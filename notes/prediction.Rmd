@@ -1,0 +1,65 @@
+---
+title: "Untitled"
+author: "Jeffrey Arnold"
+date: "1/29/2018"
+output: html_document
+---
+
+```{r setup, include=FALSE}
+knitr::opts_chunk$set(echo = TRUE)
+```
+
+# Loops in R
+
+Read over the sections in *R for Data Science* on iteration and the 
+
+It briefly mentions "\n" as newline character.
+
+
+# General Conditional Statements in R
+
+Recall that in general the `return` function is not needed in functions since a function implictly return the value of its last expression.
+However, in some functions in which you use conditional statements you may need to return values *early*. 
+The situation would look like this pseudo-code.
+```{r}
+foo <- function(x) {
+  if (x == something) {
+    # some calculations
+    # return a value early
+    return(...)
+  }
+  # other calculations
+  ...
+  # last value is returned 
+}
+```
+
+# Poll Predictions
+
+- How does prediction allow for black-boxing the method? 
+- What is prediction error?
+- What is unbiased?
+- False (true) positive, false (true) negative
+
+# Linear regression
+
+- Correlation
+- Least squares
+- Residual or prediction error
+- RMSE
+- How are intercept and slope parameters calculated?
+- What is the relationship between correlation and beta?
+-
+
+
+# Regression to the mean
+
+What is the phenomena of regresssion to the mean? 
+
+# Merging Data Sets in R
+
+We've already covered that
+- Review the output of `lm`
+- What is the mean of errors? What is the median of errors?
+
+

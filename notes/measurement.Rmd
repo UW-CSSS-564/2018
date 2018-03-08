@@ -1,0 +1,40 @@
+---
+output: html_document
+editor_options: 
+  chunk_output_type: console
+---
+
+- What is non-response bias?
+- What is listwise deletion?
+- Difference between a bar-plot and a histogram?
+- What is density?
+- What is the role of randomization in surveys vs. RCT?
+- What is probability sampling? sampling frame? quota sampling? Multistage cluster?
+
+Visualizing Univariate Distribution
+
+- bar plot
+- histograms
+- box-plot
+
+## Survey Sampling
+
+### Role or randomization
+
+- probability sampling
+- simple random sampling
+- sample frame
+- without vs. with replacement
+- quota sampling
+- random digit dialing
+
+### Non-response Bias
+
+- unit non-response
+- item non-response
+- item count/list experiment
+- randomized response 
+
+## Measuring Political Polarization
+
+How does R handle missing values? 

@@ -1,0 +1,277 @@
+<!DOCTYPE html>
+<html lang="en-US">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    <meta name="generator" content="Hugo 0.31.1" />
+
+      
+      <title>Notes on R for Data Science - POLS 503: Advanced Quantitative Political Methodology</title>
+      <meta property="og:title" content="Notes on R for Data Science - POLS 503: Advanced Quantitative Political Methodology">
+    
+
+    
+      
+    
+
+    
+
+    
+
+    
+
+
+<link href='//cdn.bootcss.com/highlight.js/9.11.0/styles/github.min.css' rel='stylesheet' type='text/css' />
+
+
+
+    <link rel="stylesheet" href="/2018/bootstrap-4.0.0-beta.2-dist/css/bootstrap.min.css">
+
+    <script defer src="/2018/fontawesome/js/fontawesome-all.js"></script>
+
+
+    <link rel="stylesheet" href="/2018/css/pols501.css" media="all">
+
+  </head>
+  <body>
+    <nav class="navbar navbar-expand-md navbar-dark bg-dark fixed-top">
+
+  <a class="navbar-brand" href="/2018/">POLS 503 </a>
+  <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarsExampleDefault" aria-controls="navbarsExampleDefault" aria-expanded="false" aria-label="Toggle navigation">
+    <span class="navbar-toggler-icon"></span>
+  </button>
+
+  <div class="collapse navbar-collapse" id="navbarsItems">
+    <ul class="navbar-nav mr-auto">
+    
+      <li class="nav-item">
+        <a class="nav-link" href="/2018/assignments/">Assignments</a>
+      </li>
+    
+      <li class="nav-item">
+        <a class="nav-link" href="/2018/pages/">Pages</a>
+      </li>
+    
+      <li class="nav-item">
+        <a class="nav-link" href="/2018/projects/">Projects</a>
+      </li>
+    
+      <li class="nav-item">
+        <a class="nav-link" href="/2018/schedule/">Schedule</a>
+      </li>
+    
+    </ul>
+    
+  </div>
+</nav>
+
+    
+<main class="container">
+    <h1>Notes on R for Data Science</h1>
+
+    <div id="visualization" class="section level1">
+<h1>Visualization</h1>
+<p>Other resources:</p>
+<ul>
+<li><a href="http://stat545.com/graph00_index.html">All the graph things</a> Stat 545. Jenny Bryan.</li>
+</ul>
+</div>
+<div id="tibbles" class="section level1">
+<h1>Tibbles</h1>
+<p>Why might you want to create non-syntactic variable names? Since variable names are often used as in plots (e.g. axis-titles) or headers in tables, where having spaces or other characters that are invalid R variable names is useful. Those functions will have ways to use text other than the column, but using the non-syntactic variable name can be convenient.</p>
+<p>If <code>nycflights::flights</code> were printed in the console it would be much worse. Just try it, I dare you.</p>
+<pre class="r"><code>as.data.frame(nycflights13::flights)</code></pre>
+<p>Partial matching is bad! Suppose you have this data frame:</p>
+<pre class="r"><code>d &lt;- data.frame(foobar = 1:3)</code></pre>
+<p>This code works to extract <code>foobar</code>,</p>
+<pre class="r"><code>d$foobar</code></pre>
+<pre><code>## [1] 1 2 3</code></pre>
+<p>but so does this,</p>
+<pre class="r"><code>d$foo</code></pre>
+<pre><code>## [1] 1 2 3</code></pre>
+<p>This is called partial matching, since <code>foo</code> matches <code>foobar</code>. R uses partial matching with <code>$</code> and argument names in functions.</p>
+<p>This seems convenient. Who wants to type extra characters? Now suppose you have a data frame with two variables <code>foobar</code> and <code>foo</code>. However, when creating it you accidentally misspell <code>foo</code> as <code>fo</code>.</p>
+<pre class="r"><code>d &lt;- data.frame(foobar = 1:3, fo = 5:7)</code></pre>
+<p>If you run this,</p>
+<pre class="r"><code>d$foo</code></pre>
+<pre><code>## [1] 1 2 3</code></pre>
+<p>it will still return a value, and you may not realize your initial error. It would have been better if <code>$</code> had returned <code>NULL</code> or raised an error since then you would have realized the bug and fixed it. However, <code>tibble</code> objects never partially match column names with <code>$</code>:</p>
+<pre class="r"><code>library(&quot;tibble&quot;)
+as.tibble(d)$foo</code></pre>
+<pre><code>## Warning: Unknown or uninitialised column: &#39;foo&#39;.</code></pre>
+<pre><code>## NULL</code></pre>
+<p>Additionally, <code>[[</code> does not partially match:</p>
+<pre class="r"><code>d[[&quot;foo&quot;]]</code></pre>
+<pre><code>## NULL</code></pre>
+<p><strong>Partial matching is bad; never do it. Tibbles prevent you from doing it.</strong></p>
+<div id="interacting-with-older-code" class="section level3">
+<h3>Interacting with Older Code</h3>
+<p>Not all older functions work with tibbles (an example includes the <strong>Amelia</strong> package). This is because rely may assume the very quirks in <code>data.frame</code> behavior that <code>tibbles</code> fix. Use <code>as.data.frame()</code> to turn a tibble back into a <code>data.frame</code>. These problems are usually due to <code>[</code> inconsistently returning a vector or a data frame.</p>
+</div>
+</div>
+<div id="tidy-data" class="section level1">
+<h1>Tidy Data</h1>
+<ul>
+<li>Describe what tidy data is and why it is important?</li>
+<li>Provide some examples of non-tidy data</li>
+<li>Be able to convert non-tidy data to tidy data</li>
+<li>Provide some examples when non-tidy data formats would be appropriate or useful</li>
+</ul>
+<p>The Rules</p>
+<ol style="list-style-type: decimal">
+<li>Each <strong>variable</strong> has its own <strong>column</strong></li>
+<li>Each <strong>observation</strong> must have its own <strong>row</strong></li>
+<li>Each <strong>value</strong> must have its own <strong>cell</strong></li>
+</ol>
+<p>or even</p>
+<ol style="list-style-type: decimal">
+<li>Put each <strong>dataset</strong> in a <strong>tibble</strong></li>
+<li>Put each <strong>variable</strong> in a <strong>column</strong></li>
+</ol>
+<p>These seem obvious at first, so we need to see examples of not-following tidy data and what happens.</p>
+<p>Some nuances:</p>
+<p>The definitions of <strong>variable</strong>, <strong>observation</strong>, and <strong>value</strong> are not always clear. And how you store and arrange the data can depend on how you aim to use it. Generally, aim for storing the data in a tidy format that ensures minimal errors. When you model it, you can transform the data later. See non-tidy data.</p>
+<p>It is easier to work with variables in columns because of <code>mutate</code> and <code>summary</code> functions. It will also work better with <code>tidyverse</code> functions: e.g. using <code>group_by</code> to group and summarize, or <code>facet_*</code> and aesthetics in <strong>ggplot2</strong>.</p>
+<p>The tidy data ideas are adapted from the <a href="https://en.wikipedia.org/wiki/Database_normalization">database normalization</a>, but simplified and adapted to the general uses of practicing data scientists.</p>
+<p>Non-tidy data</p>
+<ul>
+<li>Corpus and text data is often stored in sparse Matrices <a href="https://cran.r-project.org/web/packages/tm/tm.pdf" class="uri">https://cran.r-project.org/web/packages/tm/tm.pdf</a></li>
+<li>Graphical data has its own format: <a href="http://igraph.org/r/doc/" class="uri">http://igraph.org/r/doc/</a></li>
+</ul>
+<p>Replication datasets and datasets used in analysis are often non-tidy. Why?</p>
+</div>
+<div id="dates-and-times" class="section level1">
+<h1>Dates and Times</h1>
+<ul>
+<li>Ideas for applications: CDB90 data, COW war start end and duration</li>
+<li>Read more on time-zones: <a href="https://en.wikipedia.org/wiki/Time_zone" class="uri">https://en.wikipedia.org/wiki/Time_zone</a></li>
+<li>Computerphile <a href="https://www.youtube.com/watch?v=-5wpm-gesOY">The Problem with Time &amp; Timezones - Computerphile</a></li>
+<li>The history of the tz database are themselves interesting: <a href="https://en.wikipedia.org/wiki/Tz_database" class="uri">https://en.wikipedia.org/wiki/Tz_database</a></li>
+<li><a href="https://blog.jonudell.net/2009/10/23/a-literary-appreciation-of-the-olsonzoneinfotz-database/">A literary appreciation of the Olson/Zoneinfo/tz database</a></li>
+</ul>
+</div>
+<div id="relational-data" class="section level1">
+<h1>Relational Data</h1>
+<ul>
+<li>What is relational data?</li>
+<li>What is a primary key?</li>
+<li>List and describe the types of joins</li>
+<li>What are set union, intersection, complement, and difference?</li>
+</ul>
+<p><a href="https://cran.r-project.org/web/packages/nycflights13/index.html">nycflights13</a> is an example of a <strong>data-only</strong> R package. R packages can contain both functions and data. Since data-sets can get large, often they can be packaged as their own dataset. These sorts of data-only R packages make it convenient for R users to access your data, but it should not be the only way you provide your research data. Not everyone uses R, so the original data should be provided in a program agnostic format (e.g. CSV files). This also holds for those using Stata; they should not be distributing data in <code>.dta</code> format files specific to Stata (even if as we saw earlier, other programs can read that data.) Another example of a data-only R package is the <a href="https://cran.r-project.org/package=gapminder">gapminder</a> package.</p>
+</div>
+<div id="strings" class="section level1">
+<h1>Strings</h1>
+<p>The discussion of encodings is detailed, but these details can make your life hell. Skim now, but be aware that what should be simple, actually is not.</p>
+<p>After reading this you should be able to answer:</p>
+<ul>
+<li>What are character encodings? Why might they be an issue in data cleaning?</li>
+<li>What are regular expressions? When would you use them.</li>
+</ul>
+<p>You don’t need to memorize the various types of character encoding and regular expressions. For the former, knowing the existence of it and being able to recognize when you are having a character encoding issue is the key skill. After that Google is your friend. For the latter, you should be aware that regular expressions are a way to match string patterns. When you need to match a string pattern, look up the regular expression. You will learn regular expressions over time.</p>
+<p>The <a href="https://github.com/kevinushey/rex"><code>rex</code></a> package functions that allow you to write regular expressions with R functions rather than the more compact but sometimes difficult to interpret regex syntax.</p>
+<p><strong>Warning</strong> There are several variants of regular expressions out there. All use a similar grammar. However, each language or library may implement slightly different features.</p>
+<p>This Computerphile video on Unicode is great <a href="https://www.youtube.com/watch?v=MijmeoH9LT4">Characters, Symbols and the Unicode Miracle - Computerphile</a></p>
+<p>This suggested reading is very useful: <a href="http://kunststube.net/encoding/" class="uri">http://kunststube.net/encoding/</a></p>
+<p>Also see:</p>
+<ul>
+<li><a href="http://stat545.com/block032_character-encoding.html">Character encoding</a> Stat 545. Jenny Bryan.</li>
+<li><a href="http://stat545.com/block028_character-data.html">Character data</a>. Stat 545. Jenny Bryan.</li>
+<li><a href="http://stat545.com/block022_regular-expression.html">Regular expressions in R</a>. Stat 545. Jenny Bryan.</li>
+</ul>
+<div id="dates-and-times-1" class="section level2">
+<h2>Dates and Times</h2>
+<p>This section seems less complete than the others. Refer to the <a href="https://cran.r-project.org/web/packages/lubridate/vignettes/lubridate.html">lubridate</a> vignette for more information.</p>
+</div>
+<div id="vectors" class="section level2">
+<h2>Vectors</h2>
+<ul>
+<li>What is the difference between atomic vectors and lists?</li>
+<li>What is the difference between numeric vectors and integer vectors?</li>
+<li>List several problems that may occur with floating point arithmetic</li>
+</ul>
+<p>Why does floating point math matter? For 99% of the work you are likely to do as an applied social scientist, you need to know it. Someone else has written the numerical methods and (hopefully) accounted for numerical issues. However, if you are not even aware that “floating point numbers” are a “thing”, if something goes wrong, it will seem like magic. Also, at least being aware of these problems will help you understand error messages from optimization routines that complaining of “numerical precision”.</p>
+<p>Computerphile has a good video on <a href="https://youtu.be/PZRI1IfStY0">Floating Point Numbers</a>.</p>
+<p>Be careful testing equality with floating point numbers:</p>
+<pre class="r"><code>0.1 + 0.2 == 0.3</code></pre>
+<pre><code>## [1] FALSE</code></pre>
+<pre class="r"><code>0.15 + 0.15 &gt;= 0.1 + 0.2</code></pre>
+<pre><code>## [1] FALSE</code></pre>
+<p>To test for equality with floating point numbers use <code>all.equal</code>:</p>
+<pre class="r"><code>all.equal(0.15 + 0.15, 0.1 + 0.2)</code></pre>
+<pre><code>## [1] TRUE</code></pre>
+<p>For functions that test equality in floating point numbers there will be some sort of “tolerance” argument which is the difference at which two numbers can be equal.</p>
+<p>Numbers too large to represent will “overflow” to <code>Inf</code>:</p>
+<pre class="r"><code>1e1000000</code></pre>
+<pre><code>## [1] Inf</code></pre>
+<p>This is true even if the final expression would be finite. E.g. <span class="math inline">\(\log(e^10000) = 10000\)</span>, but in R,</p>
+<pre class="r"><code>log(exp(10000))</code></pre>
+<pre><code>## [1] Inf</code></pre>
+<p>because <span class="math inline">\(e^10000 \approx \infty\)</span> and <span class="math inline">\(\log(\infty) = \infty\)</span>.</p>
+</div>
+</div>
+<div id="models" class="section level1">
+<h1>Models</h1>
+<p>Some of the discussion of models is slightly different, and has a different emphasis than in most social science research. This is largely because this book is speaking to data scientists, where the primary goal is prediction rather than theory testing (that I don’t view these as too different is a different story).</p>
+<p>The discussion about hypothesis generation vs. confirmation is interesting. Too little emphasis is placed on hypothesis generation in social science. The importance of out of sample testing also receives too little emphasis in political science.</p>
+<p>And from this discussion it should be clear that many papers in social science are hypothesis generation masquerading as hypothesis confirmation.</p>
+</div>
+<div id="model-basics" class="section level1">
+<h1>Model Basics</h1>
+<p>Distinction between <em>family of models</em> and <em>fitted model</em> is a useful way to think about models. Especially as we can abstract some families of models to be themselves a fitted model of a more flexible family of models. For example, linear regression is a special case of GLM or Gaussian Processes etc.</p>
+<p><strong>NOTE</strong> It’s worth mentioning these as more general models. Though they don’t appear as much in social science work. I should try to explain that. I can think of several reasons</p>
+<ul>
+<li>preference for easy to explain models (though I think that’s wrong–most people can’t visualize high-dimensional space well, and interpret results marginally even though they are conditional)</li>
+<li>status-quo bias and path dependence combined with lack of knowledge of work outside the field and median lack of technical ability to understand or use these models.</li>
+<li>the most principled reason is that those more complicated models really excel in prediction. If we take an agnostic approach to regression, as in the Angrist and Pischke books, then regression is not being used to fit <span class="math inline">\(f(y | x)\)</span>, its being used to fit <span class="math inline">\(E(f(y | x))\)</span>, and more specifically to get some sort of average effect for a change in a specific variable.</li>
+</ul>
+</div>
+<div id="model-basics-1" class="section level1">
+<h1>Model basics</h1>
+<p>For more complex models, visualize their</p>
+<ol style="list-style-type: decimal">
+<li>predictions</li>
+<li>residuals</li>
+</ol>
+<ul>
+<li>see the <code>tidyr::complete</code>, <code>tidyr::expand</code>, and <code>modelr::data_grid</code> functions</li>
+<li><code>modelr::add_residuals</code> and <code>modelr::add_predictions</code> functions add residuals or predictions to the original data</li>
+<li><code>geom_ref_line</code></li>
+</ul>
+</div>
+
+
+</main>
+
+    <footer class="footer bg-light text-muted">
+      <div class="container">
+        <p>Made with <a href="https://bookdown.org/yihui/blogdown/">Blogdown</a>,
+           <a href="https://gohugo.io/">Hugo</a>,
+            <a href="https://getbootstrap.com/">Bootstrap</a>, and
+            <a href="https://fontawesome.com/">Fontawesome</a>.
+            Source code on <a href="https://github.com/UW-POLS501/2018/"><i class="fab fa-github"></i></a>.</p>
+        <p>
+          This work is licensed under a <a rel="license" href="http://creativecommons.org/licenses/by/4.0/">Creative Commons Attribution 4.0 International License</a>
+        </p>
+      </div>
+    </footer>
+
+    
+
+
+
+<script src="//cdn.bootcss.com/highlight.js/9.11.0/highlight.min.js"></script>
+
+
+
+<script src="//cdn.bootcss.com/highlight.js/9.11.0/languages/r.min.js"></script>
+<script src="//cdn.bootcss.com/highlight.js/9.11.0/languages/yaml.min.js"></script>
+<script>hljs.configure({languages: []}); hljs.initHighlightingOnLoad();</script>
+
+
+
+    
+
+
+  </body>
+</html>

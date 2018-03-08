@@ -1,0 +1,69 @@
+---
+title: "Git: Assignment Submission and Workflow"
+---
+
+```{r setup,include=FALSE}
+library("DiagrammeR")
+```
+
+## Cloning, Pull Requests, Forking, Pulling, and Pushing
+
+See the *Happy Git and GitHub for the useR* chapter [Fork a repo](http://happygitwithr.com/fork.html).
+
+
+## Instructions
+
+1.  Go to the course website, click *Assignments*.
+   
+    ![](../img/image1.png)
+
+2.  Scroll down to the *Assignments* section, click on the link to the assignment under *Instructions and Submissions*.
+
+    ![](../img/image2.png)
+
+3.  Click on the *Fork* button to fork the repository to your GitHub account.
+
+    ![](../img/image3.png)
+
+4.  Click *Clone or download*. You will work on the copy of the repository that exists on your account.
+
+    ![](../img/image4.png)
+
+5. Click *Copy to clipboard*
+
+    ![](../img/image5.png)
+
+6.  Go to RStudio, click *File* and select *New Project*.
+
+    ![](../img/image6.png)
+
+7.  Select *Version Control*.
+
+    ![](../img/image7.png)
+
+8.  Choose *Git*.
+
+    ![](../img/image8.png)
+
+9.  Paste the URL that you copied into the field *Repository URL*, choose a name for the folder in which the project will be saved in the field *Project Directory Name*, and select the sub-directory
+
+    ![](../img/image9.png)
+
+
+## Overview
+
+<img alt="Relationship between git and GitHub" src="../../img/github-diagram.svg">
+
+The above diagram provides an overview of the relationship between these repositories and the workflow.
+
+1. **Forks** the repository `UW-POLS501/assignment-1` to `username/assignment-1` to get a copy of the assignment in their GitHub account.
+2. **Clone** the repository to their device.
+3. Work on the assignment and commit changes to the repository on their device.
+4. **Push** changes to their repository, `UW-POLS501/assignment-1`
+5. When ready to submit their assignment, open a **Pull request**
+
+Alternatively, the workflow is represented as:
+
+```{r echo=FALSE}
+mermaid("homework-flow.mmd")
+```

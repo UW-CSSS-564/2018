@@ -1,0 +1,17 @@
+---
+title: "Git: Project Submission and Workflow"
+---
+
+<script src="/2018/rmarkdown-libs/htmlwidgets/htmlwidgets.js"></script>
+<script src="/2018/rmarkdown-libs/d3/d3.min.js"></script>
+<script src="/2018/rmarkdown-libs/dagre/dagre-d3.min.js"></script>
+<link href="/2018/rmarkdown-libs/mermaid/dist/mermaid.css" rel="stylesheet" />
+<script src="/2018/rmarkdown-libs/mermaid/dist/mermaid.slim.min.js"></script>
+<link href="/2018/rmarkdown-libs/DiagrammeR-styles/styles.css" rel="stylesheet" />
+<script src="/2018/rmarkdown-libs/chromatography/chromatography.js"></script>
+<script src="/2018/rmarkdown-libs/DiagrammeR-binding/DiagrammeR.js"></script>
+
+
+<p>For the project assignments, each student has a repository named <code>UW-POLS501/:username</code> where <code>:username</code> is the GitHub username of the student. This does not need to be forked. The student works directly on that repository, and submits assignments by opening an issue on <code>UW-POLS501/:username/issue</code>.</p>
+<div id="htmlwidget-1" style="width:672px;height:480px;" class="DiagrammeR html-widget"></div>
+<script type="application/json" data-for="htmlwidget-1">{"x":{"diagram":"sequenceDiagram\n  participant remote as UW-POLS501/student\n  participant local as local repository\n  remote->>local: Clone repository\n  Note over remote: Assignment 1\n  loop Until completed\n    local->>local: Work and commit\n    local->>remote: Push changes\n  end\n  remote->>remote: Open issue to submit\n  Note over remote: Assignment 2\n  loop Until completed\n    local->>local: Work and commit\n    local->>remote: Push changes\n  end\n  remote->>remote: Open issue to submit"},"evals":[],"jsHooks":[]}</script>

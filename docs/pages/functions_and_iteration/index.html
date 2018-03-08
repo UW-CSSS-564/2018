@@ -1,0 +1,486 @@
+<!DOCTYPE html>
+<html lang="en-US">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    <meta name="generator" content="Hugo 0.31.1" />
+
+      
+      <title>How to avoid copying and pasting code by using functions, for loops and functionals - POLS 503: Advanced Quantitative Political Methodology</title>
+      <meta property="og:title" content="How to avoid copying and pasting code by using functions, for loops and functionals - POLS 503: Advanced Quantitative Political Methodology">
+    
+
+    
+      
+    
+
+    
+
+    
+
+    
+
+
+<link href='//cdn.bootcss.com/highlight.js/9.11.0/styles/github.min.css' rel='stylesheet' type='text/css' />
+
+
+
+    <link rel="stylesheet" href="/2018/bootstrap-4.0.0-beta.2-dist/css/bootstrap.min.css">
+
+    <script defer src="/2018/fontawesome/js/fontawesome-all.js"></script>
+
+
+    <link rel="stylesheet" href="/2018/css/pols501.css" media="all">
+
+  </head>
+  <body>
+    <nav class="navbar navbar-expand-md navbar-dark bg-dark fixed-top">
+
+  <a class="navbar-brand" href="/2018/">POLS 503 </a>
+  <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarsExampleDefault" aria-controls="navbarsExampleDefault" aria-expanded="false" aria-label="Toggle navigation">
+    <span class="navbar-toggler-icon"></span>
+  </button>
+
+  <div class="collapse navbar-collapse" id="navbarsItems">
+    <ul class="navbar-nav mr-auto">
+    
+      <li class="nav-item">
+        <a class="nav-link" href="/2018/assignments/">Assignments</a>
+      </li>
+    
+      <li class="nav-item">
+        <a class="nav-link" href="/2018/pages/">Pages</a>
+      </li>
+    
+      <li class="nav-item">
+        <a class="nav-link" href="/2018/projects/">Projects</a>
+      </li>
+    
+      <li class="nav-item">
+        <a class="nav-link" href="/2018/schedule/">Schedule</a>
+      </li>
+    
+    </ul>
+    
+  </div>
+</nav>
+
+    
+<main class="container">
+    <h1>How to avoid copying and pasting code by using functions, for loops and functionals</h1>
+
+    <p>One of the most important principles in writing software is “don’t repeat yourself (DRY)”. This module covers using functions, for-loops, and functionals to avoid copying and pasting code.</p>
+<p>In addition to this, see the the <em>R for Data Science</em> chapters <a href="http://r4ds.had.co.nz/functions.html">Functions</a> a <a href="http://r4ds.had.co.nz/iteration.html">Iteration</a> (for-loops and functions) for more detailed discussions of these concepts.</p>
+<div id="setup" class="section level2 unnumbered">
+<h2>Setup</h2>
+<p>Consider the example from QSS Exercise 1. Review the explanations and instructions for that question.</p>
+<pre class="r"><code># a QSS Exercise from Chapter 1.
+library(&quot;tidyverse&quot;)</code></pre>
+<pre><code>## ── Attaching packages ────────────────────────────────────────────── tidyverse 1.2.1 ──</code></pre>
+<pre><code>## ✔ ggplot2 2.2.1     ✔ purrr   0.2.4
+## ✔ tibble  1.4.1     ✔ dplyr   0.7.4
+## ✔ tidyr   0.7.2     ✔ stringr 1.2.0
+## ✔ readr   1.1.1     ✔ forcats 0.2.0</code></pre>
+<pre><code>## ── Conflicts ───────────────────────────────────────────────── tidyverse_conflicts() ──
+## ✖ dplyr::filter() masks stats::filter()
+## ✖ dplyr::lag()    masks stats::lag()</code></pre>
+<pre class="r"><code>library(&quot;qss&quot;)
+
+data(&quot;Kenya&quot;, package = &quot;qss&quot;)
+data(&quot;Sweden&quot;, package = &quot;qss&quot;)
+data(&quot;World&quot;, package = &quot;qss&quot;)</code></pre>
+</div>
+<div id="replacing-copy-and-pasting-code-with-functions" class="section level2">
+<h2>Replacing Copy and Pasting Code with Functions</h2>
+<p>On question asks you to calculate the CDR (crude death rate)</p>
+<pre class="r"><code># Let&#39;s write some code that works for Kenya
+Kenya %&gt;%
+  group_by(period) %&gt;%
+  summarize(CDR_data = sum(deaths) / sum(py.men + py.women))</code></pre>
+<pre><code>## # A tibble: 2 x 2
+##   period    CDR_data
+##   &lt;chr&gt;        &lt;dbl&gt;
+## 1 1950-1955   0.0240
+## 2 2005-2010   0.0104</code></pre>
+<p>Awesome! This code does what I want.</p>
+<p>But, it only works for Kenya, and I’d need to copy and paste it to work on the <code>Sweden</code> and <code>World</code> data frames.</p>
+<pre class="r"><code>Sweden %&gt;%
+  group_by(period) %&gt;%
+  summarize(CDR_data = sum(deaths) / sum(py.men + py.women))</code></pre>
+<pre><code>## # A tibble: 2 x 2
+##   period    CDR_data
+##   &lt;chr&gt;        &lt;dbl&gt;
+## 1 1950-1955  0.00984
+## 2 2005-2010  0.00997</code></pre>
+<pre class="r"><code>World %&gt;%
+  group_by(period) %&gt;%
+  summarize(CDR_data = sum(deaths) / sum(py.men + py.women))</code></pre>
+<pre><code>## # A tibble: 2 x 2
+##   period    CDR_data
+##   &lt;chr&gt;        &lt;dbl&gt;
+## 1 1950-1955  0.0193 
+## 2 2005-2010  0.00817</code></pre>
+<p>R4DS notes that I should write a function anytime I’m doing the same thing <a href="http://r4ds.had.co.nz/functions.html#when-should-you-write-a-function">3 or more times</a>.</p>
+<p>So to generalize the previous code, consider what changes when copy and pasting this data. The only thing that changes is the specification of the input data frame: <code>Kenya</code>, <code>Sweden</code>, or <code>World</code>. I could rewrite this code by creating a new variable <code>x</code> which I can assign to the input data frame I want to use.</p>
+<pre class="r"><code>x &lt;- Kenya
+# x &lt;- Sweden
+# x &lt;- World
+
+x %&gt;%
+  group_by(period) %&gt;%
+  summarize(CDR_data = sum(deaths) / sum(py.men + py.women))</code></pre>
+<pre><code>## # A tibble: 2 x 2
+##   period    CDR_data
+##   &lt;chr&gt;        &lt;dbl&gt;
+## 1 1950-1955   0.0240
+## 2 2005-2010   0.0104</code></pre>
+<p>This helps clarify the programming task, but isn’t yet that useful because we would still have to copy and paste that code to run it in a script.</p>
+<p>However, now that we’ve written the code such that the input is a variable <code>x</code> and an expression of code using that variable <code>x</code>. We can take that previous code and encapsulate it in a function.</p>
+<pre class="r"><code>CDR &lt;- function(x) {
+  x %&gt;%
+    group_by(period) %&gt;%
+    summarize(CDR_data = sum(deaths) / sum(py.men + py.women))
+}</code></pre>
+<p>A function consists of there parts: <code>name</code>, <code>arguments</code> (inputs), and <code>body</code>.</p>
+<ol style="list-style-type: decimal">
+<li>Functions are objects. You can assign them to variable names. <code>name</code> is the name you assign the function to. In this case, <code>CDR</code>.</li>
+<li>The <code>arguments</code> are names that are given to input values.</li>
+<li>The <code>body</code> is the code that the function executes.</li>
+</ol>
+<p>Now we can run the <code>CDR</code> on Kenya, Sweden, and World:</p>
+<pre class="r"><code>CDR(Kenya)</code></pre>
+<pre><code>## # A tibble: 2 x 2
+##   period    CDR_data
+##   &lt;chr&gt;        &lt;dbl&gt;
+## 1 1950-1955   0.0240
+## 2 2005-2010   0.0104</code></pre>
+<pre class="r"><code>CDR(Sweden)</code></pre>
+<pre><code>## # A tibble: 2 x 2
+##   period    CDR_data
+##   &lt;chr&gt;        &lt;dbl&gt;
+## 1 1950-1955  0.00984
+## 2 2005-2010  0.00997</code></pre>
+<pre class="r"><code>CDR(World)</code></pre>
+<pre><code>## # A tibble: 2 x 2
+##   period    CDR_data
+##   &lt;chr&gt;        &lt;dbl&gt;
+## 1 1950-1955  0.0193 
+## 2 2005-2010  0.00817</code></pre>
+</div>
+<div id="repeating-inputs-with-for-loops" class="section level2">
+<h2>Repeating Inputs with For Loops</h2>
+<p>In the previous section we still had to run the function <code>CDR</code> three times, once for each country. While three countries is not terrible, this would be quite tedious if we had hundreds of countries.</p>
+<p>In this section, we’ll reduce that redundancy using a for loop.</p>
+<div id="lists" class="section level3">
+<h3>Lists</h3>
+<p>The first step is to put those data frames in a list.</p>
+<pre class="r"><code>countries &lt;- list(KEN = Kenya, SWE = Sweden, WLD = World)</code></pre>
+<p>The names of the elements of the list are arbitrary, but were purposefully chosen to be different than the names of the data frames to emphasize that they are arbitrary.</p>
+<p>The list <code>countries</code> has 3 elements,</p>
+<pre class="r"><code>length(countries)</code></pre>
+<pre><code>## [1] 3</code></pre>
+<p>with names</p>
+<pre class="r"><code>names(countries)</code></pre>
+<pre><code>## [1] &quot;KEN&quot; &quot;SWE&quot; &quot;WLD&quot;</code></pre>
+<p>To get an element from the list, use <code>[[</code> or <code>$</code> and reference the elements by name or index number:</p>
+<pre class="r"><code>summary(countries$KEN)</code></pre>
+<pre><code>##    country             period              age                births      
+##  Length:30          Length:30          Length:30          Min.   :   0.0  
+##  Class :character   Class :character   Class :character   1st Qu.:   0.0  
+##  Mode  :character   Mode  :character   Mode  :character   Median :   0.0  
+##                                                           Mean   : 298.3  
+##                                                           3rd Qu.: 267.5  
+##                                                           Max.   :2285.7  
+##      deaths           py.men            py.women             l_x        
+##  Min.   : 18.51   Min.   :   39.85   Min.   :   82.24   Min.   :  9457  
+##  1st Qu.: 21.24   1st Qu.:  840.92   1st Qu.:  733.89   1st Qu.: 53537  
+##  Median : 55.13   Median : 1712.56   Median : 1800.20   Median : 66138  
+##  Mean   : 91.06   Mean   : 3681.89   Mean   : 3684.72   Mean   : 64688  
+##  3rd Qu.:103.75   3rd Qu.: 4506.66   3rd Qu.: 4417.88   3rd Qu.: 81411  
+##  Max.   :661.25   Max.   :15932.59   Max.   :15674.83   Max.   :100000</code></pre>
+<pre class="r"><code>summary(countries[[&quot;SWE&quot;]])</code></pre>
+<pre><code>##    country             period              age                births      
+##  Length:30          Length:30          Length:30          Min.   :  0.00  
+##  Class :character   Class :character   Class :character   1st Qu.:  0.00  
+##  Mode  :character   Mode  :character   Mode  :character   Median :  0.00  
+##                                                           Mean   : 36.48  
+##                                                           3rd Qu.: 58.80  
+##                                                           Max.   :193.19  
+##      deaths            py.men          py.women           l_x        
+##  Min.   :  0.191   Min.   : 250.7   Min.   : 320.6   Min.   : 35709  
+##  1st Qu.:  1.522   1st Qu.:1217.2   1st Qu.:1230.0   1st Qu.: 93116  
+##  Median :  4.157   Median :1383.4   Median :1358.1   Median : 96880  
+##  Mean   : 26.908   Mean   :1350.0   Mean   :1364.1   Mean   : 91839  
+##  3rd Qu.: 14.406   3rd Qu.:1508.7   3rd Qu.:1499.5   3rd Qu.: 98904  
+##  Max.   :271.644   Max.   :2612.9   Max.   :2635.8   Max.   :100000</code></pre>
+<pre class="r"><code>summary(countries[[3]])</code></pre>
+<pre><code>##    country             period              age                births      
+##  Length:30          Length:30          Length:30          Min.   :     0  
+##  Class :character   Class :character   Class :character   1st Qu.:     0  
+##  Mode  :character   Mode  :character   Mode  :character   Median :     0  
+##                                                           Mean   : 38782  
+##                                                           3rd Qu.: 55748  
+##                                                           Max.   :219277  
+##      deaths           py.men           py.women      
+##  Min.   :  3248   Min.   :  30527   Min.   :  47262  
+##  1st Qu.:  6263   1st Qu.: 380398   1st Qu.: 388215  
+##  Median :  8104   Median : 673948   Median : 665470  
+##  Mean   : 17517   Mean   : 778510   Mean   : 770349  
+##  3rd Qu.: 14409   3rd Qu.:1184047   3rd Qu.:1153630  
+##  Max.   :101090   Max.   :1619802   Max.   :1512274</code></pre>
+<p>The for loop lets us run</p>
+<pre class="r"><code>for (x in countries) {
+  print(glimpse(x))
+  print(CDR(x))
+}</code></pre>
+<pre><code>## Observations: 30
+## Variables: 8
+## $ country  &lt;chr&gt; &quot;KEN&quot;, &quot;KEN&quot;, &quot;KEN&quot;, &quot;KEN&quot;, &quot;KEN&quot;, &quot;KEN&quot;, &quot;KEN&quot;, &quot;KEN...
+## $ period   &lt;chr&gt; &quot;1950-1955&quot;, &quot;1950-1955&quot;, &quot;1950-1955&quot;, &quot;1950-1955&quot;, &quot;...
+## $ age      &lt;chr&gt; &quot;0-4&quot;, &quot;5-9&quot;, &quot;10-14&quot;, &quot;15-19&quot;, &quot;20-24&quot;, &quot;25-29&quot;, &quot;30...
+## $ births   &lt;dbl&gt; 0.000, 0.000, 0.000, 264.185, 485.564, 383.252, 268.6...
+## $ deaths   &lt;dbl&gt; 398.314, 36.799, 19.520, 18.508, 21.361, 20.424, 18.9...
+## $ py.men   &lt;dbl&gt; 2982.589, 1977.935, 1634.561, 1588.554, 1427.824, 120...
+## $ py.women &lt;dbl&gt; 2977.828, 1969.698, 1633.975, 1564.652, 1364.061, 110...
+## $ l_x      &lt;dbl&gt; 100000.000, 75157.419, 71364.502, 69469.475, 67421.14...
+##    country    period   age   births  deaths    py.men  py.women        l_x
+## 1      KEN 1950-1955   0-4    0.000 398.314  2982.589  2977.828 100000.000
+## 2      KEN 1950-1955   5-9    0.000  36.799  1977.935  1969.698  75157.419
+## 3      KEN 1950-1955 10-14    0.000  19.520  1634.561  1633.975  71364.502
+## 4      KEN 1950-1955 15-19  264.185  18.508  1588.554  1564.652  69469.475
+## 5      KEN 1950-1955 20-24  485.564  21.361  1427.824  1364.061  67421.149
+## 6      KEN 1950-1955 25-29  383.252  20.424  1204.917  1105.817  64854.800
+## 7      KEN 1950-1955 30-34  268.644  18.979  1033.053   928.075  62126.807
+## 8      KEN 1950-1955 35-39  165.693  18.854   913.425   802.620  59238.699
+## 9      KEN 1950-1955 40-44   79.582  19.301   816.753   710.981  56114.347
+## 10     KEN 1950-1955 45-49   25.573  19.889   692.612   654.844  52677.510
+## 11     KEN 1950-1955 50-54    0.000  21.198   568.514   592.359  48980.402
+## 12     KEN 1950-1955 55-59    0.000  23.384   455.258   501.808  44720.493
+## 13     KEN 1950-1955 60-69    0.000  55.056   600.284   710.673  39640.720
+## 14     KEN 1950-1955 70-79    0.000  53.304   231.866   337.111  25809.675
+## 15     KEN 1950-1955   80+    0.000  24.420    39.847    82.243   9457.307
+## 16     KEN 2005-2010   0-4    0.000 661.251 15932.589 15674.827 100000.000
+## 17     KEN 2005-2010   5-9    0.000  76.725 13254.048 13100.146  90959.093
+## 18     KEN 2005-2010 10-14    0.000  66.137 11380.859 11277.374  89360.375
+## 19     KEN 2005-2010 15-19 1063.629  62.441 10640.972 10575.915  88101.925
+## 20     KEN 2005-2010 20-24 2285.725  75.375  9707.670  9692.037  86830.022
+## 21     KEN 2005-2010 25-29 1868.313 105.366  8046.140  8020.328  85158.465
+## 22     KEN 2005-2010 30-34 1119.287 132.677  6324.058  6188.021  82430.691
+## 23     KEN 2005-2010 35-39  611.440 131.216  4794.929  4657.950  78352.835
+## 24     KEN 2005-2010 40-44  208.039  98.897  3641.841  3697.673  72998.677
+## 25     KEN 2005-2010 45-49  118.814  67.807  2892.613  3114.355  68493.362
+## 26     KEN 2005-2010 50-54    0.000  55.204  2353.851  2596.142  64781.860
+## 27     KEN 2005-2010 55-59    0.000  52.216  1790.568  1966.429  61285.591
+## 28     KEN 2005-2010 60-69    0.000 111.775  2076.313  2325.052  57288.655
+## 29     KEN 2005-2010 70-79    0.000 149.509  1122.979  1317.524  44378.060
+## 30     KEN 2005-2010   80+    0.000 115.845   329.133   401.195  23198.269
+## # A tibble: 2 x 2
+##   period    CDR_data
+##   &lt;chr&gt;        &lt;dbl&gt;
+## 1 1950-1955   0.0240
+## 2 2005-2010   0.0104
+## Observations: 30
+## Variables: 8
+## $ country  &lt;chr&gt; &quot;SWE&quot;, &quot;SWE&quot;, &quot;SWE&quot;, &quot;SWE&quot;, &quot;SWE&quot;, &quot;SWE&quot;, &quot;SWE&quot;, &quot;SWE...
+## $ period   &lt;chr&gt; &quot;1950-1955&quot;, &quot;1950-1955&quot;, &quot;1950-1955&quot;, &quot;1950-1955&quot;, &quot;...
+## $ age      &lt;chr&gt; &quot;0-4&quot;, &quot;5-9&quot;, &quot;10-14&quot;, &quot;15-19&quot;, &quot;20-24&quot;, &quot;25-29&quot;, &quot;30...
+## $ births   &lt;dbl&gt; 0.000, 0.000, 0.000, 40.823, 141.137, 160.882, 116.90...
+## $ deaths   &lt;dbl&gt; 13.765, 1.302, 1.216, 1.581, 2.264, 2.885, 3.610, 4.7...
+## $ py.men   &lt;dbl&gt; 1490.037, 1542.698, 1266.321, 1078.133, 1119.421, 130...
+## $ py.women &lt;dbl&gt; 1410.502, 1470.816, 1217.133, 1049.193, 1105.129, 128...
+## $ l_x      &lt;dbl&gt; 100000.00, 97575.29, 97308.11, 97093.74, 96733.76, 96...
+##    country    period   age  births  deaths   py.men py.women       l_x
+## 1      SWE 1950-1955   0-4   0.000  13.765 1490.037 1410.502 100000.00
+## 2      SWE 1950-1955   5-9   0.000   1.302 1542.698 1470.816  97575.29
+## 3      SWE 1950-1955 10-14   0.000   1.216 1266.321 1217.133  97308.11
+## 4      SWE 1950-1955 15-19  40.823   1.581 1078.133 1049.193  97093.74
+## 5      SWE 1950-1955 20-24 141.137   2.264 1119.421 1105.129  96733.76
+## 6      SWE 1950-1955 25-29 160.882   2.885 1305.003 1284.552  96223.56
+## 7      SWE 1950-1955 30-34 116.906   3.610 1367.220 1338.146  95692.18
+## 8      SWE 1950-1955 35-39  64.795   4.704 1365.747 1333.127  95041.54
+## 9      SWE 1950-1955 40-44  21.824   6.809 1366.917 1346.314  94214.33
+## 10     SWE 1950-1955 45-49   1.702  10.015 1256.239 1268.418  93037.78
+## 11     SWE 1950-1955 50-54   0.000  14.225 1101.377 1139.260  91196.10
+## 12     SWE 1950-1955 55-59   0.000  19.862  944.579 1008.943  88360.78
+## 13     SWE 1950-1955 60-69   0.000  65.883 1456.084 1620.309  83988.01
+## 14     SWE 1950-1955 70-79   0.000 106.465  829.383  945.557  67496.43
+## 15     SWE 1950-1955   80+   0.000  95.869  250.678  320.593  35708.75
+## 16     SWE 2005-2010   0-4   0.000   1.801 1361.938 1290.214 100000.00
+## 17     SWE 2005-2010   5-9   0.000   0.191 1204.157 1142.830  99675.23
+## 18     SWE 2005-2010 10-14   0.000   0.320 1445.904 1372.248  99631.15
+## 19     SWE 2005-2010 15-19   9.000   0.832 1588.189 1507.308  99584.84
+## 20     SWE 2005-2010 20-24  69.501   1.318 1435.878 1369.963  99440.57
+## 21     SWE 2005-2010 25-29 155.772   1.354 1399.640 1340.452  99205.05
+## 22     SWE 2005-2010 30-34 193.185   1.503 1511.593 1460.486  98966.03
+## 23     SWE 2005-2010 35-39  98.987   2.155 1639.975 1581.454  98717.43
+## 24     SWE 2005-2010 40-44  19.122   3.336 1637.465 1572.523  98386.34
+## 25     SWE 2005-2010 45-49   0.907   5.310 1524.391 1476.251  97871.49
+## 26     SWE 2005-2010 50-54   0.000   8.590 1450.930 1423.215  97027.02
+## 27     SWE 2005-2010 55-59   0.000  14.466 1541.470 1529.924  95583.16
+## 28     SWE 2005-2010 60-69   0.000  51.588 2612.883 2635.789  93349.47
+## 29     SWE 2005-2010 70-79   0.000  92.385 1500.119 1794.682  84371.90
+## 30     SWE 2005-2010   80+   0.000 271.644  904.764 1567.216  63683.52
+## # A tibble: 2 x 2
+##   period    CDR_data
+##   &lt;chr&gt;        &lt;dbl&gt;
+## 1 1950-1955  0.00984
+## 2 2005-2010  0.00997
+## Observations: 30
+## Variables: 7
+## $ country  &lt;chr&gt; &quot;WORLD&quot;, &quot;WORLD&quot;, &quot;WORLD&quot;, &quot;WORLD&quot;, &quot;WORLD&quot;, &quot;WORLD&quot;,...
+## $ period   &lt;chr&gt; &quot;1950-1955&quot;, &quot;1950-1955&quot;, &quot;1950-1955&quot;, &quot;1950-1955&quot;, &quot;...
+## $ age      &lt;chr&gt; &quot;0-4&quot;, &quot;5-9&quot;, &quot;10-14&quot;, &quot;15-19&quot;, &quot;20-24&quot;, &quot;25-29&quot;, &quot;30...
+## $ births   &lt;dbl&gt; 0.000, 0.000, 0.000, 54238.336, 131939.226, 128063.23...
+## $ deaths   &lt;dbl&gt; 101090.393, 7960.861, 5550.176, 5831.195, 6649.425, 6...
+## $ py.men   &lt;dbl&gt; 946910.59, 726903.29, 666794.72, 626191.13, 573518.17...
+## $ py.women &lt;dbl&gt; 904909.28, 694574.52, 635492.29, 600677.87, 555221.02...
+##    country    period   age     births     deaths     py.men   py.women
+## 1    WORLD 1950-1955   0-4      0.000 101090.393  946910.59  904909.28
+## 2    WORLD 1950-1955   5-9      0.000   7960.861  726903.29  694574.52
+## 3    WORLD 1950-1955 10-14      0.000   5550.176  666794.72  635492.29
+## 4    WORLD 1950-1955 15-19  54238.336   5831.195  626191.13  600677.87
+## 5    WORLD 1950-1955 20-24 131939.226   6649.425  573518.17  555221.02
+## 6    WORLD 1950-1955 25-29 128063.230   6425.219  508500.43  507276.96
+## 7    WORLD 1950-1955 30-34  89246.610   6208.629  433338.38  437131.76
+## 8    WORLD 1950-1955 35-39  56005.545   6877.151  400279.43  405527.72
+## 9    WORLD 1950-1955 40-44  24326.598   7995.126  373771.34  382443.66
+## 10   WORLD 1950-1955 45-49   5071.982   8885.744  326278.28  333888.55
+## 11   WORLD 1950-1955 50-54      0.000   9690.833  273318.07  285689.90
+## 12   WORLD 1950-1955 55-59      0.000  11109.256  219381.03  238443.39
+## 13   WORLD 1950-1955 60-69      0.000  27701.495  302214.30  353255.95
+## 14   WORLD 1950-1955 70-79      0.000  26702.179  133347.24  173890.98
+## 15   WORLD 1950-1955   80+      0.000  14341.537   30527.16   47261.68
+## 16   WORLD 2005-2010   0-4      0.000  40098.376 1619801.88 1512273.96
+## 17   WORLD 2005-2010   5-9      0.000   3757.199 1544406.24 1444845.83
+## 18   WORLD 2005-2010 10-14      0.000   3247.765 1552687.63 1457101.18
+## 19   WORLD 2005-2010 15-19  73194.689   4043.199 1593937.86 1509488.81
+## 20   WORLD 2005-2010 20-24 219277.185   5399.345 1503387.77 1442885.43
+## 21   WORLD 2005-2010 25-29 190318.699   5996.753 1337034.07 1294852.69
+## 22   WORLD 2005-2010 30-34 114931.466   6519.377 1259434.33 1225101.75
+## 23   WORLD 2005-2010 35-39  54975.769   7238.027 1210083.54 1177472.56
+## 24   WORLD 2005-2010 40-44  17604.730   8212.596 1105937.47 1082103.13
+## 25   WORLD 2005-2010 45-49   4278.729   9709.548  960561.39  948668.83
+## 26   WORLD 2005-2010 50-54      0.000  11955.139  840307.73  837232.56
+## 27   WORLD 2005-2010 55-59      0.000  14431.099  681101.65  696280.73
+## 28   WORLD 2005-2010 60-69      0.000  38270.238  908660.24  982545.45
+## 29   WORLD 2005-2010 70-79      0.000  54685.244  515933.20  636365.65
+## 30   WORLD 2005-2010   80+      0.000  58928.480  180743.64  307562.46
+## # A tibble: 2 x 2
+##   period    CDR_data
+##   &lt;chr&gt;        &lt;dbl&gt;
+## 1 1950-1955  0.0193 
+## 2 2005-2010  0.00817</code></pre>
+<p>The for loop runs three times:</p>
+<ol style="list-style-type: decimal">
+<li>Set <code>x = countries[[1]]</code>, and run <code>CDR(x)</code></li>
+<li>Set <code>x = countries[[2]]</code>, and run <code>CDR(x)</code></li>
+<li>Set <code>x = countries[[3]]</code>, and run <code>CDR(x)</code></li>
+</ol>
+<p>However, while we’ve run <code>CDR</code> on each country we haven’t saved the results to use anywhere. We’ll make three changes to our code:</p>
+<ol style="list-style-type: decimal">
+<li>Define an empty list <code>cdr_results</code> of the same length as <code>countries</code> to store the results</li>
+<li>Loop over the names of the countries instead of the values so we can name the elements of the results.</li>
+<li>Within the loop save the result to an element in <code>cdr_results</code></li>
+</ol>
+<p>First, create an empty vector the same length as countries.</p>
+<pre class="r"><code>cdr_results &lt;- vector(&quot;list&quot;, length = length(countries))</code></pre>
+<pre class="r"><code>cdr_results</code></pre>
+<pre><code>## [[1]]
+## NULL
+## 
+## [[2]]
+## NULL
+## 
+## [[3]]
+## NULL</code></pre>
+<p>Then, loop over each country, running <code>CDR</code> on that country’s data frame and saving the results to an element of <code>countries</code>:</p>
+<pre class="r"><code>for (i in names(countries)) {
+  cdr_results[[i]] &lt;- CDR(countries[[i]])
+}</code></pre>
+<p>Now, <code>cdr_results</code> contains the results of running <code>CDR</code> on each of those data frames:</p>
+<pre class="r"><code>cdr_results[[&quot;KEN&quot;]]</code></pre>
+<pre><code>## # A tibble: 2 x 2
+##   period    CDR_data
+##   &lt;chr&gt;        &lt;dbl&gt;
+## 1 1950-1955   0.0240
+## 2 2005-2010   0.0104</code></pre>
+<pre class="r"><code>cdr_results[[&quot;SWE&quot;]]</code></pre>
+<pre><code>## # A tibble: 2 x 2
+##   period    CDR_data
+##   &lt;chr&gt;        &lt;dbl&gt;
+## 1 1950-1955  0.00984
+## 2 2005-2010  0.00997</code></pre>
+<pre class="r"><code>cdr_results[[&quot;WLD&quot;]]</code></pre>
+<pre><code>## # A tibble: 2 x 2
+##   period    CDR_data
+##   &lt;chr&gt;        &lt;dbl&gt;
+## 1 1950-1955  0.0193 
+## 2 2005-2010  0.00817</code></pre>
+</div>
+</div>
+<div id="replacing-for-loops-with-map-functions" class="section level2">
+<h2>Replacing for loops with map functions</h2>
+<p>One annoyance and possible place to make bugs in for loops is that we need to define a vector to store the results. This requires that we create the vector with the correct length, and remember to update the same vector.</p>
+<p>The map functions in the <strong>purr</strong> package are functions that apply a function to each element of a vector.</p>
+<p>The function <code>map(.x, .f)</code> applies the function <code>.f</code> to each element of the vector <code>.x</code>. The result is</p>
+<pre><code>list(.f(.x[[1]]), .f(.x[[2]]), ..., .f(.x[[length(.x)]]))</code></pre>
+<p>Using the <code>map</code> function we can replace the previous for loop with a single line of code:</p>
+<pre class="r"><code>map(countries, CDR)</code></pre>
+<pre><code>## $KEN
+## # A tibble: 2 x 2
+##   period    CDR_data
+##   &lt;chr&gt;        &lt;dbl&gt;
+## 1 1950-1955   0.0240
+## 2 2005-2010   0.0104
+## 
+## $SWE
+## # A tibble: 2 x 2
+##   period    CDR_data
+##   &lt;chr&gt;        &lt;dbl&gt;
+## 1 1950-1955  0.00984
+## 2 2005-2010  0.00997
+## 
+## $WLD
+## # A tibble: 2 x 2
+##   period    CDR_data
+##   &lt;chr&gt;        &lt;dbl&gt;
+## 1 1950-1955  0.0193 
+## 2 2005-2010  0.00817</code></pre>
+<p>This applied the function <code>CDR</code> to each data frame in the <code>countries</code> list and returned another list with all the results. Unlike using a for loop we did not need to first create an empty vector.</p>
+</div>
+
+
+</main>
+
+    <footer class="footer bg-light text-muted">
+      <div class="container">
+        <p>Made with <a href="https://bookdown.org/yihui/blogdown/">Blogdown</a>,
+           <a href="https://gohugo.io/">Hugo</a>,
+            <a href="https://getbootstrap.com/">Bootstrap</a>, and
+            <a href="https://fontawesome.com/">Fontawesome</a>.
+            Source code on <a href="https://github.com/UW-POLS501/2018/"><i class="fab fa-github"></i></a>.</p>
+        <p>
+          This work is licensed under a <a rel="license" href="http://creativecommons.org/licenses/by/4.0/">Creative Commons Attribution 4.0 International License</a>
+        </p>
+      </div>
+    </footer>
+
+    
+
+
+
+<script src="//cdn.bootcss.com/highlight.js/9.11.0/highlight.min.js"></script>
+
+
+
+<script src="//cdn.bootcss.com/highlight.js/9.11.0/languages/r.min.js"></script>
+<script src="//cdn.bootcss.com/highlight.js/9.11.0/languages/yaml.min.js"></script>
+<script>hljs.configure({languages: []}); hljs.initHighlightingOnLoad();</script>
+
+
+
+    
+
+
+  </body>
+</html>

@@ -1,0 +1,103 @@
+<!DOCTYPE html>
+<html lang="en-US">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    <meta name="generator" content="Hugo 0.31.1" />
+
+      
+      <title>Git: Project Submission and Workflow - POLS 503: Advanced Quantitative Political Methodology</title>
+      <meta property="og:title" content="Git: Project Submission and Workflow - POLS 503: Advanced Quantitative Political Methodology">
+    
+
+    
+      
+    
+
+    
+
+    
+
+    
+
+    <link rel="stylesheet" href="/2018/bootstrap-4.0.0-beta.2-dist/css/bootstrap.min.css">
+
+    <script defer src="/2018/fontawesome/js/fontawesome-all.js"></script>
+
+
+    <link rel="stylesheet" href="/2018/css/pols501.css" media="all">
+
+  </head>
+  <body>
+    <nav class="navbar navbar-expand-md navbar-dark bg-dark fixed-top">
+
+  <a class="navbar-brand" href="/2018/">POLS 503 </a>
+  <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarsExampleDefault" aria-controls="navbarsExampleDefault" aria-expanded="false" aria-label="Toggle navigation">
+    <span class="navbar-toggler-icon"></span>
+  </button>
+
+  <div class="collapse navbar-collapse" id="navbarsItems">
+    <ul class="navbar-nav mr-auto">
+    
+      <li class="nav-item">
+        <a class="nav-link" href="/2018/assignments/">Assignments</a>
+      </li>
+    
+      <li class="nav-item">
+        <a class="nav-link" href="/2018/pages/">Pages</a>
+      </li>
+    
+      <li class="nav-item">
+        <a class="nav-link" href="/2018/projects/">Projects</a>
+      </li>
+    
+      <li class="nav-item">
+        <a class="nav-link" href="/2018/schedule/">Schedule</a>
+      </li>
+    
+    </ul>
+    
+  </div>
+</nav>
+
+    
+<main class="container">
+    <h1>Git: Project Submission and Workflow</h1>
+
+    <script src="/2018/rmarkdown-libs/htmlwidgets/htmlwidgets.js"></script>
+<script src="/2018/rmarkdown-libs/d3/d3.min.js"></script>
+<script src="/2018/rmarkdown-libs/dagre/dagre-d3.min.js"></script>
+<link href="/2018/rmarkdown-libs/mermaid/dist/mermaid.css" rel="stylesheet" />
+<script src="/2018/rmarkdown-libs/mermaid/dist/mermaid.slim.min.js"></script>
+<link href="/2018/rmarkdown-libs/DiagrammeR-styles/styles.css" rel="stylesheet" />
+<script src="/2018/rmarkdown-libs/chromatography/chromatography.js"></script>
+<script src="/2018/rmarkdown-libs/DiagrammeR-binding/DiagrammeR.js"></script>
+
+
+<p>For the project assignments, each student has a repository named <code>UW-POLS501/:username</code> where <code>:username</code> is the GitHub username of the student. This does not need to be forked. The student works directly on that repository, and submits assignments by opening an issue on <code>UW-POLS501/:username/issue</code>.</p>
+<div id="htmlwidget-1" style="width:672px;height:480px;" class="DiagrammeR html-widget"></div>
+<script type="application/json" data-for="htmlwidget-1">{"x":{"diagram":"sequenceDiagram\n  participant remote as UW-POLS501/student\n  participant local as local repository\n  remote->>local: Clone repository\n  Note over remote: Assignment 1\n  loop Until completed\n    local->>local: Work and commit\n    local->>remote: Push changes\n  end\n  remote->>remote: Open issue to submit\n  Note over remote: Assignment 2\n  loop Until completed\n    local->>local: Work and commit\n    local->>remote: Push changes\n  end\n  remote->>remote: Open issue to submit"},"evals":[],"jsHooks":[]}</script>
+
+
+</main>
+
+    <footer class="footer bg-light text-muted">
+      <div class="container">
+        <p>Made with <a href="https://bookdown.org/yihui/blogdown/">Blogdown</a>,
+           <a href="https://gohugo.io/">Hugo</a>,
+            <a href="https://getbootstrap.com/">Bootstrap</a>, and
+            <a href="https://fontawesome.com/">Fontawesome</a>.
+            Source code on <a href="https://github.com/UW-POLS501/2018/"><i class="fab fa-github"></i></a>.</p>
+        <p>
+          This work is licensed under a <a rel="license" href="http://creativecommons.org/licenses/by/4.0/">Creative Commons Attribution 4.0 International License</a>
+        </p>
+      </div>
+    </footer>
+
+    
+
+    
+
+
+  </body>
+</html>

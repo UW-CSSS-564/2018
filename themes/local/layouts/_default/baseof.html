@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html lang="{{ .Site.LanguageCode }}">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    {{ .Hugo.Generator }}
+
+      {{ if eq .URL "/" }}
+      <title>{{ .Site.Title }}</title>
+      <meta property="og:title" content="{{ .Site.Title }}">
+      <meta property="og:type" content="website">
+      {{ else }}
+      <title>{{ .Title }}{{ with .Params.subtitle }} - {{ . }} {{ end }} - {{ .Site.Title }}</title>
+      <meta property="og:title" content="{{ .Title }} - {{ .Site.Title }}">
+    {{ end }}
+
+    {{ if eq .URL "/" }}
+    <meta property="description" content="{{ .Site.Params.description }}">
+    {{ else }}
+      {{ if .Description }}
+      <meta property="description" content="{{ .Description }}">
+      {{ end }}
+    {{ end }}
+
+    {{ if .Keywords }}
+    <meta property="keywords" content ="{{ delimit .Keywords ", " }}">
+    {{ end }}
+
+    {{ if .RSSLink }}
+      <link href="{{ .RSSLink | relURL }}" rel="alternate" type="application/rss+xml" title="{{ .Site.Title }}" />
+    {{ end }}
+
+    {{ partial "highlightjs_css.html" . }}
+    {{ partial "bootstrap_css.html" . }}
+    {{ partial "fontawesome.html" . }}
+
+    <link rel="stylesheet" href="{{ "css/pols501.css" | relURL }}" media="all">
+
+  </head>
+  <body>
+    {{ partial "nav.html" . }}
+    {{ block "main" . }}
+    <main class="container">
+      <h1>{{ .Title }}</h1>
+
+      {{ .Content }}
+    </main>
+    {{ end }}
+    <footer class="footer bg-light text-muted">
+      <div class="container">
+        <p>Made with <a href="https://bookdown.org/yihui/blogdown/">Blogdown</a>,
+           <a href="https://gohugo.io/">Hugo</a>,
+            <a href="https://getbootstrap.com/">Bootstrap</a>, and
+            <a href="https://fontawesome.com/">Fontawesome</a>.
+            Source code on <a href="{{ .Site.Params.sourceURL }}"><i class="fab fa-github"></i></a>.</p>
+        <p>
+          This work is licensed under a <a rel="license" href="{{ .Site.Params.license.URL }}">{{ .Site.Params.license.name }}</a>
+        </p>
+      </div>
+    </footer>
+
+    {{ partial "highlightjs" . }}
+    {{ partial "mathjax" }}
+
+  </body>
+</html>

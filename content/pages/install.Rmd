@@ -1,0 +1,101 @@
+---
+title: "Installing R"
+---
+
+## Installing or Updating R
+
+### Install R
+
+The R website is ... special. Since you probably don't know or care what a mirror is, here are links to the
+
+- Go to the [R Project](https://cran.r-project.org/) website
+- Choose the `Download and install R` your operation system:
+    - Mac: Download `R-3.4.3.pkg`
+    - Windows: First click on `base` and then on `Download R 3.4.3 for Windows`
+
+### Upgrade R
+
+If you already have R installed, to check that you have the newest version of R, run
+```{r eval=FALSE}
+sessionInfo()
+```
+which will produce output like,
+```
+R version 3.4.3 (2016-03-10)
+Platform: x86_64-apple-darwin13.4.0 (64-bit)
+Running under: OS X 10.11.3 (El Capitan)
+
+locale:
+[1] en_US.UTF-8/en_US.UTF-8/en_US.UTF-8/C/en_US.UTF-8/en_US.UTF-8
+
+attached base packages:
+[1] stats     graphics  grDevices utils     datasets  methods   base     
+
+other attached packages:
+[1] R6_2.1.2
+
+loaded via a namespace (and not attached):
+[1] rsconnect_0.4.2 tools_3.4.3     knitr_1.12.3
+```
+At the start of this course, January 5, 2018, the newest version of R is 3.4.3.
+Check that your `R version` is that one.
+
+### Update packages
+
+Now, update all your packages
+```{r eval=FALSE}
+update.packages(ask = FALSE)
+```
+The option `ask = FALSE` answers "yes to all the questions" as to whether to answer
+
+
+## Installing or Upgrading R RStudio
+
+If you don't have RStudio installed, install it from [rstudio.com](https://www.rstudio.com/products/RStudio/#Desktop). You want to download the RStudio **Desktop Open Source Edition** (which is FREE).
+
+If you already have RStudio installed, go to `Help > Check for Updates` in the menu and install a new version if the pop-up window indicates that there is a new version available.
+
+## Installing Tools to Build R Packages from Scratch
+
+Mature R packages are distributed over CRAN and installable in R using `install.packages` without any other assistance.
+However, we may use some bleeding-edge R packages that require the packages to be built from source and installed using the [devtools](http://www.rstudio.com/products/rpackages/devtools/) package.
+```{r eval=FALSE}
+install.packages("devtools")
+```
+
+This requires some extra [programs](http://www.rstudio.com/products/rpackages/devtools/).
+
+- Windows: Install the newest version of [Rtools](http://cran.r-project.org/bin/windows/Rtools/). Use default settings.
+- Mac: Install Xcode from the Mac App Store.
+
+To check that this is setup correctly, run the following
+```{r eval=FALSE}
+library("devtools")
+has_devel()
+```
+If everything is correctly set up, it will return `TRUE`.
+If you do not have Rtools or Xcode installed you will get an error message similar to this:
+```
+> has_devel()
+"C:/PROGRA~1/R/R-32~1.4RE/bin/x64/R"  \
+  --no-site-file --no-environ --no-save  \
+  --no-restore CMD SHLIB foo.c
+
+Warning message:
+running command 'make -f "C:/PROGRA~1/R/R-32~1.4RE/etc/x64/Makeconf" -f "C:/PROGRA~1/R/R-32~1.4RE/share/make/winshlib.mk" SHLIB="foo.dll" WIN=64 TCLBIN=64 OBJECTS="foo.o"' had status 127
+Error: Command failed (1)
+```
+
+
+## Installing LaTeX
+
+LaTeX is needed to create PDFs from R Markdown files.
+Install the following, depending on your operating system:
+
+- Windows: [MikTex](http://miktex.org/download)
+
+    - When asked choose default paper size of "letter" instead of "A4"
+
+- MacOS: [MacTex](https://tug.org/mactex/)
+
+Note, these are very large files and can take a while to download.

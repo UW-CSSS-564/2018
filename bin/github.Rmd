@@ -1,0 +1,204 @@
+---
+title: "Miscellaneous Git Stuff"
+author: "Jeffrey Arnold"
+output: html_document
+editor_options: 
+  chunk_output_type: console
+---
+
+```{r setup, include=FALSE}
+knitr::opts_chunk$set(echo = TRUE)
+```
+
+Miscellaneous code used to do stuff with the GitHub API for this course.
+
+## Setup
+
+```{r}
+library("tidyverse")
+library("glue")
+library("gh")
+```
+
+GitHub organization of the course:
+```{r}
+ORG <- "UW-POLS501"
+```
+GitHub team for students in this quarter's course:
+```{r}
+STUDENT_TEAM <- "2018 students"
+
+```
+```{r}
+INSTRUCTOR_TEAM <- "2018 instructors"
+```
+Main repository for the course:
+```{r}
+REPOS <- "2018"
+```
+Instructors usernames. This could also be queried with the API.
+```{r}
+INSTRUCTORS <- c("jrnold", "calvinhgarner") 
+```
+
+
+## Get Team
+
+Get a team by name:
+```{r}
+get_team <- function(teamname) {
+  gh("GET /orgs/:org/teams", org = ORG) %>%
+    keep(~ .x$name == teamname) %>%
+    pluck(1)
+}
+```
+
+```{r}
+instructor_team <- get_team(INSTRUCTOR_TEAM)
+student_team <- get_team(STUDENT_TEAM)
+```
+
+
+## Issues
+
+Create an issue for each assignment 1-9
+
+```{r}
+create_assignment_issue <- function(i) {
+  gh("POST /repos/:owner/:repo/issues",
+     owner = ORG, repo = REPOS,
+     title = glue("Write assignment {i}"),
+     body = glue("Write assignment {i}.",
+                 "- [ ] Create submission template in repo ",
+                 "- [ ] Write asssignment in content/assignments/assignment-{i}.md", 
+                 .sep = "\n"))
+}
+walk(1:9, create_assignment_issue)
+```
+
+Create an issue for the solutions in assignments 1-9
+```{r}
+create_assignment_key_issue <- function(i) {
+  gh("POST /repos/:owner/:repo/issues",
+     owner = ORG, repo = REPOS,
+     title = glue("Write solutions to assignment {i}"),
+     body = glue("Solutions should go in the repository ",
+                 "`UW-POLS501/assignment-{i}-solutions`.",
+                 "Students should not have access to it until solutions are released."),
+                 .sep = "\n")
+}
+walk(1:9, create_assignment_key_issue)
+```
+
+# Create Student Repositories and Teams
+
+List of all students member info
+```{r}
+student_members <- gh("/teams/:id/members", id = student_team$id,
+                           role = "member")
+```
+
+Extract their login names
+```{r}
+# get list of usernames
+student_logins <- map_chr(student_members, "login")
+```
+
+Create a team for a student that includes only the student and instructors.
+This team will have read/write access to their repo.
+```{r}
+create_student_team <- function(username) {
+  team <- get_team(username)
+  if (is.null(team)) {
+    team <- 
+      gh("POST /orgs/:org/teams", org = ORG, maintainers = INSTRUCTORS, 
+         name = username, description = glue("Team for {username}'s project"),
+         privacy = "closed")    
+  } else {
+    cat(glue("Team {username} already exists"))
+  }
+  gh("PUT /teams/:id/memberships/:username", id = team$id, 
+      username = username, role = "member")
+
+}
+
+```
+```{r}
+map(student_logins, create_student_team)
+```
+
+For each student, create a repository :
+
+- instructor's team has admin privileges
+- student has push/pull privileges
+- other students have pull privileges
+- initialize repository it with a `README` and `.gitignore` file
+
+```{r}
+create_student_repo <- function(username) {
+ repo <- gh("POST /orgs/:org/repos", 
+            org = ORG,     
+            name = username,
+            desciption = glue("POLS/CSSS 501 (Winter 501) project of {username}"),
+            private = TRUE,
+            has_issues = TRUE,
+            has_wiki = FALSE,
+            auto_init = TRUE,
+            gitignore_template = "R")
+  gh("PUT /teams/:id/repos/:org/:repo", org = ORG,
+     id = instructor_team$id, repo = username,
+     permission = "admin")
+  gh("PUT /teams/:id/repos/:org/:repo", org = ORG,
+     id = get_team(username)$id,
+     repo = username, permission = "push")
+  gh("PUT /teams/:id/repos/:org/:repo", org = ORG,
+     id = student_team$id, repo = username,
+     permission = "pull")  
+}
+
+```
+
+```{r}
+# walk(student_logins, create_student_repo)
+walk("nfullman", create_student_repo)
+```
+
+
+
+## Notes
+
+Currently there is no nesting of the teams. In the future, it would make sense to nest
+them by course.
+
+## Scripting Assignment Submissions
+
+It is probably better to have students manually do this, but it could be scripted.
+
+```{r}
+# Submit an assignment via the API. Creates a release and an issue
+submit_assignment <- function(corrected = FALSE) {
+  owner <- "UW-POLS501"
+  repo <- "2018"
+  assignees <- list("calvinhgarner", "jrnold")
+  # Assumes master/head to get latest repo. Could also test by time.
+  latest <- gh("/repos/:owner/:repo/commits",
+               owner = owner, repo = repo)[[1]]
+
+  # create a tag
+  # this automatically creates a release
+  tagname <- "submission"
+  gh("POST /repos/:owner/:repo/git/refs",
+            owner = owner, repo = repo,
+            ref = glue("refs/tags/{tagname}"),
+            sha = latest[["sha"]])
+
+    # Create issue
+   gh("POST /repos/:owner/:repo/issues",
+      owner = owner, repo = repo,
+      title = if (corrected) "Review Corrections" else "Review Submission",
+      body = glue("Please review submission {latest$sha}."),
+      assignees = assignees)
+}
+
+```
+

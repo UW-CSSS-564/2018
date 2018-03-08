@@ -1,0 +1,169 @@
+<!DOCTYPE html>
+<html lang="en-US">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    <meta name="generator" content="Hugo 0.31.1" />
+
+      
+      <title>Git: Assignment Submission and Workflow - POLS 503: Advanced Quantitative Political Methodology</title>
+      <meta property="og:title" content="Git: Assignment Submission and Workflow - POLS 503: Advanced Quantitative Political Methodology">
+    
+
+    
+      
+    
+
+    
+
+    
+
+    
+
+    <link rel="stylesheet" href="/2018/bootstrap-4.0.0-beta.2-dist/css/bootstrap.min.css">
+
+    <script defer src="/2018/fontawesome/js/fontawesome-all.js"></script>
+
+
+    <link rel="stylesheet" href="/2018/css/pols501.css" media="all">
+
+  </head>
+  <body>
+    <nav class="navbar navbar-expand-md navbar-dark bg-dark fixed-top">
+
+  <a class="navbar-brand" href="/2018/">POLS 503 </a>
+  <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarsExampleDefault" aria-controls="navbarsExampleDefault" aria-expanded="false" aria-label="Toggle navigation">
+    <span class="navbar-toggler-icon"></span>
+  </button>
+
+  <div class="collapse navbar-collapse" id="navbarsItems">
+    <ul class="navbar-nav mr-auto">
+    
+      <li class="nav-item">
+        <a class="nav-link" href="/2018/assignments/">Assignments</a>
+      </li>
+    
+      <li class="nav-item">
+        <a class="nav-link" href="/2018/pages/">Pages</a>
+      </li>
+    
+      <li class="nav-item">
+        <a class="nav-link" href="/2018/projects/">Projects</a>
+      </li>
+    
+      <li class="nav-item">
+        <a class="nav-link" href="/2018/schedule/">Schedule</a>
+      </li>
+    
+    </ul>
+    
+  </div>
+</nav>
+
+    
+<main class="container">
+    <h1>Git: Assignment Submission and Workflow</h1>
+
+    <script src="/2018/rmarkdown-libs/htmlwidgets/htmlwidgets.js"></script>
+<script src="/2018/rmarkdown-libs/d3/d3.min.js"></script>
+<script src="/2018/rmarkdown-libs/dagre/dagre-d3.min.js"></script>
+<link href="/2018/rmarkdown-libs/mermaid/dist/mermaid.css" rel="stylesheet" />
+<script src="/2018/rmarkdown-libs/mermaid/dist/mermaid.slim.min.js"></script>
+<link href="/2018/rmarkdown-libs/DiagrammeR-styles/styles.css" rel="stylesheet" />
+<script src="/2018/rmarkdown-libs/chromatography/chromatography.js"></script>
+<script src="/2018/rmarkdown-libs/DiagrammeR-binding/DiagrammeR.js"></script>
+
+
+<div id="cloning-pull-requests-forking-pulling-and-pushing" class="section level2">
+<h2>Cloning, Pull Requests, Forking, Pulling, and Pushing</h2>
+<p>See the <em>Happy Git and GitHub for the useR</em> chapter <a href="http://happygitwithr.com/fork.html">Fork a repo</a>.</p>
+</div>
+<div id="instructions" class="section level2">
+<h2>Instructions</h2>
+<ol style="list-style-type: decimal">
+<li><p>Go to the course website, click <em>Assignments</em>.</p>
+<div class="figure">
+<img src="../img/image1.png" />
+
+</div></li>
+<li><p>Scroll down to the <em>Assignments</em> section, click on the link to the assignment under <em>Instructions and Submissions</em>.</p>
+<div class="figure">
+<img src="../img/image2.png" />
+
+</div></li>
+<li><p>Click on the <em>Fork</em> button to fork the repository to your GitHub account.</p>
+<div class="figure">
+<img src="../img/image3.png" />
+
+</div></li>
+<li><p>Click <em>Clone or download</em>. You will work on the copy of the repository that exists on your account.</p>
+<div class="figure">
+<img src="../img/image4.png" />
+
+</div></li>
+<li><p>Click <em>Copy to clipboard</em></p>
+<div class="figure">
+<img src="../img/image5.png" />
+
+</div></li>
+<li><p>Go to RStudio, click <em>File</em> and select <em>New Project</em>.</p>
+<div class="figure">
+<img src="../img/image6.png" />
+
+</div></li>
+<li><p>Select <em>Version Control</em>.</p>
+<div class="figure">
+<img src="../img/image7.png" />
+
+</div></li>
+<li><p>Choose <em>Git</em>.</p>
+<div class="figure">
+<img src="../img/image8.png" />
+
+</div></li>
+<li><p>Paste the URL that you copied into the field <em>Repository URL</em>, choose a name for the folder in which the project will be saved in the field <em>Project Directory Name</em>, and select the sub-directory</p>
+<div class="figure">
+<img src="../img/image9.png" />
+
+</div></li>
+</ol>
+</div>
+<div id="overview" class="section level2">
+<h2>Overview</h2>
+<p><img alt="Relationship between git and GitHub" src="../../img/github-diagram.svg"></p>
+<p>The above diagram provides an overview of the relationship between these repositories and the workflow.</p>
+<ol style="list-style-type: decimal">
+<li><strong>Forks</strong> the repository <code>UW-POLS501/assignment-1</code> to <code>username/assignment-1</code> to get a copy of the assignment in their GitHub account.</li>
+<li><strong>Clone</strong> the repository to their device.</li>
+<li>Work on the assignment and commit changes to the repository on their device.</li>
+<li><strong>Push</strong> changes to their repository, <code>UW-POLS501/assignment-1</code></li>
+<li>When ready to submit their assignment, open a <strong>Pull request</strong></li>
+</ol>
+<p>Alternatively, the workflow is represented as:</p>
+<div id="htmlwidget-1" style="width:672px;height:480px;" class="DiagrammeR html-widget"></div>
+<script type="application/json" data-for="htmlwidget-1">{"x":{"diagram":"sequenceDiagram\n  participant org as UW-POLS501/assignment-1\n  participant user as student/assignment-1\n  participant local as local repository\n  org->>user: Fork repository\n  org->>local: Clone repository\n  loop Until complete\n    local->>local: Work and commit\n    local->>user: Push changes\n  end\n  user->>org: Submit with a pull request\n  Note over org,local: Solutions released in UW-POLS501/assignment-1-solutions\n  loop Until all corrections made\n    local->>local: Work and commit\n    local->>user: Push changes\n  end\n  user->>org: Submit with a pull request"},"evals":[],"jsHooks":[]}</script>
+</div>
+
+
+</main>
+
+    <footer class="footer bg-light text-muted">
+      <div class="container">
+        <p>Made with <a href="https://bookdown.org/yihui/blogdown/">Blogdown</a>,
+           <a href="https://gohugo.io/">Hugo</a>,
+            <a href="https://getbootstrap.com/">Bootstrap</a>, and
+            <a href="https://fontawesome.com/">Fontawesome</a>.
+            Source code on <a href="https://github.com/UW-POLS501/2018/"><i class="fab fa-github"></i></a>.</p>
+        <p>
+          This work is licensed under a <a rel="license" href="http://creativecommons.org/licenses/by/4.0/">Creative Commons Attribution 4.0 International License</a>
+        </p>
+      </div>
+    </footer>
+
+    
+
+    
+
+
+  </body>
+</html>

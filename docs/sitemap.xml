@@ -1,0 +1,68 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes" ?>
+<urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9"
+  xmlns:xhtml="http://www.w3.org/1999/xhtml">
+  
+  <url>
+    <loc>/2018/assignments/</loc>
+  </url>
+  
+  <url>
+    <loc>/2018/pages/changelog/</loc>
+  </url>
+  
+  <url>
+    <loc>/2018/categories/</loc>
+    <priority>0</priority>
+  </url>
+  
+  <url>
+    <loc>/2018/schedule/</loc>
+  </url>
+  
+  <url>
+    <loc>/2018/pages/help/</loc>
+  </url>
+  
+  <url>
+    <loc>/2018/pages/git/</loc>
+  </url>
+  
+  <url>
+    <loc>/2018/pages/git-assignment-workflow/</loc>
+  </url>
+  
+  <url>
+    <loc>/2018/pages/git-project-workflow/</loc>
+  </url>
+  
+  <url>
+    <loc>/2018/pages/install/</loc>
+  </url>
+  
+  <url>
+    <loc>/2018/pages/r4ds-notes/</loc>
+  </url>
+  
+  <url>
+    <loc>/2018/pages/onboarding/</loc>
+  </url>
+  
+  <url>
+    <loc>/2018/</loc>
+  </url>
+  
+  <url>
+    <loc>/2018/pages/</loc>
+    <priority>0</priority>
+  </url>
+  
+  <url>
+    <loc>/2018/pages/references/</loc>
+  </url>
+  
+  <url>
+    <loc>/2018/tags/</loc>
+    <priority>0</priority>
+  </url>
+  
+</urlset>

@@ -1,0 +1,210 @@
+---
+title: "Descriptive Statistics"
+author: "Jeffrey Arnold"
+date: "1/2/2018"
+output: html_document
+---
+
+# Descriptive Statistics
+
+A **statistic** is a function of data.[^sample]
+That's it. Any function of data is a statistic. 
+Of course, that does not mean that all statistics are equally useful for understanding data, or equally easy to work with. 
+
+
+[^sample]: After introducing *sampling*, we will distinguish between **sample** and **populations**.
+  In **inference**, we will use statistics of the sample to infer parameters of a population.
+  However, it is useful to remember that a statistic is defined indepenently of its inferential purposes,
+  even if many of the statistics that are introduced in this section and a commonly used are 
+  used because of their inferrential properties.
+
+What is the purpose of the descriptive statistics? To understand data. 
+But what does it mean to *understand*? And how and what statistics aid in that?
+
+The fundamental problem in descriptive statistics is one of *dimension reduction*.
+A dataset almost certainly contains more numbers that can be held in short term memory, so how can it be reduced to a form that can be understood?
+There are two main approaches:
+
+1. *summary statistics* Reduce the data to a few numbers that represent the 
+2. *data visualization* Convert the data a form (visual stimuli) that allow humans to process larger amounts .[^senses]
+
+[^senses]: More generally, the idea is to convert data to a form that human senses can process rapidly. In practice, this is usually,
+  visual. [Data sonification or aurlization](https://en.wikipedia.org/wiki/Sonification) converts data to sounds.  If one was so inclined, one could
+  convert data to forms amenable to touch, taste, or smell. While these would make for interesting art projects, in most cases they seem less
+  powerful than visualization. However, if data analysis was conducted by dogs, you could imagine that data olfactorization would be the primary means
+  of conveying and understanding datasets.
+
+Summary statistics and data visualization are not mutually exclusive. In particular, many data visualization methods display 
+a some summary statistics of the data rather than the original data itself, with histograms and box plots being notable examples.
+
+    
+## Location
+
+How to think about statistics? 
+
+Claim - 
+
+$$
+mean(x) = \arg \min_m \sum_{i = 1}^n
+$$
+```{r}
+
+```
+
+
+We could show this via calculus.
+The minimum of 
+$$
+\sum_{i = 1}^n
+$$
+
+
+Consider the average salary dataset from *How to Lie with Statistic*:
+```{r}
+library("tidyverse")
+data("average_salary", package = "datums")
+ggplot(average_salary, aes(x = salary)) +
+  geom_dotplot(binwidth = 1)
+```
+
+```{r}
+summary(average_salary)
+```
+
+
+The mean of this is the number, $m$, that minimizes $\sum_i (x_i - m)^2$.
+Finding the minimum analytically with calculus allows us to both find the minimum of this function and prove it is unique.
+But to help understand the objective function we'll visualize it.
+For a given point $m$, calculate the total error. 
+Take the actual mean $m = 5.7$:
+```{r}
+m <- 5.7
+sum((average_salary$salary - m) ^ 2)
+```
+However, to show that it's.
+
+Since we'll reuse this code, let's write a function:
+```{r}
+squared_error <- function(m, x) {
+  sum((x - m) ^ 2)
+}
+squared_error(m, average_salary$salary)
+```
+
+
+```{r}
+grid <-
+  tibble(value = seq(min(average_salary$salary), max(average_salary$salary),
+                   by = 0.1),
+         loss = NA)
+
+for (i in seq_len(nrow(possible_means))) {
+  possible_means[["loss"]][[i]] <- squared_error(possible_means[["value"]][[i]],
+                                                average_salary$salary)
+}
+
+```
+
+The mean is the value with the minimum loss:
+```{r}
+min_loss <- filter(possible_means, loss == min(loss))
+min_loss
+```
+
+We can plot the loss for each possible value of the mean.
+```{r}
+ggplot() +
+  geom_line(data = possible_means, mapping = aes(x = value, y = loss)) +
+  geom_point(data = min_loss, aes(x = value, y = loss)) +
+  geom_text(data = min_loss, aes(x = value, y = loss + 1000, 
+                                 label = str_c("mean = ", value)), vjust = 0)
+```
+
+```{r}
+abs_error <- function(m, x) {
+  sum(abs(m - x))
+}
+```
+
+
+```{r}
+grid <-
+  tibble(value = seq(min(average_salary$salary), max(average_salary$salary),
+                   by = 0.1)) %>%
+  mutate(loss_mean = map_dbl(value, 
+                             ~ squared_error(.x, average_salary$salary)),
+         loss_median = map_dbl(value, 
+                             ~ abs_error(.x, average_salary$salary)))
+
+```
+
+The median is the value with the minimum loss:
+```{r}
+min_loss <- filter(grid, loss_median == min(loss_median))
+min_loss
+```
+
+We can plot the loss for each possible value of the mean.
+```{r}
+ggplot() +
+  geom_line(data = grid, mapping = aes(x = value, y = loss_median)) +
+  geom_line(data = grid, mapping = aes(x = value, y = sqrt(loss_mean)), colour = "blue") +
+  geom_point(data = min_loss, aes(x = value, y = loss_median)) +
+  geom_text(data = min_loss, aes(x = value, y = loss_median + 1000, 
+                                 label = str_c("mean = ", value)), vjust = 0)
+```
+
+
+- Multiply $x$ by a scalar, $a$. What is the mean of $a x$? 
+- Add a scalar $a$ to $x$. What is the mean of $a + x$?
+- Does $(mean(x))^ 2 = mean(x ^ 2)$ ? (This is called Jensen's Inequality)
+- Remove each observation, and then calculate the mean and median. Plot the 
+    distributions of each. What do you conclude about the sensitivity of the 
+    mean and median to the sample? 
+- Take some data, subtract the mean, calculate the sum of squares? 
+    How does it compare to the variance?
+
+## Spread
+
+- Variance
+- Standard Deviation
+- Interquartile Range (IQR)
+
+### Exercises
+
+- What are loss functions that produce the variance and IQR?
+- Consider some data $x$
+
+    - Multiply $x$ by a scalar, $a$. What is the variance of $a x$?  What is
+        the standard deviation of $a x$?
+    - Add a scalar $a$ to $x$. What is the variance of $a + x$?
+    - Take some data, subtract the mean, calculate the sum of squares? 
+        How does it compare to the variance?
+
+## Shape
+
+- Bar Plot
+- Histograms
+- Density Plots
+
+
+## Bivariate Summaries
+
+- Scatterplots
+- Hexplots
+- Contour plots  
+- 2D density plots
+- Covariance
+- Correlation
+- Nonparametric regression (e.g. loess)
+- Linear regression
+
+
+## Multivariate Summaries
+
+- Covariance / Correlation matrix
+- Multivariate regression
+- Clustering
+- PCA / Factor models
+- t-SNE
+

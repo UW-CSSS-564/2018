@@ -1,0 +1,90 @@
+baseurl: https://UW-CSSS-564.github.io/2018/
+ignoreFiles: [\.Rmd$, \.Rmarkdown$, _files$, _cache$]
+languageCode: en-US
+menu:
+  main:
+  - {name: Schedule, url: /schedule/}
+  - {name: Assignments, url: /assignments/}
+  - {name: Projects, url: /projects/}
+  - {name: Pages, url: /pages/}
+params:
+  inprogress: true
+
+  title: 'CS&SS/STAT 564: Bayesian Statistics for the Social Sciences'
+
+  NavbarBrand:
+    URL: "/"
+    name: "CSSS/STAT 564"
+  meetings:
+    - room:
+        building: Savery
+        number: '130'
+        url: 'https://www.washington.edu/maps/#!/sav'
+      startTime: '2018-03-27T14:30:00-08:00'
+      endTime: '2018-03-27T15:50:00-07:00'
+      lab: false
+    - room:
+        building: Savery
+        number: '130'
+        url: 'https://www.washington.edu/maps/#!/sav'
+      startTime: '2018-03-29T16:30:00-07:00'
+      endTime: '2018-03-29T17:50:00-07:00'
+      lab: false
+    - room:
+        building: Savery
+        number: '121'
+        url: "https://www.washington.edu/maps/#!/sav"
+      startTime: '2018-03-29T13:30:00-07:00'
+      endTime: '2018-03-29T14:20:00-07:00'
+      lab: true
+  course:
+    institution: University of Washington
+    mailing_lists: [csss564a_sp18@uw.edu, stat564a_sp18@uw.edu]
+    number: "CS&SS/STAT 564"
+    term: Spring
+    title: "Bayesian Statistics for the Social Sciences"
+    year: '2018'
+  description: >
+    The website for University of Washington: POLS 564
+    "Bayesian Statistics for the Social Sciences" (Spring 2018)
+
+  instructor:
+    email: jrnold@uw.edu
+    name: Jeffrey B. Arnold
+    officeHours:
+      room: Smith 221B
+      buildingURL: "https://www.washington.edu/maps/#!/smi"
+      time: ''
+    title: Assistant Professor, Political Science; Core Faculty, CSSS
+    url: https://jrnold.com
+
+  sourceUrl: "https://github.com/UW-CSSS-564/2018/"
+  ta:
+    email: cgilroy@uw.edu
+    name: Connor Gilroy
+    officeHours:
+      room: ""
+      time: ""
+      buildingURL: "https://www.washington.edu/maps/#!/gow"
+    title: Graduate Student, Political Science
+    url: https://soc.washington.edu/people/connor-gilroy
+
+  license:
+    URL: 'http://creativecommons.org/licenses/by/4.0/'
+    name: Creative Commons Attribution 4.0 International License
+
+  useBootstrap: true
+  highlightjsCDN: //cdn.bootcss.com
+  highlightjsLang: [r, yaml]
+  highlightjsTheme: github
+  highlightjsVersion: 9.11.0
+  MathJaxCDN: //cdn.bootcss.com
+  MathJaxVersion: 2.7.1
+
+permalinks:
+  page: '/:slug/'
+  post: '/:year/:month/:day/:slug/'
+publishDir: docs
+theme: local
+
+

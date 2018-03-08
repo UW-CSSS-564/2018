@@ -1,0 +1,38 @@
+{{ define "main" }}
+<main class="container">
+  <h1>Projects</h1>
+
+  <h2>Instructions</h2>
+
+  {{ .Content }}
+
+  <h2>Schedule</h2>
+
+  <table class="table">
+    <thead>
+      <tr>
+      <th></th>
+      <th>Due date</th>
+      </tr>
+    </thead>
+    <tbody>
+        {{ range .Data.Pages.ByWeight }}
+        <tr>
+          <td>
+            {{ if .Params.Draft }}
+              {{ .Title }}
+            {{ else }}
+              <a href="{{ .URL }}">{{ .Title }}</a>
+            {{ end }}
+          </td>
+          <td>
+            {{ if .Params.DateDue }}
+              {{ dateFormat "January 2" .Params.DateDue }}
+            {{ end }}
+          </td>
+        </tr>
+        {{ end }}
+    </tbody>
+  </table>
+</main>
+{{ end }}

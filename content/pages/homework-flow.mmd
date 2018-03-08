@@ -1,0 +1,17 @@
+sequenceDiagram
+  participant org as UW-POLS501/assignment-1
+  participant user as student/assignment-1
+  participant local as local repository
+  org->>user: Fork repository
+  org->>local: Clone repository
+  loop Until complete
+    local->>local: Work and commit
+    local->>user: Push changes
+  end
+  user->>org: Submit with a pull request
+  Note over org,local: Solutions released in UW-POLS501/assignment-1-solutions
+  loop Until all corrections made
+    local->>local: Work and commit
+    local->>user: Push changes
+  end
+  user->>org: Submit with a pull request

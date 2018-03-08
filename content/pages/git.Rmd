@@ -1,0 +1,19 @@
+---
+title: "Git and GitHub"
+---
+
+For quick introduction on  learn how to use Version control within RStudio, I suggest the "Version Control" chapter of the [Working with the RStudio IDE (Part 2)](https://www.datacamp.com/courses/working-with-the-rstudio-ide-part-2) DataCamp course.
+
+## Relationship between GitHub and Local Git Projects
+
+<img alt="Relationship between git and GitHub" src="../../img/github-diagram.svg">
+
+## References
+
+- Jenny Bryan, [Happy Git and GitHub for the useR](http://happygitwithr.com/)
+-   DataCamp course [Version Control with Git](http://swcarpentry.github.io/git-novice/). This course requires shell knowledge, but the following two modules are useful.
+    - [Automated Version Control](http://swcarpentry.github.io/git-novice/01-basics/)
+    - [Using Git from RStudio](http://swcarpentry.github.io/git-novice/14-supplemental-rstudio/)
+- [Simple guide to forks in GitHub and Git](http://www.dataschool.io/simple-guide-to-forks-in-github-and-git/)
+- [GitHub Help](https://help.github.com/)
+- [Git and GitHub videos for beginners](http://www.dataschool.io/git-and-github-videos-for-beginners/) from dataschool introduces git and GitHub via many videos.
