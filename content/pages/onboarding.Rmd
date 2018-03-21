@@ -4,9 +4,10 @@ title: Onboarding Instructions for CS&SS 564, Spring 2018
 
 Please complete the following before the first day of class (Tuesday, March 27, 2018).
 
-1.  Sign up for our Slack channel, <https://uwcsss564.slack.com>. You should have received an invite. If not email the [instructors](cgilroy@uw.edu) to receive one.
+1.  Sign up for our Slack worplace, <https://uwcsss564.slack.com>. We will use this for announcments, and asking and answering questions in this course. You should have received an invite. If not email the [instructors](cgilroy@uw.edu) to receive one.
 
-2.  Sign into the Slack channel <https://uwcsss564.slack.com>, and leave a message on the `#oonboarding` channel that introduces yourself, why you are taking this course, and what you hope to get out of it.
+2.  Sign into the course Slack workplace <https://uwcsss564.slack.com>, and leave a message on the [#onboarding](https://uwcsss564.slack.com/messages/C9TRYPV19/) channel.
+    In the message introduce yourself, explain why you are taking this course, and what you hope to get out of taking this course.
 
 2.  Tell use about yourself: Complete the pre-course survey. If you are registered for the course, you should have received an email. kIf not, you can find a link pinned on the `#onboarding` channel of Slack.
 
