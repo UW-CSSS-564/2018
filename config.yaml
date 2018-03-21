@@ -5,7 +5,6 @@ menu:
   main:
   - {name: Schedule, url: /schedule/}
   - {name: Assignments, url: /assignments/}
-  - {name: Projects, url: /projects/}
   - {name: Pages, url: /pages/}
 params:
   inprogress: true
@@ -54,7 +53,7 @@ params:
     officeHours:
       room: Smith 221B
       buildingURL: "https://www.washington.edu/maps/#!/smi"
-      time: ''
+      time: 'Th 12&ndash;1 pm, 4&ndash;5 pm'
     title: Assistant Professor, Political Science; Core Faculty, CSSS
     url: https://jrnold.com
 
@@ -63,8 +62,8 @@ params:
     email: cgilroy@uw.edu
     name: Connor Gilroy
     officeHours:
-      room: ""
-      time: ""
+      room: "Savery 216B"
+      time: "Tu 9:30&ndash;11:30 am"
       buildingURL: "https://www.washington.edu/maps/#!/gow"
     title: Graduate Student, Political Science
     url: https://soc.washington.edu/people/connor-gilroy
