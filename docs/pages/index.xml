@@ -1,9 +1,9 @@
 <?xml version="1.0" encoding="utf-8" standalone="yes" ?>
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
-    <title>Pages on POLS 503: Advanced Quantitative Political Methodology</title>
+    <title>Pages on CS&amp;SS/STAT 564: Bayesian Statistics for the Social Sciences</title>
     <link>/2018/pages/</link>
-    <description>Recent content in Pages on POLS 503: Advanced Quantitative Political Methodology</description>
+    <description>Recent content in Pages on CS&amp;SS/STAT 564: Bayesian Statistics for the Social Sciences</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>en-US</language>
     
@@ -37,31 +37,9 @@ Include the exact code that you ran The error message that you got  Without the 
       <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
       
       <guid>/2018/pages/git/</guid>
-      <description>For quick introduction on learn how to use Version control within RStudio, I suggest the “Version Control” chapter of the Working with the RStudio IDE (Part 2) DataCamp course.
-Relationship between GitHub and Local Git Projects  References  Jenny Bryan, Happy Git and GitHub for the useR DataCamp course Version Control with Git. This course requires shell knowledge, but the following two modules are useful.  Automated Version Control Using Git from RStudio  Simple guide to forks in GitHub and Git GitHub Help Git and GitHub videos for beginners from dataschool introduces git and GitHub via many videos.</description>
-    </item>
-    
-    <item>
-      <title>Git: Assignment Submission and Workflow</title>
-      <link>/2018/pages/git-assignment-workflow/</link>
-      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
-      
-      <guid>/2018/pages/git-assignment-workflow/</guid>
-      <description>Cloning, Pull Requests, Forking, Pulling, and Pushing See the Happy Git and GitHub for the useR chapter Fork a repo.
- Instructions Go to the course website, click Assignments.
- Scroll down to the Assignments section, click on the link to the assignment under Instructions and Submissions.
- Click on the Fork button to fork the repository to your GitHub account.
- Click Clone or download.</description>
-    </item>
-    
-    <item>
-      <title>Git: Project Submission and Workflow</title>
-      <link>/2018/pages/git-project-workflow/</link>
-      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
-      
-      <guid>/2018/pages/git-project-workflow/</guid>
-      <description>For the project assignments, each student has a repository named UW-POLS501/:username where :username is the GitHub username of the student. This does not need to be forked. The student works directly on that repository, and submits assignments by opening an issue on UW-POLS501/:username/issue.
- {&#34;x&#34;:{&#34;diagram&#34;:&#34;sequenceDiagram\n participant remote as UW-POLS501/student\n participant local as local repository\n remote-local: Clone repository\n Note over remote: Assignment 1\n loop Until completed\n local-local: Work and commit\n local-remote: Push changes\n end\n remote-remote: Open issue to submit\n Note over remote: Assignment 2\n loop Until completed\n local-local: Work and commit\n local-remote: Push changes\n end\n remote-remote: Open issue to submit&#34;</description>
+      <description>What is Git? Git is software for version control (keeping track of the changes and history of files).
+ What is GitHub? GitHub is a website that hosts git repositories. It also has tools to enable collaboration on software using git.
+ Getting Started with Git RStudio includes a GUI interface to git, which will cover almost all the cases you will encounter in this course. For quick introduction on learn how to use Version control within RStudio, I suggest the “Version Control” chapter of the Working with the RStudio IDE (Part 2) DataCamp course.</description>
     </item>
     
     <item>
@@ -75,23 +53,15 @@ Relationship between GitHub and Local Git Projects  References  Jenny Bryan, Hap
     </item>
     
     <item>
-      <title>Notes on R for Data Science</title>
-      <link>/2018/pages/r4ds-notes/</link>
-      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
-      
-      <guid>/2018/pages/r4ds-notes/</guid>
-      <description>Visualization Other resources:
- All the graph things Stat 545. Jenny Bryan.   Tibbles Why might you want to create non-syntactic variable names? Since variable names are often used as in plots (e.g. axis-titles) or headers in tables, where having spaces or other characters that are invalid R variable names is useful. Those functions will have ways to use text other than the column, but using the non-syntactic variable name can be convenient.</description>
-    </item>
-    
-    <item>
-      <title>Onboarding</title>
+      <title>Onboarding Instructions for CS&amp;SS 564, Spring 2018</title>
       <link>/2018/pages/onboarding/</link>
       <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
       
       <guid>/2018/pages/onboarding/</guid>
-      <description>Please complete the following before the first day of class.
- Sign up for our Slack channel. You should have received an invite. If not email the instructors. Sign up for a GitHub Fill out course survey using the course. The should have received an email with the link. A link is also posted on the Slack channel. Fill out the survey with office hour preferences. See the email sent to the class or the Slack channel for a link.</description>
+      <description>Please complete the following before the first day of class (Tuesday, March 27, 2018).
+Sign up for our Slack channel, https://uwcsss564.slack.com. You should have received an invite. If not email the instructors to receive one.
+ Sign into the Slack channel https://uwcsss564.slack.com, and leave a message on the #oonboarding channel that introduces yourself, why you are taking this course, and what you hope to get out of it.
+ Tell use about yourself: Complete the pre-course survey.</description>
     </item>
     
     <item>
@@ -101,8 +71,8 @@ Relationship between GitHub and Local Git Projects  References  Jenny Bryan, Hap
       
       <guid>/2018/pages/references/</guid>
       <description>Articles and books references in this course. Download these references as bibtex file here.
-Angrist, Joshua D, and Jörn-Steffen Pischke. 2010. “The Credibility Revolution in Empirical Economics: How Better Research Design Is Taking the Con Out of Econometrics.” Journal of Economic Perspectives 24 (2). American Economic Association: 3–30. doi:10.1257/jep.24.2.3.
- Bailey, Michael A., Anton Strezhnev, and Erik Voeten. 2016. “Estimating Dynamic State Preferences from United Nations Voting Data.” Journal of Conflict Resolution 61 (2).</description>
+Aguilar, Omar, and Mike West. 2000. “Bayesian Dynamic Factor Models and Portfolio Allocation.” Journal of Business &amp;amp; Economic Statistics 18 (3). Informa UK Limited: 338–57. doi:10.1080/07350015.2000.10524875.
+ Aitkin, M., and N. Longford. 1986. “Statistical Modelling Issues in School Effectiveness Studies.” Journal of the Royal Statistical Society. Series A (General) 149 (1). [Royal Statistical Society, Wiley]: 1–43. http://www.</description>
     </item>
     
   </channel>

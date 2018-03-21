@@ -1,13 +1,13 @@
 ---
 title: "References"
 output: html_document
-bibliography: ../../static/pols501.bib
+bibliography: ../../static/bayesian.bib
 nocite: |
   @*
 editor_options: 
   chunk_output_type: console
 ---
 
-Articles and books references in this course. Download these references as bibtex file [here](/pols501.bib).
+Articles and books references in this course. Download these references as bibtex file [here](/bayesian.bib).
 
 ----

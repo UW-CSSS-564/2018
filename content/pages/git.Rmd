@@ -2,7 +2,22 @@
 title: "Git and GitHub"
 ---
 
+## What is Git? 
+
+Git is software for version control (keeping track of the changes and history of files).
+
+## What is GitHub? 
+
+GitHub is a website that hosts git repositories. It also has tools to enable
+collaboration on software using git.
+
+## Getting Started with Git
+
+RStudio includes a GUI interface to git, which will cover almost all the cases you will encounter in this course.
 For quick introduction on  learn how to use Version control within RStudio, I suggest the "Version Control" chapter of the [Working with the RStudio IDE (Part 2)](https://www.datacamp.com/courses/working-with-the-rstudio-ide-part-2) DataCamp course.
+
+However, if you are comfortable with the command line I suggest you learn how
+to use git from the command line. See the references below for more information.
 
 ## Relationship between GitHub and Local Git Projects
 
@@ -14,6 +29,10 @@ For quick introduction on  learn how to use Version control within RStudio, I su
 -   DataCamp course [Version Control with Git](http://swcarpentry.github.io/git-novice/). This course requires shell knowledge, but the following two modules are useful.
     - [Automated Version Control](http://swcarpentry.github.io/git-novice/01-basics/)
     - [Using Git from RStudio](http://swcarpentry.github.io/git-novice/14-supplemental-rstudio/)
+    
+- [Try Git](https://try.github.io/levels/1/challenges/1)
+- [Software Carpentry: Version Control with Git](http://swcarpentry.github.io/git-novice/)
 - [Simple guide to forks in GitHub and Git](http://www.dataschool.io/simple-guide-to-forks-in-github-and-git/)
 - [GitHub Help](https://help.github.com/)
 - [Git and GitHub videos for beginners](http://www.dataschool.io/git-and-github-videos-for-beginners/) from dataschool introduces git and GitHub via many videos.
+- [Git Cheat Sheet](https://www.git-tower.com/blog/git-cheat-sheet/)

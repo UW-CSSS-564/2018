@@ -8,11 +8,10 @@ title: CS&SS/STAT 564 (Spring 2018)"
 Statistical methods based on the idea of probability as a measure of uncertainty. Topics covered include subjective notion of probability, Bayes' Theorem, prior and posterior distributions, and data analysis techniques for statistical models.
 
 
+<!--
 ### Course Goals
 
 By the end of the course students will be able to
-
-<!--
 
 TODO ...
 
@@ -23,21 +22,23 @@ TODO ...
 ### Prerequisites
 
 Students should have completed the introductory quantitative methods sequence appropriate to their programs. They should be familiar with statistical inference, regression methods, and maximum likelihood. 
-A course SOC 504, SOC 505, SOC 506 or the 
+Courses SOC 504, SOC 505, SOC 506 or the equivalent will suffice.
 
 It will be useful, but not required, for students to have a familiarity with the **R** programming language, or the programming background to learn it quickly. This is a computationally intensive and focused course, and some level of proficiency in programming prior to taking this course.
-To learn **R**, I suggest [R for Data Science](http://r4ds.had.co.nz/) or [DataCamp](https://www.datacamp.com/). In particular, this course will heavily use the  [tidyverse](https://www.tidyverse.org/) packages (ggplot2, dplyr, ...).
+To learn **R**, I suggest [R for Data Science](http://r4ds.had.co.nz/) or [DataCamp](https://www.datacamp.com/). 
+Note that I will often use the [tidyverse](https://www.tidyverse.org/) packages (ggplot2, dplyr, ...).
 
 
-- **Git and GitHub**: We will use git and GitHub for assignments and projects. This was introduced in POLS 501, so you are not familiar with these tools it may take some extra time to familiarize yourself with them
+
 
 ## Assignments
 
-There are three main types of assignments for students:
+There are two main types of assignments for students:
 
-1.  Weekly homework: Learning data analysis requires practice. There will be weekly homework assignments. See the [assignments](./assignments/) page.
-2.  Research project: Students will complete a research project. The expectation is that students will work on the project throughout the quarter and apply concepts and skills to that project soon after covering them in class. See the [project](./projects/) page for more details.
-3.  Reading Assignments: Students are expected to come to class prepared. I have chosen textbooks that are accessible, so we will not spend valuable class time summarizing assigned readings. Instead we will use class for more value-added learning activities. As part of that, before each class students will provide feedback and questions on the readings that will be used to guide class in-class discussion.
+1.  (Bi-Weekly) homeworks: Learning quantitative methods requires practice. As such,
+    there will be approximately bi-weekly homework assignments. See the [assignments](./assignments/) page for more information.
+2.  Research project: The final assignment will ask students to use Bayesian methods to 
+    estimate a model to answer a research question of their own.
 
 
 ## Materials
@@ -50,23 +51,28 @@ Students should have a laptop that they can bring to both class and lab as we wi
 This course will use [R](https://www.r-project.org/), which is a free and open-source programming language primarily used for statistics and data analysis. We will also use [RStudio](https://www.rstudio.com/), which is an easy-to-use interface to R.
 Instructions to install or upgrade R are [here](./pages/install/).
 
-This course will also use [git](https://git-scm.com/) (through RStudio)
-for version control, which is like "track changes" for a directory of files, in reproducible research.
-Homework assignments will be distributed and submitted via [GitHub](https://github.com/), which is a website that hosts git repositories.
-If that did not make sense, don't worry; we'll cover it in the course.
-
-Students will have access to [DataCamp classroom](https://www.datacamp.com/groups/education). You can use this for additional practice.
+We will use [git](https://git-scm.com/) and [GitHub](https://github.com/) for distributing, collecting, and commenting on assignments and projects. See the [onboarding](./pages/onboarding) instructions for setting up git and GitHub.
+See the [git and GitHub](./pages/git) for links to help introductions and refences on git and GitHub.
 
 
 ### Books
+
+The primary text for this course is:
+
+> Gelman, Andrew, John B. Carlin, Hal S. Stern, David B. Dunson, and Aki  Vehtari. 2013. 3rd edition. Bayesian Data Analysis. Taylor & Francis Ltd.
+
+It is important that you get the 3rd edition and not previous editions because it is has been updated in ways relevant to this course.
+
+This will be supplemented with other readings and notes as indicated on the schedule.
 
 
 ## Evaluation
 
 
+
 ## Communication
 
-For questions regarding the content of the course, ask and answer them on our [Slack](https://uwpolsmethods.slack.com/) channel.
+For questions regarding the content of the course, ask and answer them on our [Slack](https://uwcsss564.slack.com/) channel.
 If you have a question about the topic, it is likely that someone else had the same question.
 Posting questions and answers publicly allows us all to learn from each of these questions and answers.
 
@@ -78,7 +84,7 @@ Reserve emails to the instructors for personal matters.
 ### Changes
 
 A summary of changes to the syllabus and schedule are posted in the 
-[CHANGELOG/](/pages/CHANGELOG)
+[CHANGELOG](/pages/CHANGELOG)
 
 ### Resources
 

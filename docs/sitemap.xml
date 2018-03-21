@@ -11,6 +11,10 @@
   </url>
   
   <url>
+    <loc>/2018/</loc>
+  </url>
+  
+  <url>
     <loc>/2018/categories/</loc>
     <priority>0</priority>
   </url>
@@ -28,27 +32,11 @@
   </url>
   
   <url>
-    <loc>/2018/pages/git-assignment-workflow/</loc>
-  </url>
-  
-  <url>
-    <loc>/2018/pages/git-project-workflow/</loc>
-  </url>
-  
-  <url>
     <loc>/2018/pages/install/</loc>
   </url>
   
   <url>
-    <loc>/2018/pages/r4ds-notes/</loc>
-  </url>
-  
-  <url>
     <loc>/2018/pages/onboarding/</loc>
-  </url>
-  
-  <url>
-    <loc>/2018/</loc>
   </url>
   
   <url>

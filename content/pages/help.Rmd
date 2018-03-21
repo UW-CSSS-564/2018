@@ -148,25 +148,6 @@ Two references organized by task are [The Cookbook for R](http://www.cookbook-r.
 [R-bloggers](http://www.r-bloggers.com/) aggregates R-related blogging.
 
 
-On twitter, the R hashtag is `#rstats`. Some prominent R-related people and accounts on twitter are:
-
-- [@RLangTip](https://twitter.com/RLangTip). One R Tip a Day
-- [@R-bloggers](https://twitter.com/Rbloggers)
-- [@RevolutionR](https://twitter.com/RevolutionR)
-- [@isDotR](https://twitter.com/isDotR)
-- [@swirlstats](https://twitter.com/swirlstats)
-- [@rOpenGov](https://twitter.com/rOpenGov)
-- [@JennyBryan](https://twitter.com/JennyBryan)
-- [@rOpenSci](https://twitter.com/rOpenSci)
-- [@rstudio](https://twitter.com/rstudio)
-- [@inside_R](https://twitter.com/inside_R)
-- [@cboettig](https://twitter.com/cboettig)
-- [@ramnath_vaidya](https://twitter.com/ramnath_vaidya)
-- [@eddelbuettel](https://twitter.com/eddelbuettel)
-- [@benmarwick](https://twitter.com/benmarwick)
-- [@thosjleeper](https://twitter.com/thosjleeper)
-- [@STAT545](https://twitter.com/STAT545)
-
 # Task Views
 
 Do you want to know what packages exist for a given topic? [CRAN Task Views](https://cran.r-project.org/web/views/) provide subject matter groupings of R packages. Some potentially useful task-views to social scientists are:
