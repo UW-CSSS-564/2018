@@ -6,6 +6,7 @@ See the [GitHub repository](https://github.com/UW-POLS503/2018/commits/master) t
 
 ## 2018-03-27
 
+-   fix times and locations of classes
 -   add final project page
 -   add dates for final project to schedule.
 -   add learning objectives to the syllabus.

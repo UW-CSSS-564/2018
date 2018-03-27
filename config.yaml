@@ -24,18 +24,19 @@ params:
       lab: false
     - room:
         building: Savery
-        number: '130'
-        url: 'https://www.washington.edu/maps/#!/sav'
-      startTime: '2018-03-29T16:30:00-07:00'
-      endTime: '2018-03-29T17:50:00-07:00'
-      lab: false
-    - room:
-        building: Savery
-        number: '121'
+        number: '139'
         url: "https://www.washington.edu/maps/#!/sav"
       startTime: '2018-03-29T13:30:00-07:00'
       endTime: '2018-03-29T14:20:00-07:00'
       lab: true
+    - room:
+        building: Savery
+        number: '130'
+        url: 'https://www.washington.edu/maps/#!/sav'
+      startTime: '2018-03-29T14:30:00-07:00'
+      endTime: '2018-03-29T15:50:00-07:00'
+      lab: false
+
   course:
     institution: University of Washington
     mailing_lists: [csss564a_sp18@uw.edu, stat564a_sp18@uw.edu]
