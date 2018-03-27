@@ -8,7 +8,7 @@ Students will be informed of changes to the schedule.
 Subject to time constraints, I expect to cover the following topics.
 
 - Bayes Theorem
-- Conjugage posterior distributions
+- Conjugate posterior distributions
 - Bayesian Inference
 - Bayesian computational methods
 - Introduction to Stan
@@ -23,7 +23,7 @@ Subject to time constraints, I expect to cover the following topics.
 
 See the [Assignments](./assignments) page.
 
-## Final Probject
+## Final Project
 
 1. Proposal. Tues, May 8
 2. Rough draft. Fri, June 1.
