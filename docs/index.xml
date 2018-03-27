@@ -17,7 +17,18 @@
       
       <guid>/2018/pages/changelog/</guid>
       <description> See the GitHub repository the history of changes.
-2018-03-08  Initial draft of syllabus page  2018-03-31  Cleaned up syllabus Added office hours  </description>
+2018-03-27  add final project page add dates for final project to schedule. add learning objectives to the syllabus. add topics to the schedule. add readings for Week 1. update assignment instructions. update onboarding instructions.
+ add instructions to update all R packages. add instructions to install LaTeX.  update git resources page.
+  2018-03-21  Cleaned up syllabus Added office hours  2018-03-08  Initial draft of syllabus page  </description>
+    </item>
+    
+    <item>
+      <title>Final Project</title>
+      <link>/2018/pages/final_project/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      
+      <guid>/2018/pages/final_project/</guid>
+      <description>The final project will a short analysis in R markdown that implements a Bayesian model using Stan to answer a research question of the student’s choosing.</description>
     </item>
     
     <item>
@@ -40,16 +51,6 @@ Include the exact code that you ran The error message that you got  Without the 
       <description>What is Git? Git is software for version control (keeping track of the changes and history of files).
  What is GitHub? GitHub is a website that hosts git repositories. It also has tools to enable collaboration on software using git.
  Getting Started with Git RStudio includes a GUI interface to git, which will cover almost all the cases you will encounter in this course. For quick introduction on learn how to use Version control within RStudio, I suggest the “Version Control” chapter of the Working with the RStudio IDE (Part 2) DataCamp course.</description>
-    </item>
-    
-    <item>
-      <title>Installing R</title>
-      <link>/2018/pages/install/</link>
-      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
-      
-      <guid>/2018/pages/install/</guid>
-      <description>Installing or Updating R Install R The R website is … special. Since you probably don’t know or care what a mirror is, here are links to the
- Go to the R Project website Choose the Download and install R your operation system:  Mac: Download R-3.4.3.pkg Windows: First click on base and then on Download R 3.4.3 for Windows    Upgrade R If you already have R installed, to check that you have the newest version of R, run</description>
     </item>
     
     <item>

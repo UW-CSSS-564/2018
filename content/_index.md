@@ -7,17 +7,15 @@ title: CS&SS/STAT 564 (Spring 2018)"
 
 Statistical methods based on the idea of probability as a measure of uncertainty. Topics covered include subjective notion of probability, Bayes' Theorem, prior and posterior distributions, and data analysis techniques for statistical models.
 
+In this course students will learn to
 
-<!--
-### Course Goals
-
-By the end of the course students will be able to
-
-TODO ...
-
--->
-
-
+- compare and contrast frequentist and Bayesian inferential approaches,
+- describe various methods to derive or approximate posterior distribution,
+- write and estimate Bayesian models with the Stan and R programming, languages.
+- implement and estimate univariate, regression, hierarchical, and measurement models using Stan and the R programming language,
+- evaluate and compare Bayesian models,
+- diagnose problems in Bayesian sampling methods, and
+- apply Bayesian methods to their own research problem.
 
 ### Prerequisites
 
@@ -26,9 +24,7 @@ Courses SOC 504, SOC 505, SOC 506 or the equivalent will suffice.
 
 It will be useful, but not required, for students to have a familiarity with the **R** programming language, or the programming background to learn it quickly. This is a computationally intensive and focused course, and some level of proficiency in programming prior to taking this course.
 To learn **R**, I suggest [R for Data Science](http://r4ds.had.co.nz/) or [DataCamp](https://www.datacamp.com/). 
-Note that I will often use the [tidyverse](https://www.tidyverse.org/) packages (ggplot2, dplyr, ...).
-
-
+Note that I will often use the [tidyverse](https://www.tidyverse.org/) packages (including **ggplot2** and **dplyr**).
 
 
 ## Assignments
@@ -37,8 +33,7 @@ There are two main types of assignments for students:
 
 1.  (Bi-Weekly) homeworks: Learning quantitative methods requires practice. As such,
     there will be approximately bi-weekly homework assignments. See the [assignments](./assignments/) page for more information.
-2.  Research project: The final assignment will ask students to use Bayesian methods to 
-    estimate a model to answer a research question of their own.
+2.  Research project: The final assignment will ask students to use Bayesian methods to estimate a model to answer a research question of their own.
 
 
 ## Materials
@@ -68,6 +63,16 @@ This will be supplemented with other readings and notes as indicated on the sche
 
 ## Evaluation
 
+The evalution of Students will be based on the following.
+
+1.  Assignments
+
+    - initial submission
+    - peer review
+    - correction
+
+2.  Final Project
+3.  Peer Review. Students should contribute to the intellectual quality of the course by asking and answering questions on our Slack channel.
 
 
 ## Communication

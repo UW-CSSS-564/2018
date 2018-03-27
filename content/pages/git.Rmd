@@ -25,6 +25,11 @@ to use git from the command line. See the references below for more information.
 
 ## References
 
+There are **many** references/introductions and tutorials on git and GitHub available. 
+However, be aware that many of these are written for programmers/software engineers who may have different use-cases for git than you will have working on research in a small team or solo.
+
+Here are a few that I've found useful.
+
 - Jenny Bryan, [Happy Git and GitHub for the useR](http://happygitwithr.com/)
 -   DataCamp course [Version Control with Git](http://swcarpentry.github.io/git-novice/). This course requires shell knowledge, but the following two modules are useful.
     - [Automated Version Control](http://swcarpentry.github.io/git-novice/01-basics/)

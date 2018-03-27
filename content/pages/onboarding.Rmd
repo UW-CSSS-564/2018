@@ -1,5 +1,5 @@
 ---
-title: Onboarding Instructions for CS&SS 564, Spring 2018
+title: "Onboarding Instructions for CS&SS 564, Spring 2018"
 ---
 
 Please complete the following before the first day of class (Tuesday, March 27, 2018).
@@ -32,6 +32,12 @@ Please complete the following before the first day of class (Tuesday, March 27, 
         
     2.  If you do not have R or the latest version of it installed, then download
         it from [CRAN](https://cloud.r-project.org/).
+        
+    3.  Update all installed R packages,
+    
+        ```rconsole
+        $ update.packages(ask = FALSE)
+        ```
 
 5.  Download that install RStudio Desktop (Open Source Edition). RStudio provides a
     friendly interface to R (an IDE). (If you are proficient with R and have
@@ -42,3 +48,13 @@ Please complete the following before the first day of class (Tuesday, March 27, 
     2.  If you already have RStudio installed, check that you have the latest version
         by selecting `Help > Check for Updates` in the menu. Download and install
         the newest version if not.
+        
+6.  Install LaTeX. We will not use LaTeX directly. But we will use it to create PDFs from R Markdown files. If you do not have LaTeX installed on your machine, download and install a LaTeX distribution. There are many different distributions, but these are the ones common to each distribution.
+
+    -   Windows: [MikTex](http://miktex.org/download)
+    -   MacOS: [MacTex](https://tug.org/mactex/)
+    -   Linux: `tex-live` is the most common LaTeX distribution. Install it
+        using your distribution's package manager.
+
+    Note, these are very large files and can take a while to download.
+
