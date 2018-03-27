@@ -7,7 +7,7 @@ menu:
   - {name: Assignments, url: /assignments/}
   - {name: Pages, url: /pages/}
 params:
-  inprogress: true
+  inprogress: false
 
   title: 'CS&SS/STAT 564: Bayesian Statistics for the Social Sciences'
 
