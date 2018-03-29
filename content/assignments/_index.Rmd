@@ -12,24 +12,23 @@ Each assignment will have three steps
 2. Peer review (1 week after initial submission)
 3. Corrections (1 week after peer review)
 
-There will approximately 4--6 assignments. 
+There will be approximately 4--6 assignments. 
 
 
 # Initial Submission
 
-Submissions of all assignments should include both an R Markdown and a compiled PDF files.
+Submissions of all assignments should include both an R Markdown file and a compiled PDF file. Each assignment should be forked from the assignment repository, and submitted with a pull request. More detailed instructions are [here](https://github.com/UW-CSSS-564/assignment-2018-0). 
 
 
-The initial submission will be graded on the following categorical scale.
-These will be graded on the following 4-category scale.
+The initial submission will be graded on the following 4-category scale:
 
 --- ------------------------------------------------------
 4   exceptional, above and beyond what was expected
-3   effort made to complete all questions; mostly correct.
+3   effort made to complete all questions; mostly correct
 2   some effort made for most or all questions
 1   submitted, but largely incomplete
 0   did not submit 
---- -------------------------------------------------------
+--- ------------------------------------------------------
 
 # Peer Review
 
@@ -83,11 +82,11 @@ Features of "needs more":
 # Corrections
 
 After receiving the key students will correct any issues with their
-assignments. Corrections 
+assignments. Corrections will be evaluated as follows: 
 
 --- ----------------------------------
 1   Acceptable
-0   Uncacceptable
+0   Unacceptable
 --- ----------------------------------
 
 
