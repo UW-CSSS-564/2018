@@ -1,13 +1,47 @@
----
-title: "References"
-output: html_document
-bibliography: ../../static/bayesian.bib
-nocite: |
-  @*
-editor_options: 
-  chunk_output_type: console
----
+Introductory Texts
 
-Articles and books references in this course. Download these references as bibtex file [here](/bayesian.bib).
+-   Kruschke (2015) *Doing Bayesian data analysis* [@Kruschke2015a] Another accessible introduction aimed at psych. [Website](https://sites.google.com/site/doingbayesiandataanalysis/) with additional material.
+-   McElreath (2016) *Statistical rethinking* [@McElreath2016a] An accessible introduction to Bayesian stats; effectively an intro-stats/linear models course taught from a Bayesian perspective.
+[Website](http://xcelab.net/rm/statistical-rethinking/) with lectures and slides.
 
-----
+-   Lee (2012) *Bayesian Statistics : An Introduction* [@Lee2012]
+-   Marin and Robert (2015) *Bayesian Essentials with R* [@MarinRobert2015]
+
+    - Marin and Robert (2015) *Bayesian Essentials with R: The complete solution manual* [URL](https://arxiv.org/pdf/1503.04662.pdf)
+
+-   Robert and Casella. 2010. *Introducing Monte Carlo Methods with R* [@RobertCasella2010]
+-   Robert and Casella. 2004. *Monte Carlo statistical methods* [RobertCasella2004a]
+-   Albert (2009) *Bayesian Computation with R* [@Albert20019]
+
+-   Jackman (2009) *Bayesian analysis for the social sciences* [Jackman2009a] Covers commonly used models in the social sciences.
+
+-   Hoff (2009) *A first course in bayesian statistical methods* [@Hoff2009a]
+-   Gelman, Carlin, Stern, Dunson, and Vehtari (2013) *Bayesian data analysis* (3rd Edition) @BDA3
+
+-   Gelman, and Hill (2007) *Data analysis using regression and multilevel/hierarchical models* [@GelmanHill2007a] An accessible introduction to to linear models and multilevel models. 
+
+-   Efron and Hastie (2016) *Computer Age Statistical Inference: Algorithms, Evidence, and Data Science* This is a unique work that blends an overview of statistical methods with a history of statistics. [@EfronHastie2016a]
+
+-   Robert (2007) *The Bayesian Choice* A statistics grad level book on Bayesian statistics.
+-   Berger (1993) *Statistical Decision Theory and Bayesian Analysis* [@Berger1993a] The classic book on Bayesian inference and decision theory. The underlying statistical theory is still relevant even if its date makes the computational aspects less so.
+-   Murphy (2012) *Machine Learning: A Probabilistic Perspective* [@Murphy2012a] A machine learning book with a heavy Bayesian influence.
+-   MacKay (2003) *Information Theory, Inference, and Learning Algorithms* [URL](https://www.ece.uvic.ca/~agullive/Mackay.pdf). [@MacKay2003a] On information theory, but combines it with Bayesian statistics, and is ultimately about learning and evidence. Lectures from the course are available [here](http://videolectures.net/course_information_theory_pattern_recognition/).
+
+
+## Short Introductions
+
+- Clark (2018) *[Bayesian Basics](https://m-clark.github.io/docs/IntroBayes.html)*  A short intro to Bayesian statistics using Stan; up through 
+
+
+
+## Bayes Factors
+
+- [Lindley's Paradox](https://en.wikipedia.org/wiki/Lindley%27s_paradox)
+- [Bayes' Factors](https://en.wikipedia.org/wiki/Bayes_factor)
+- Robert (2016) [The expected demise of the
+Bayes factor](https://arxiv.org/pdf/1506.08292.pdf) [@Robert2016].
+- Kass and Raferty (1995) "Bayes factors" [@KassRaftery1995a]
+
+## Compare Frequentism and Bayesianism
+
+- VanderPlas (2014) Frequentism and Bayesianism: A Python-driven Primer. [posts](http://jakevdp.github.io/blog/2014/06/14/frequentism-and-bayesianism-4-bayesian-in-python/)
