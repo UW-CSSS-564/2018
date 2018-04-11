@@ -40,20 +40,20 @@ See the [Assignments](./assignments) page.
 - Review R. See [R for Data Science](http://r4ds.had.co.nz/).
 - Frank Harrell, "[My Journey From Frequentist to Bayesian Statistics](http://www.fharrell.com/post/journey/)".
 
+#### In Class
+
+- [March 29th Notes](https://uw-csss-564.github.io/2018-03-29/)
+
 ### Week 2
+
+- [April 3rd Notes](https://uw-csss-564.github.io/2018-04-03/)
+- [April 5th Notes](https://uw-csss-564.github.io/2018-04-05/)
 
 ### Week 3
 
-### Week 4
+Conjugate priors and Bayesian computation
 
-### Week 5
-
-### Week 6
-
-### Week 7
-
-### Week 8
-
-### Week 9
-
-### Week 10
+-   *BDA3*
+  
+    - Chapter 2: "Single Parameter Models"
+    - Chapter 10: "Introduction to Bayesian Computation"
