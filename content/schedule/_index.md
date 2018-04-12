@@ -57,3 +57,13 @@ Conjugate priors and Bayesian computation
   
     - Chapter 2: "Single Parameter Models"
     - Chapter 10: "Introduction to Bayesian Computation"
+    
+On Markov chain Monte Carlo: 
+
+- Richard McElreath, "[Markov Chains: Why Walk When You Can Flow?](http://elevanth.org/blog/2017/11/28/build-a-better-markov-chain/)"
+- Chi Feng, [Interactive MCMC Demo](https://chi-feng.github.io/mcmc-demo/app.html#NaiveNUTS,banana)
+
+On Stan: 
+
+- Getting started with [RStan](http://mc-stan.org/users/interfaces/rstan.html)
+- Michael Clark, [Bayesian Basics](https://m-clark.github.io/bayesian-basics/)
