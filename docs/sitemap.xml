@@ -3,6 +3,10 @@
   xmlns:xhtml="http://www.w3.org/1999/xhtml">
   
   <url>
+    <loc>/2018/notes/links/</loc>
+  </url>
+  
+  <url>
     <loc>/2018/assignments/</loc>
   </url>
   
@@ -36,16 +40,17 @@
   </url>
   
   <url>
+    <loc>/2018/notes/</loc>
+    <priority>0</priority>
+  </url>
+  
+  <url>
     <loc>/2018/pages/onboarding/</loc>
   </url>
   
   <url>
     <loc>/2018/pages/</loc>
     <priority>0</priority>
-  </url>
-  
-  <url>
-    <loc>/2018/pages/references/</loc>
   </url>
   
   <url>
