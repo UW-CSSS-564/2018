@@ -1,6 +1,0 @@
----
-title: "Final Project"
----
-
-The final project will a short analysis in R markdown that implements a Bayesian model using Stan to answer a research question of the student's choosing.
-

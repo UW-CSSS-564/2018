@@ -2,20 +2,33 @@
 title: CS&SS/STAT 564 (Spring 2018)"
 ---
 
-
 ## Overview
 
 Statistical methods based on the idea of probability as a measure of uncertainty. Topics covered include subjective notion of probability, Bayes' Theorem, prior and posterior distributions, and data analysis techniques for statistical models.
 
 In this course students will learn to
 
-- compare and contrast frequentist and Bayesian inferential approaches,
-- describe various methods to derive or approximate posterior distribution,
-- write and estimate Bayesian models with the Stan and R programming, languages.
-- implement and estimate univariate, regression, hierarchical, and measurement models using Stan and the R programming language,
-- evaluate and compare Bayesian models,
-- diagnose problems in Bayesian sampling methods, and
-- apply Bayesian methods to their own research problem.
+-   compare and contrast frequentist and Bayesian inferential approaches,
+-   describe various methods to derive or approximate posterior distribution,
+-   write and estimate Bayesian models with the Stan and R programming, languages.
+-   implement and estimate univariate, regression, hierarchical, and measurement models using Stan and the R programming language,
+-   evaluate and compare Bayesian models,
+-   diagnose problems in Bayesian sampling methods, and
+-   apply Bayesian methods to their own research problem.
+
+Subject to time constraints, I expect to cover the following topics.
+
+-   Bayes Theorem
+-   Conjugate posterior distributions
+-   Bayesian Inference
+-   Bayesian computational methods
+-   Introduction to Stan
+-   Regression Models
+-   Diagnosing sampling issues
+-   Comparing models
+-   Shrinkage and sparsity in Bayesian Models
+-   Hierarchical Models
+-   Measurement models
 
 ### Prerequisites
 
@@ -33,7 +46,8 @@ There are two main types of assignments for students:
 
 1.  (Bi-Weekly) homeworks: Learning quantitative methods requires practice. As such,
     there will be approximately bi-weekly homework assignments. See the [assignments](./assignments/) page for more information.
-2.  Research project: The final assignment will ask students to use Bayesian methods to estimate a model to answer a research question of their own.
+
+1.  Research project: The final assignment will ask students to use Bayesian methods to estimate a model to answer a research question of their own.
 
 
 ## Materials
@@ -49,7 +63,6 @@ Instructions to install or upgrade R are [here](./pages/install/).
 We will use [git](https://git-scm.com/) and [GitHub](https://github.com/) for distributing, collecting, and commenting on assignments and projects. See the [onboarding](./pages/onboarding) instructions for setting up git and GitHub.
 See the [git and GitHub](./pages/git) for links to help introductions and refences on git and GitHub.
 
-
 ### Books
 
 The primary text for this course is:
@@ -60,20 +73,19 @@ It is important that you get the 3rd edition and not previous editions because i
 
 This will be supplemented with other readings and notes as indicated on the schedule.
 
-
 ## Evaluation
 
 The evalution of Students will be based on the following.
 
 1.  Assignments
 
-    - initial submission
-    - peer review
-    - correction
+    -   initial submission
+    -   peer review
+    -   correction
 
-2.  Final Project
-3.  Peer Review. Students should contribute to the intellectual quality of the course by asking and answering questions on our Slack channel.
+1.  Final Project
 
+1.  Peer Review. Students should contribute to the intellectual quality of the course by asking and answering questions on our Slack channel.
 
 ## Communication
 
@@ -82,7 +94,6 @@ If you have a question about the topic, it is likely that someone else had the s
 Posting questions and answers publicly allows us all to learn from each of these questions and answers.
 
 Reserve emails to the instructors for personal matters.
-
 
 ## Errata
 
@@ -99,11 +110,9 @@ Beyond what the teaching team can provide, there are several resources on campus
 -   [CSSS](https://csss.washington.edu) [Statistical Consulting](https://csss.washington.edu/consulting) provides general statistical consulting. Go there for questions about statistical methods.
 -   [eScience Data Science Office Hours](http://escience.washington.edu/office-hours/)
 
-
 ### License
 
 Science should be open, and this course builds up other open licensed material, so unless otherwise noted, all materials for this class are licensed under a <a rel="license" href="https://creativecommons.org/licenses/by/4.0/">Creative Commons Attribution 4.0 International License</a>.
-
 
 ### Bugs
 

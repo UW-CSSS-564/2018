@@ -5,47 +5,61 @@
 
   {{ .Content }}
 
-  <hr>
-
-  {{ range .Params.weeks }}
-    <h3>Week {{ .week }}</h3>
-
-    {{ range .classes }}
-      <h5>{{ dateFormat "Monday, Jan 2, 2006" .date }} <small>{{ if .lab }}Lab{{ end }}</small></h5>
-      <p>{{ if .description }} {{- .description | markdownify -}} {{ end }}</p>
-      {{ if .readings }}
-        <p>
-        <strong>Readings before:</strong>
-          <ul>
-            {{ range .readings }}
-              <li>{{- . | markdownify -}}</li>
-            {{- end -}}
-          </ul>
-        </p>
-      {{ end }}
-      {{ if .inClass }}
-        <p>
-          <strong>In class:</strong>
-          <ul>
-            {{ range .inClass }}
-              <li>{{- . | markdownify -}}</li>
-            {{ end }}
-          </ul>
-        </p>
-      {{ end }}
-      {{ if .after }}
-        <p>
-          <strong>Optional readings after:</strong>
-          <ul>
-            {{ range .after }}
-              <li>{{- . | markdownify -}}</li>
-            {{ end }}
-          </ul>
-        </p>
-      {{ end }}
-    {{ end}}
+  {{ range .Data.Pages.ByDate }}
     <hr>
-  {{ end }}
+    <h3><a href="{{ .Permalink }}">Week {{ .Params.week }}</a></h3>
 
+    {{ with .Params.tags }}
+    <p>
+      Topics: {{ delimit . "; " }}
+    </p>
+    {{ end }}
+    {{ with .Params.due }}
+    <h4>Due</h4>
+    <p>
+      <ul>
+        {{ range . }}
+          <li>
+            <a href="{{ .url | relURL }}">{{ .title }}</a> {{ dateFormat "Jan 2, 3:04 PM" .date }}
+          </li>
+        {{ end }}
+      </ul>
+    </p>
+    {{ end }}
+    {{ range .Params.meetings }}
+
+      <hr>
+      <h4>{{ dateFormat "Jan 2 (Monday)" .date }}</h4>
+
+      {{ with .tags }}
+        <p>
+          <emph>Topics</emph>: {{ delimit . "; " }}
+        </p>
+      {{ end }}
+
+      <h5>Readings</h5>
+      <p>
+          {{ with .before }}
+            <ul>
+              {{ range . }}
+                {{ partial "list-reading" . }}
+              {{ end }}
+            </ul>
+          {{ else }}
+            None
+          {{ end }}
+      </p>
+      {{ with .after }}
+        <h5>Optional</h5>
+        <p>
+          <ul>
+          {{ range . }}
+            {{ partial "list-reading" . }}
+          {{ end }}
+          </ul>
+        </p>
+      {{ end }}
+    {{ end }}
+  {{ end }}
 </div>
 {{ end }}

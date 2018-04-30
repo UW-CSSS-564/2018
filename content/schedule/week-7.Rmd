@@ -1,0 +1,28 @@
+---
+title: Week 7
+date: '2018-05-07'
+tags: []
+week: 7
+due:
+- title: "Research Project Proposal"
+  url: "https://UW-CSSS-564.github.io/proposal/"
+  date: "2018-05-08T14:30:00"
+meetings:
+- date: '2018-05-08'
+  week: 7
+  weekday: Tuesday
+  before: []
+  after: []
+  tags: []
+  lab: no
+- date: '2018-05-10'
+  week: 7
+  weekday: Thursday
+  tags: []
+  lab: yes
+- date: '2018-05-10'
+  week: 7
+  weekday: Thursday
+  tags: []
+  lab: no
+---

@@ -1,0 +1,60 @@
+{{ define "title" }}
+<h1>{{ .Title }}</h1>
+{{ end }}
+
+{{ define "main" }}
+<div class="container">
+  {{ with .Params.tags }}
+  <p>
+    Topics: {{ delimit . "; " }}
+  </p>
+  {{ end }}
+
+  {{ .Content }}
+
+  {{ range .Params.meetings }}
+
+    <hr>
+    <h4>{{ dateFormat "Jan 2 (Monday)" .date }}</h4>
+
+    {{ with .tags }}
+    <p>
+      <emph>Topics</emph>: {{ delimit . "; " }}
+    </p>
+    {{ end }}
+
+    <h5>Due</h5>
+    <p>
+      <ul>
+        {{ range .Params.due }}
+        <li><a href="{{ .due }}">{{ .title }}</a> {{ dateFormat .date "Jan 2, 3:04 PM" }}</li>
+        {{ end }}
+      </ul>
+    </p>
+
+    <h5>Readings</h5>
+    <p>
+      {{ with .before }}
+        <ul>
+        {{ range . }}
+          {{ partial "list-reading" . }}
+        {{ end }}
+        </ul>
+      {{ else }}
+        None
+      {{ end }}
+    </p>
+    <p>
+      {{ with .after }}
+        <h5>Optional</h5>
+        <ul>
+          {{ range . }}
+            {{ partial "list-reading" . }}
+          {{ end }}
+        </ul>
+      {{ end }}
+    </p>
+  {{ end }}
+
+</div>
+{{ end }}

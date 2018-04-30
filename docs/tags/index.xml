@@ -1,14 +1,42 @@
 <?xml version="1.0" encoding="utf-8" standalone="yes" ?>
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
-    <title>Tags on CS&amp;SS/STAT 564: Bayesian Statistics for the Social Sciences</title>
+    <title>Tags on </title>
     <link>/2018/tags/</link>
-    <description>Recent content in Tags on CS&amp;SS/STAT 564: Bayesian Statistics for the Social Sciences</description>
+    <description>Recent content in Tags on </description>
     <generator>Hugo -- gohugo.io</generator>
     <language>en-US</language>
+    <lastBuildDate>Mon, 16 Apr 2018 00:00:00 +0000</lastBuildDate>
     
 	<atom:link href="/2018/tags/index.xml" rel="self" type="application/rss+xml" />
     
+    
+    <item>
+      <title>Cross Validation</title>
+      <link>/2018/tags/cross-validation/</link>
+      <pubDate>Mon, 16 Apr 2018 00:00:00 +0000</pubDate>
+      
+      <guid>/2018/tags/cross-validation/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>Model Fit</title>
+      <link>/2018/tags/model-fit/</link>
+      <pubDate>Mon, 16 Apr 2018 00:00:00 +0000</pubDate>
+      
+      <guid>/2018/tags/model-fit/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>Prediction</title>
+      <link>/2018/tags/prediction/</link>
+      <pubDate>Mon, 16 Apr 2018 00:00:00 +0000</pubDate>
+      
+      <guid>/2018/tags/prediction/</guid>
+      <description></description>
+    </item>
     
   </channel>
 </rss>

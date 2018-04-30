@@ -1,9 +1,9 @@
 <?xml version="1.0" encoding="utf-8" standalone="yes" ?>
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
-    <title>Pages on CS&amp;SS/STAT 564: Bayesian Statistics for the Social Sciences</title>
+    <title>Pages on </title>
     <link>/2018/pages/</link>
-    <description>Recent content in Pages on CS&amp;SS/STAT 564: Bayesian Statistics for the Social Sciences</description>
+    <description>Recent content in Pages on </description>
     <generator>Hugo -- gohugo.io</generator>
     <language>en-US</language>
     
@@ -62,17 +62,6 @@ Include the exact code that you ran The error message that you got  Without the 
       <description>Please complete the following before the first day of class (Tuesday, March 27, 2018).
 Sign up for our Slack worplace, https://uwcsss564.slack.com. We will use this for announcments, and asking and answering questions in this course. You should have received an invite. If not email the instructors to receive one.
  Sign into the course Slack workplace https://uwcsss564.slack.com, and leave a message on the #onboarding channel. In the message introduce yourself, explain why you are taking this course, and what you hope to get out of taking this course.</description>
-    </item>
-    
-    <item>
-      <title>References</title>
-      <link>/2018/pages/references/</link>
-      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
-      
-      <guid>/2018/pages/references/</guid>
-      <description>Articles and books references in this course. Download these references as bibtex file here.
-Aguilar, Omar, and Mike West. 2000. “Bayesian Dynamic Factor Models and Portfolio Allocation.” Journal of Business &amp;amp; Economic Statistics 18 (3). Informa UK Limited: 338–57. doi:10.1080/07350015.2000.10524875.
- Aitkin, M., and N. Longford. 1986. “Statistical Modelling Issues in School Effectiveness Studies.” Journal of the Royal Statistical Society. Series A (General) 149 (1). [Royal Statistical Society, Wiley]: 1–43. http://www.</description>
     </item>
     
   </channel>

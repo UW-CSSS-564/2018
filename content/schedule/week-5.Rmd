@@ -1,0 +1,26 @@
+---
+title: Week 5
+date: '2018-04-23'
+tags: []
+week: 5
+due: []
+meetings:
+- date: '2018-04-24'
+  week: 5
+  weekday: Tuesday
+  before: []
+  tags: []
+  lab: no
+- date: '2018-04-26'
+  week: 5
+  weekday: Thursday
+  before: []
+  tags: []
+  lab: yes
+- date: '2018-04-26'
+  week: 5
+  weekday: Thursday
+  tags:
+  - []
+  lab: yes
+---

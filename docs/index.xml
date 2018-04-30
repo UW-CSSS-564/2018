@@ -1,14 +1,127 @@
 <?xml version="1.0" encoding="utf-8" standalone="yes" ?>
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
-    <title>CS&amp;SS/STAT 564 (Spring 2018)&#34; on CS&amp;SS/STAT 564: Bayesian Statistics for the Social Sciences</title>
+    <title>CS&amp;SS/STAT 564 (Spring 2018)&#34; on </title>
     <link>/2018/</link>
-    <description>Recent content in CS&amp;SS/STAT 564 (Spring 2018)&#34; on CS&amp;SS/STAT 564: Bayesian Statistics for the Social Sciences</description>
+    <description>Recent content in CS&amp;SS/STAT 564 (Spring 2018)&#34; on </description>
     <generator>Hugo -- gohugo.io</generator>
     <language>en-US</language>
+    <lastBuildDate>Mon, 04 Jun 2018 00:00:00 +0000</lastBuildDate>
     
 	<atom:link href="/2018/index.xml" rel="self" type="application/rss+xml" />
     
+    
+    <item>
+      <title>Week 11</title>
+      <link>/2018/schedule/week-11/</link>
+      <pubDate>Mon, 04 Jun 2018 00:00:00 +0000</pubDate>
+      
+      <guid>/2018/schedule/week-11/</guid>
+      <description>Finals week.</description>
+    </item>
+    
+    <item>
+      <title>Week 10</title>
+      <link>/2018/schedule/week-10/</link>
+      <pubDate>Mon, 28 May 2018 00:00:00 +0000</pubDate>
+      
+      <guid>/2018/schedule/week-10/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>Week 9</title>
+      <link>/2018/schedule/week-9/</link>
+      <pubDate>Mon, 21 May 2018 00:00:00 +0000</pubDate>
+      
+      <guid>/2018/schedule/week-9/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>Week 8</title>
+      <link>/2018/schedule/week-8/</link>
+      <pubDate>Mon, 14 May 2018 00:00:00 +0000</pubDate>
+      
+      <guid>/2018/schedule/week-8/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>Week 7</title>
+      <link>/2018/schedule/week-7/</link>
+      <pubDate>Mon, 07 May 2018 00:00:00 +0000</pubDate>
+      
+      <guid>/2018/schedule/week-7/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>Week 6</title>
+      <link>/2018/schedule/week-6/</link>
+      <pubDate>Mon, 30 Apr 2018 00:00:00 +0000</pubDate>
+      
+      <guid>/2018/schedule/week-6/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>Week 5</title>
+      <link>/2018/schedule/week-5/</link>
+      <pubDate>Mon, 23 Apr 2018 00:00:00 +0000</pubDate>
+      
+      <guid>/2018/schedule/week-5/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>Week 4</title>
+      <link>/2018/schedule/week-4/</link>
+      <pubDate>Mon, 16 Apr 2018 00:00:00 +0000</pubDate>
+      
+      <guid>/2018/schedule/week-4/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>Week 3</title>
+      <link>/2018/schedule/week-3/</link>
+      <pubDate>Mon, 09 Apr 2018 00:00:00 +0000</pubDate>
+      
+      <guid>/2018/schedule/week-3/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>Week 2</title>
+      <link>/2018/schedule/week-2/</link>
+      <pubDate>Mon, 02 Apr 2018 00:00:00 +0000</pubDate>
+      
+      <guid>/2018/schedule/week-2/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>Week 1</title>
+      <link>/2018/schedule/week-1/</link>
+      <pubDate>Mon, 26 Mar 2018 00:00:00 +0000</pubDate>
+      
+      <guid>/2018/schedule/week-1/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title></title>
+      <link>/2018/notes/links/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      
+      <guid>/2018/notes/links/</guid>
+      <description>Textbooks
+ Robert. Bayesian Choice. Berger. Geyer. http://www.mcmchandbook.net/HandbookChapter1.pdf  Week 1  BDA, Chapter 1 Review probability. This Probability Resource is a good resource. Review R. See R for Data Science. Frank Harrell, &amp;ldquo;My Journey From Frequentist to Bayesian Statistics&amp;rdquo;.
+ Frequentism and Bayesianism: A Practical Introduction
+ The Bayesian New Statistics: Hypothesis testing, estimation, meta-analysis, and power analysis from a Bayesian perspective
+ Clark, Michael Bayesian Basics A quick overview of Bayesian inference using regression, Stan, and including model checking.</description>
+    </item>
     
     <item>
       <title>CHANGELOG</title>
@@ -62,17 +175,6 @@ Include the exact code that you ran The error message that you got  Without the 
       <description>Please complete the following before the first day of class (Tuesday, March 27, 2018).
 Sign up for our Slack worplace, https://uwcsss564.slack.com. We will use this for announcments, and asking and answering questions in this course. You should have received an invite. If not email the instructors to receive one.
  Sign into the course Slack workplace https://uwcsss564.slack.com, and leave a message on the #onboarding channel. In the message introduce yourself, explain why you are taking this course, and what you hope to get out of taking this course.</description>
-    </item>
-    
-    <item>
-      <title>References</title>
-      <link>/2018/pages/references/</link>
-      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
-      
-      <guid>/2018/pages/references/</guid>
-      <description>Articles and books references in this course. Download these references as bibtex file here.
-Aguilar, Omar, and Mike West. 2000. “Bayesian Dynamic Factor Models and Portfolio Allocation.” Journal of Business &amp;amp; Economic Statistics 18 (3). Informa UK Limited: 338–57. doi:10.1080/07350015.2000.10524875.
- Aitkin, M., and N. Longford. 1986. “Statistical Modelling Issues in School Effectiveness Studies.” Journal of the Royal Statistical Society. Series A (General) 149 (1). [Royal Statistical Society, Wiley]: 1–43. http://www.</description>
     </item>
     
   </channel>

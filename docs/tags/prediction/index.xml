@@ -1,0 +1,24 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes" ?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>Prediction on </title>
+    <link>/2018/tags/prediction/</link>
+    <description>Recent content in Prediction on </description>
+    <generator>Hugo -- gohugo.io</generator>
+    <language>en-US</language>
+    <lastBuildDate>Mon, 16 Apr 2018 00:00:00 +0000</lastBuildDate>
+    
+	<atom:link href="/2018/tags/prediction/index.xml" rel="self" type="application/rss+xml" />
+    
+    
+    <item>
+      <title>Week 4</title>
+      <link>/2018/schedule/week-4/</link>
+      <pubDate>Mon, 16 Apr 2018 00:00:00 +0000</pubDate>
+      
+      <guid>/2018/schedule/week-4/</guid>
+      <description></description>
+    </item>
+    
+  </channel>
+</rss>

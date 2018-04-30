@@ -13,29 +13,35 @@ output: html_document
 <li>Include the exact code that you ran</li>
 <li>The error message that you got</li>
 </ol>
-<p>Without the code and the error message it can be hard to impossible to diagnose the problem and provide a solution. Questions such as “This isn’t working” or even “I’m getting this error message” aren’t useful without the code and error message.</p>
-<p>Even better is to provide a <strong>minimal reproducible answer</strong>. This is the smallest amount of code that <strong>someone else can run</strong>, that produces the same error that you are getting. This often means trying to reproduce your error running the same code on a different built-in data set and seeing if you still get the same error. See more instructions <a href="http://stackoverflow.com/questions/5963269/how-to-make-a-great-r-reproducible-example">here</a>. A benefit of this approach, is that often by trying to reproduce with minimal code you will be able to debug the code itself.</p>
-<p>Finally, include the results of <code>sessionInfo()</code>. This provides information about the exact versions of R, loaded packages, and operating system you are using, which can be useful in debugging problems.</p>
+<p>Without the code and the error message it can be hard to impossible to diagnose the problem and provide a solution.
+Questions such as “This isn’t working” or even “I’m getting this error message” aren’t useful without the code and error message.</p>
+<p>Even better is to provide a <strong>minimal reproducible answer</strong>.
+This is the smallest amount of code that <strong>someone else can run</strong>, that produces the same error that you are getting.
+This often means trying to reproduce your error running the same code on a different built-in data set and seeing if you still get the same error.
+See more instructions <a href="http://stackoverflow.com/questions/5963269/how-to-make-a-great-r-reproducible-example">here</a>.
+A benefit of this approach, is that often by trying to reproduce with minimal code you will be able to debug the code itself.</p>
+<p>Finally, include the results of <code>sessionInfo()</code>.
+This provides information about the exact versions of R, loaded packages, and operating system you are using, which can be useful in debugging problems.</p>
 <pre class="r"><code>sessionInfo()</code></pre>
-<pre><code>## R version 3.4.3 (2017-11-30)
+<pre><code>## R version 3.5.0 (2018-04-23)
 ## Platform: x86_64-apple-darwin15.6.0 (64-bit)
-## Running under: macOS High Sierra 10.13.3
+## Running under: macOS High Sierra 10.13.4
 ## 
 ## Matrix products: default
-## BLAS: /Library/Frameworks/R.framework/Versions/3.4/Resources/lib/libRblas.0.dylib
-## LAPACK: /Library/Frameworks/R.framework/Versions/3.4/Resources/lib/libRlapack.dylib
+## BLAS: /Library/Frameworks/R.framework/Versions/3.5/Resources/lib/libRblas.0.dylib
+## LAPACK: /Library/Frameworks/R.framework/Versions/3.5/Resources/lib/libRlapack.dylib
 ## 
 ## locale:
 ## [1] en_US.UTF-8/en_US.UTF-8/en_US.UTF-8/C/en_US.UTF-8/en_US.UTF-8
 ## 
 ## attached base packages:
-## [1] methods   stats     graphics  grDevices utils     datasets  base     
+## [1] stats     graphics  grDevices utils     datasets  methods   base     
 ## 
 ## loaded via a namespace (and not attached):
-##  [1] compiler_3.4.3  backports_1.1.2 bookdown_0.6    magrittr_1.5   
-##  [5] rprojroot_1.3-2 tools_3.4.3     htmltools_0.3.6 yaml_2.1.16    
-##  [9] Rcpp_0.12.15    stringi_1.1.6   rmarkdown_1.8   blogdown_0.5   
-## [13] knitr_1.19      stringr_1.2.0   digest_0.6.15   xfun_0.1       
+##  [1] compiler_3.5.0  backports_1.1.2 bookdown_0.7    magrittr_1.5   
+##  [5] rprojroot_1.3-2 tools_3.5.0     htmltools_0.3.6 yaml_2.1.18    
+##  [9] Rcpp_0.12.16    stringi_1.1.7   rmarkdown_1.9   blogdown_0.6   
+## [13] knitr_1.20      stringr_1.3.0   digest_0.6.15   xfun_0.1       
 ## [17] evaluate_0.10.1</code></pre>
 <p>For further discussion on how to ask good questions:</p>
 <ul>
@@ -51,23 +57,32 @@ output: html_document
 <h1>Getting Help from Within R and RStudio</h1>
 <p><strong>Help tab:</strong> The first place to look is to use the search box in the <em>Help</em> tab of RStudio.</p>
 <p><strong>Autocompletion:</strong> If you start typing in either the console or editor in RStudio and hit <code>[TAB]</code>, the RStudio will show a list of completions as well as a short help for each.</p>
-<p>There are several R functions to get help. You can use either <code>?</code> or <code>help</code>. For example to find help for a function <code>quantile</code>, both</p>
+<p>There are several R functions to get help.
+You can use either <code>?</code> or <code>help</code>.
+For example to find help for a function <code>quantile</code>, both</p>
 <pre class="r"><code>?quantile</code></pre>
 <p>and</p>
 <pre class="r"><code>help(&quot;quantile&quot;)</code></pre>
-<p>will display the help page for <code>quantile</code>. To view this documentation online in a searchable form visit <a href="http://www.rdocumentation.org/">Rdocumentation.org</a>.</p>
-<p>To find the help pages available for a package, use <code>help</code> with the <code>package</code> argument. For example,</p>
+<p>will display the help page for <code>quantile</code>.
+To view this documentation online in a searchable form visit <a href="http://www.rdocumentation.org/">Rdocumentation.org</a>.</p>
+<p>To find the help pages available for a package, use <code>help</code> with the <code>package</code> argument.
+For example,</p>
 <pre class="r"><code>help(package = &quot;tidyr&quot;)</code></pre>
-<p>The help for R functions is only useful if you know what function you need want to know either what it is doing, or what the arguments are. The help files in R are not useful for understanding what a package does or how to use it. However, <em>vignettes</em> for R packages are often overviews of the functionality of packages that serve as tutorials or introductions to using the package. To get a list of all vignettes of the packages your have installed, run</p>
+<p>The help for R functions is only useful if you know what function you need want to know either what it is doing, or what the arguments are.
+The help files in R are not useful for understanding what a package does or how to use it.
+However, <em>vignettes</em> for R packages are often overviews of the functionality of packages that serve as tutorials or introductions to using the package.
+To get a list of all vignettes of the packages your have installed, run</p>
 <pre class="r"><code>browseVignettes()</code></pre>
 <p>To get the list of vignettes for a specific package, run</p>
 <pre class="r"><code>browseVignettes(&quot;dplyr&quot;)</code></pre>
-<p>You can also find vignettes for packages you have not installed on the packages’ CRAN page <a href="https://github.com/hadley/dplyr">https://cran.r-project.org/web/packages/tidyr/index.html</a>. There is also a <code>vignette</code> function, but you need the exact name of the vignette, which you generally do not know.</p>
+<p>You can also find vignettes for packages you have not installed on the packages’ CRAN page <a href="https://github.com/hadley/dplyr">https://cran.r-project.org/web/packages/tidyr/index.html</a>.
+There is also a <code>vignette</code> function, but you need the exact name of the vignette, which you generally do not know.</p>
 <p>You can search for foo in help manuals and archived mailing lists</p>
 <pre class="r"><code>RSiteSearch(&quot;ggplot2&quot;)</code></pre>
 <p>Want to find out what data sets are included in the R packages that you have installed?</p>
 <pre class="r"><code>data()</code></pre>
-<p>To find data sets included in a specific package, use <code>data</code> with the <code>package</code> argument, For example,</p>
+<p>To find data sets included in a specific package, use <code>data</code> with the <code>package</code> argument,
+For example,</p>
 <pre class="r"><code>data(package = &quot;ggplot2&quot;)</code></pre>
 <p>Note that <code>search()</code> <strong>does not</strong> do what you expect it to do (unless you expect it to return the <a href="http://adv-r.had.co.nz/Environments.html">search path</a> in which R looks for names of functions and objects).</p>
 </div>
@@ -80,15 +95,24 @@ output: html_document
 <li><a href="http://docs.ggplot2.org/">ggplot2 documentation</a>. Documentation for <strong>ggplot2</strong>.</li>
 <li><a href="https://www.ggplot2-exts.org/">ggplot2 extensions</a> A list of packages that extend the functionality of <strong>ggplot2</strong>.</li>
 </ul>
-<p>Google has gotten better with R searches, but <code>R</code> is a particularly unfriendly search term. However, if you are searching for “R” with other words in context, you are likely to have some success. An alternative is to use <a href="http://rseek.org">rseek.org</a> instead. It is a Google search restricted to a curated set of sites related to R.</p>
-<p>Many R packages have an article in either the <a href="http://www.jstatsoft.org/index">Journal of Statistical Software</a> or <a href="https://journal.r-project.org/">The R Journal</a> These articles are similar to package does.</p>
-<p><a href="https://stackoverflow.com">Stack Overflow</a> is a question and answer website for computer programming questions. Search for questions about R using the “r” tag. You can do this by adding <code>[r]</code> to your search query. Other tags that may be useful are <code>[ggplot2]</code>, <code>[plyr]</code>. However, generally you should not need to <em>ask</em> questions for this course. Someone has likely already asked your question before.</p>
+<p>Google has gotten better with R searches, but <code>R</code> is a particularly unfriendly search term.
+However, if you are searching for “R” with other words in context, you are likely to have some success.
+An alternative is to use <a href="http://rseek.org">rseek.org</a> instead.
+It is a Google search restricted to a curated set of sites related to R.</p>
+<p>Many R packages have an article in either the <a href="http://www.jstatsoft.org/index">Journal of Statistical Software</a> or <a href="https://journal.r-project.org/">The R Journal</a>
+These articles are similar to package does.</p>
+<p><a href="https://stackoverflow.com">Stack Overflow</a> is a question and answer website for computer programming questions.
+Search for questions about R using the “r” tag. You can do this by adding <code>[r]</code> to your search query. Other tags that may be useful are <code>[ggplot2]</code>, <code>[plyr]</code>.
+However, generally you should not need to <em>ask</em> questions for this course.
+Someone has likely already asked your question before.</p>
 <p>If you have a question about “statistics” or “data analysis” rather than “R”, then <a href="https://stats.stackexchange.com/">Cross Validated</a> is a Q-and-A site like Stack Overflow, but for statistics and machine learning.</p>
-<p>The traditional source of R help was the <a href="https://stat.ethz.ch/mailman/listinfo/r-help">R-help mailing list</a>. It is still a useful resource, though much of the traffic has moved over to StackOverflow.</p>
+<p>The traditional source of R help was the <a href="https://stat.ethz.ch/mailman/listinfo/r-help">R-help mailing list</a>.
+It is still a useful resource, though much of the traffic has moved over to StackOverflow.</p>
 </div>
 <div id="r-cheatsheets" class="section level1">
 <h1>R Cheatsheets</h1>
-<p>RStudio has man very good <a href="https://www.rstudio.com/resources/cheatsheets/">cheatsheets</a>. The most relevant to this course are:</p>
+<p>RStudio has man very good <a href="https://www.rstudio.com/resources/cheatsheets/">cheatsheets</a>.
+The most relevant to this course are:</p>
 <ul>
 <li><a href="https://www.rstudio.com/wp-content/uploads/2016/01/rstudio-IDE-cheatsheet.pdf">RStudio IDE</a></li>
 <li><a href="https://www.rstudio.com/wp-content/uploads/2016/11/ggplot2-cheatsheet-2.1.pdf">Data Visualization</a></li>
@@ -100,7 +124,8 @@ output: html_document
 <li><a href="https://www.rstudio.com/wp-content/uploads/2016/02/advancedR.pdf">Advanced R</a></li>
 <li><a href="https://www.rstudio.com/wp-content/uploads/2016/09/RegExCheatsheet.pdf">Regular Expressions</a></li>
 </ul>
-<p>The <a href="https://cran.r-project.org/doc/contrib/Short-refcard.pdf">Short R Reference Card</a> is the classic cheatsheet. However, some of the data manipulation and plotting functions are not those we use in this course, but it does cover much of the statistical functions.</p>
+<p>The <a href="https://cran.r-project.org/doc/contrib/Short-refcard.pdf">Short R Reference Card</a> is the classic cheatsheet.
+However, some of the data manipulation and plotting functions are not those we use in this course, but it does cover much of the statistical functions.</p>
 </div>
 <div id="books" class="section level1">
 <h1>Books</h1>
