@@ -3,6 +3,7 @@
   xmlns:xhtml="http://www.w3.org/1999/xhtml">
   
   <url>
+<<<<<<< HEAD
     <loc>/2018/schedule/week-11/</loc>
     <lastmod>2018-06-04T00:00:00+00:00</lastmod>
   </url>
@@ -58,6 +59,8 @@
   </url>
   
   <url>
+=======
+>>>>>>> 6b08f17feb580bbbd3f56236cd1c0999a9b3b5fb
     <loc>/2018/notes/links/</loc>
   </url>
   
@@ -103,6 +106,7 @@
   </url>
   
   <url>
+<<<<<<< HEAD
     <loc>/2018/tags/model-fit/</loc>
     <lastmod>2018-04-16T00:00:00+00:00</lastmod>
     <priority>0</priority>
@@ -115,16 +119,23 @@
   
   <url>
     <loc>/2018/pages/onboarding/</loc>
-  </url>
-  
-  <url>
-    <loc>/2018/pages/</loc>
+=======
+    <loc>/2018/notes/</loc>
     <priority>0</priority>
+>>>>>>> 6b08f17feb580bbbd3f56236cd1c0999a9b3b5fb
   </url>
   
   <url>
+    <loc>/2018/pages/onboarding/</loc>
+  </url>
+  
+  <url>
+<<<<<<< HEAD
     <loc>/2018/tags/prediction/</loc>
     <lastmod>2018-04-16T00:00:00+00:00</lastmod>
+=======
+    <loc>/2018/pages/</loc>
+>>>>>>> 6b08f17feb580bbbd3f56236cd1c0999a9b3b5fb
     <priority>0</priority>
   </url>
   
