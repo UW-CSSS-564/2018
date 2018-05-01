@@ -3,145 +3,121 @@
   xmlns:xhtml="http://www.w3.org/1999/xhtml">
   
   <url>
-<<<<<<< HEAD
-    <loc>/2018/schedule/week-11/</loc>
-    <lastmod>2018-06-04T00:00:00+00:00</lastmod>
-  </url>
-  
-  <url>
-    <loc>/2018/schedule/week-10/</loc>
-    <lastmod>2018-05-28T00:00:00+00:00</lastmod>
-  </url>
-  
-  <url>
-    <loc>/2018/schedule/week-9/</loc>
-    <lastmod>2018-05-21T00:00:00+00:00</lastmod>
-  </url>
-  
-  <url>
-    <loc>/2018/schedule/week-8/</loc>
-    <lastmod>2018-05-14T00:00:00+00:00</lastmod>
-  </url>
-  
-  <url>
-    <loc>/2018/schedule/week-7/</loc>
-    <lastmod>2018-05-07T00:00:00+00:00</lastmod>
-  </url>
-  
-  <url>
-    <loc>/2018/schedule/week-6/</loc>
+    <loc>https://UW-CSSS-564.github.io/2018/schedule/week-6/</loc>
     <lastmod>2018-04-30T00:00:00+00:00</lastmod>
   </url>
   
   <url>
-    <loc>/2018/schedule/week-5/</loc>
+    <loc>https://UW-CSSS-564.github.io/2018/schedule/week-5/</loc>
     <lastmod>2018-04-23T00:00:00+00:00</lastmod>
   </url>
   
   <url>
-    <loc>/2018/schedule/week-4/</loc>
+    <loc>https://UW-CSSS-564.github.io/2018/schedule/week-4/</loc>
     <lastmod>2018-04-16T00:00:00+00:00</lastmod>
   </url>
   
   <url>
-    <loc>/2018/schedule/week-3/</loc>
+    <loc>https://UW-CSSS-564.github.io/2018/schedule/week-3/</loc>
     <lastmod>2018-04-09T00:00:00+00:00</lastmod>
   </url>
   
   <url>
-    <loc>/2018/schedule/week-2/</loc>
+    <loc>https://UW-CSSS-564.github.io/2018/schedule/week-2/</loc>
     <lastmod>2018-04-02T00:00:00+00:00</lastmod>
   </url>
   
   <url>
-    <loc>/2018/schedule/week-1/</loc>
+    <loc>https://UW-CSSS-564.github.io/2018/schedule/week-1/</loc>
     <lastmod>2018-03-26T00:00:00+00:00</lastmod>
   </url>
   
   <url>
-=======
->>>>>>> 6b08f17feb580bbbd3f56236cd1c0999a9b3b5fb
-    <loc>/2018/notes/links/</loc>
+    <loc>https://UW-CSSS-564.github.io/2018/notes/links/</loc>
   </url>
   
   <url>
-    <loc>/2018/assignments/</loc>
+    <loc>https://UW-CSSS-564.github.io/2018/assignments/</loc>
   </url>
   
   <url>
-    <loc>/2018/pages/changelog/</loc>
-  </url>
-  
-  <url>
-    <loc>/2018/</loc>
-    <lastmod>2018-06-04T00:00:00+00:00</lastmod>
-  </url>
-  
-  <url>
-    <loc>/2018/categories/</loc>
+    <loc>https://UW-CSSS-564.github.io/2018/tags/bayesian-computation/</loc>
+    <lastmod>2018-04-09T00:00:00+00:00</lastmod>
     <priority>0</priority>
   </url>
   
   <url>
-    <loc>/2018/schedule/</loc>
-    <lastmod>2018-06-04T00:00:00+00:00</lastmod>
+    <loc>https://UW-CSSS-564.github.io/2018/pages/changelog/</loc>
   </url>
   
   <url>
-    <loc>/2018/tags/cross-validation/</loc>
+    <loc>https://UW-CSSS-564.github.io/2018/</loc>
+    <lastmod>2018-04-30T00:00:00+00:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>https://UW-CSSS-564.github.io/2018/categories/</loc>
+    <priority>0</priority>
+  </url>
+  
+  <url>
+    <loc>https://UW-CSSS-564.github.io/2018/tags/conjugate-priors/</loc>
+    <lastmod>2018-04-09T00:00:00+00:00</lastmod>
+    <priority>0</priority>
+  </url>
+  
+  <url>
+    <loc>https://UW-CSSS-564.github.io/2018/schedule/</loc>
+    <lastmod>2018-04-30T00:00:00+00:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>https://UW-CSSS-564.github.io/2018/tags/cross-validation/</loc>
     <lastmod>2018-04-16T00:00:00+00:00</lastmod>
     <priority>0</priority>
   </url>
   
   <url>
-    <loc>/2018/pages/final_project/</loc>
+    <loc>https://UW-CSSS-564.github.io/2018/pages/help/</loc>
   </url>
   
   <url>
-    <loc>/2018/pages/help/</loc>
+    <loc>https://UW-CSSS-564.github.io/2018/pages/git/</loc>
   </url>
   
   <url>
-    <loc>/2018/pages/git/</loc>
-  </url>
-  
-  <url>
-<<<<<<< HEAD
-    <loc>/2018/tags/model-fit/</loc>
+    <loc>https://UW-CSSS-564.github.io/2018/tags/model-fit/</loc>
     <lastmod>2018-04-16T00:00:00+00:00</lastmod>
     <priority>0</priority>
   </url>
   
   <url>
-    <loc>/2018/notes/</loc>
+    <loc>https://UW-CSSS-564.github.io/2018/notes/</loc>
     <priority>0</priority>
   </url>
   
   <url>
-    <loc>/2018/pages/onboarding/</loc>
-=======
-    <loc>/2018/notes/</loc>
+    <loc>https://UW-CSSS-564.github.io/2018/pages/onboarding/</loc>
+  </url>
+  
+  <url>
+    <loc>https://UW-CSSS-564.github.io/2018/pages/</loc>
     <priority>0</priority>
->>>>>>> 6b08f17feb580bbbd3f56236cd1c0999a9b3b5fb
   </url>
   
   <url>
-    <loc>/2018/pages/onboarding/</loc>
-  </url>
-  
-  <url>
-<<<<<<< HEAD
-    <loc>/2018/tags/prediction/</loc>
+    <loc>https://UW-CSSS-564.github.io/2018/tags/prediction/</loc>
     <lastmod>2018-04-16T00:00:00+00:00</lastmod>
-=======
-    <loc>/2018/pages/</loc>
->>>>>>> 6b08f17feb580bbbd3f56236cd1c0999a9b3b5fb
     <priority>0</priority>
   </url>
   
   <url>
-    <loc>/2018/tags/</loc>
-    <lastmod>2018-04-16T00:00:00+00:00</lastmod>
+    <loc>https://UW-CSSS-564.github.io/2018/pages/research_project/</loc>
+  </url>
+  
+  <url>
+    <loc>https://UW-CSSS-564.github.io/2018/tags/</loc>
+    <lastmod>2018-04-09T00:00:00+00:00</lastmod>
     <priority>0</priority>
   </url>
   

@@ -1,0 +1,4 @@
+<li>
+{{ with .title }}{{ . | markdownify }}{{ end }}
+{{ with .notes }}{{ . | markdownify }}{{ end }}
+</li>
