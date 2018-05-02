@@ -3,7 +3,7 @@ date: 2018-03-29T14:30:00
 weekday: Thursday
 inclass: []
 lab: no
-title: Mar, 29 (Thu)&mdash;Class
+title: Mar 29 (Thu)&mdash;Class
 week: 1
 readings:
 - '*BDA*, Chapter 1'

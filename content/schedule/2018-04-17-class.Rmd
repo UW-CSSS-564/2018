@@ -2,7 +2,7 @@
 date: 2018-04-17T14:30:00
 weekday: Tuesday
 lab: no
-title: Apr, 17 (Tue)&mdash;Class
+title: Apr 17 (Tue)&mdash;Class
 week: 4
 readings: []
 optional: []

@@ -4,6 +4,17 @@ title: CHANGELOG
 
 See the [GitHub repository](https://github.com/UW-POLS503/2018/commits/master) the history of changes.
 
+## 2018-05-02
+
+-   changed due date of final research project to June 7
+-   added peer review assignment due on June 1
+-   added optional reading for May 1
+-   added reading for May 3
+-   added reading for May 15
+-   added reading for May 17
+-   added reading for May 22
+-   added instructions for peer review to research project instructions
+
 ## 2018-05-01
 
 -   added all research project dates

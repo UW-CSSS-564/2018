@@ -4,7 +4,7 @@ weekday: Thursday
 inclass:
 - '[March 29th Notes](https://uw-csss-564.github.io/2018-03-29/)'
 lab: yes
-title: Mar, 29 (Thu)&mdash;Lab
+title: Mar 29 (Thu)&mdash;Lab
 week: 1
 readings: []
 optional: []

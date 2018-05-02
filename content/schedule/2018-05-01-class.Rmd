@@ -3,20 +3,26 @@ date: 2018-05-01T14:30:00
 week: 6
 weekday: Tuesday
 lab: no
-title: May, 01 (Tue)&mdash;Class
+title: May 1 (Tue)&mdash;Class
 readings:
-- '*BDA3*, Ch. 6: "Model Checking" *BDA3*, Ch. 7: "Evaluating, Comparing, and Expanding
-  Models"'
-- Gabry, J., D. Simpson, A. Vehtari, M. Betancourt,  and Gelman, A. "[Visualization
+- >-
+  *BDA3*, Ch. 6: "Model Checking" *BDA3*, Ch. 7: "Evaluating, Comparing, and Expanding Models"
+- >-
+  Gabry, J., D. Simpson, A. Vehtari, M. Betancourt,  and Gelman, A. "[Visualization
   in Bayesian workflow](https://arxiv.org/abs/1709.01449)." (2017)
-- Vehtari and Gabry (2018) "(Using the loo package (version >= 2.0.0)](https://cran.r-project.org/web/packages/loo/vignettes/loo2-example.html)."
+- >-
+  Vehtari and Gabry (2018) "[Using the loo package (version >= 2.0.0)](https://cran.r-project.org/web/packages/loo/vignettes/loo2-example.html)."
   R package vignette.
-- Vehtari, Gelman, and Gabry (2017) "[Practical Bayesian model evaluation using leave-one-out
-  cross-validation and WAIC](https://dx.doi.org/10.1007/s11222-016-9696-4)" *Statistics
-  and Computing*
-- Gabry, Jonah. "[Graphical posterior predictive checks using the bayesplot package](http://mc-stan.org/bayesplot/articles/graphical-ppcs.html)"
-  2018-03-30. R package vignette.
-optional: []
+- >-
+  Vehtari, Gelman, and Gabry (2017) "[Practical Bayesian model evaluation using leave-one-out
+  cross-validation and WAIC](https://dx.doi.org/10.1007/s11222-016-9696-4)" *Statistics and Computing*
+- >-
+  Gabry, Jonah. "[Graphical posterior predictive checks using the bayesplot package](http://mc-stan.org/bayesplot/articles/graphical-ppcs.html)" 2018-03-30. R package vignette.
+optional:
+- >-
+  Gelman, Meng, and Stern. "[Posterior Predictive Assessment of Model Fitness Via Realized Discrepencies](http://www.stat.columbia.edu/~gelman/research/published/A6n41.pdf)." *Statistica Sinica.* 1996.
+- >-
+  Kruschke. "[Posterior predictive checks can and should be Bayesian: Comment on Gelman and Shalizi, ‘Philosophy and the practice of Bayesian statistics’]( http://www.indiana.edu/~kruschke/articles/Kruschke2013BJMSP.pdf)." *British Journal of Mathematical and Statistical Psychology*. 2013.
 startTime: 2018-05-01T14:30:00
 endTime: 2018-05-01T15:50:00
 

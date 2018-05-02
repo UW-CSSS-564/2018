@@ -180,7 +180,6 @@ classification](https://arxiv.org/pdf/1509.08864.pdf)
 - [BMA](https://cran.r-project.org/web/packages/BMA/BMA.pdf)
 - [BMS](https://cran.r-project.org/web/packages/BMS/index.html)
 - Posterior Predictive
-- .
 
 ### HMC
 

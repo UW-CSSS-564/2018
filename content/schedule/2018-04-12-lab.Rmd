@@ -3,7 +3,7 @@ date: 2018-04-12T13:30:00
 week: 3
 weekday: Thursday
 lab: yes
-title: Apr, 12 (Thu)&mdash;Lab
+title: Apr 12 (Thu)&mdash;Lab
 readings: []
 optional:
 - 'Richard McElreath, "[Markov Chains: Why Walk When You Can Flow?](http://elevanth.org/blog/2017/11/28/build-a-better-markov-chain/)"'

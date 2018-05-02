@@ -19,6 +19,8 @@ project:
 - date: 2018-05-29T14:30:00
   name: Draft Version
 - date: 2018-06-01T14:30:00
+  name: Peer Review 
+- date: 2018-06-07T17:00:00
   name: Final Version
 ---
 

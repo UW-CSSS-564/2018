@@ -3,10 +3,10 @@ date: 2018-05-24T13:30:00
 week: 9
 weekday: Thursday
 lab: yes
-title: May, 24 (Thu)&mdash;Lab
-readings: []
-optional: []
+title: May 24 (Thu)&mdash;Lab
 startTime: 2018-05-24T13:30:00
 endTime: 2018-05-24T14:20:00
 
 ---
+
+Bayesian regularization models for causal inference.

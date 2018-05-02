@@ -3,11 +3,27 @@ date: 2018-05-03T14:30:00
 week: 6
 weekday: Thursday
 lab: no
-title: May, 03 (Thu)&mdash;Class
+title: May 3 (Thu)&mdash;Class
 readings:
-
-optional: []
+- >-
+  Yao, Vehtari, Simpson, and Gelman. "[Using Stacking to Average Bayesian Predictive Distributions](https://dx.doi.org/10.1214/17-BA1091)." *Bayesian Analysis.* 2018.
+- >-
+  Vehtari and Gabry. "[Bayesian Stacking and Pseudo-BMA weights using the loo package](https://cran.r-project.org/web/packages/loo/vignettes/loo2-weights.html)"
+optional:
+- >-
+  Vehtari, A. and Ojanen, J. (2012). "A survey of Bayesian predictive methods for model assessment, selection and comparison." *Statistics Survey*.
+- >-
+  Kass and Raftery. (1993) [Bayes Factors](https://amstat.tandfonline.com/doi/abs/10.1080/01621459.1995.10476572). *Journal of the American Statistical Association*
+- >-
+  Hoeting, Madigan, Raftery, and Volinsky (1995) "[Bayesian model averaging: a tutorial](https://projecteuclid.org/euclid.ss/1009212519)." *Statistical Science*
+- >-
+  Tiago M. Fragoso, Francisco Louzada Neto, [Bayesian model averaging: A systematic review and conceptual classification](https://arxiv.org/pdf/1509.08864.pdf)
+- >-
+  Montgomery and Nyhan (2010) "[Bayesian Model Averaging: Theoretical Developments and Practical Applications](http://www.jstor.org/stable/25792007)" *Political Analysis*
+- >-
+  [BMA R package ](https://cran.r-project.org/web/packages/BMA/BMA.pdf)
+- >-
+  [BMS R package](https://cran.r-project.org/web/packages/BMS/index.html)  
 startTime: 2018-05-03T14:30:00
 endTime: 2018-05-03T15:50:00
-
 ---

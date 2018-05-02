@@ -3,7 +3,7 @@ date: 2018-05-10T13:30:00
 week: 7
 weekday: Thursday
 lab: yes
-title: May, 10 (Thu)&mdash;Lab
+title: May 10 (Thu)&mdash;Lab
 readings: []
 optional: []
 startTime: 2018-05-10T13:30:00

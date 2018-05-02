@@ -38,6 +38,36 @@ This is a draft of the final research project. This will consistent of whatever 
 We will spend the last week working on these projects so the intent of having a draft prior to that week is not to have a complete draft, but to provide an opportunity for the student to document the current state of the project from which instructors and peers can provide feedback.
 The student should write up whatever they have done, and their plans, in such a way to provide others the best possibility to provide feedback.
 
+## Peer Review
+
+After the drafts are submitted, each student will be assigned one other student to peer review and provide feedback.
+Time will be allocated in class during the last week in order to do this.
+
+### Instructions
+
+These reviews will be submitted as comments on the pull request.
+The comments should address both substantive and programming issues.
+
+### Evaluation
+
+Each peer review will be deemed “good” or “needs more”.[^peer-review]
+Each review you do will give you 1 point if is "good" and 0 points if it "needs more".
+Those will be totaled over all assignments to form your peer review mark.
+
+How to give good comments:
+
+-   Address questions that were answered incorrectly, unclearly, or particularly well.
+-   Give thoughtful, constructive and considerate comments.
+-   Be specific and concise.
+-   Try to learn something new and, if you succeed, point that out.
+-   If you can’t find anything to praise or that you found helpful, then at least offer some suggestions in a kind way.
+
+Features of "needs more":
+
+-   You do not address each question.
+-   Your review is mean.
+-   You can’t find anything to praise/learn and yet you don’t offer any suggestions either.
+
 ## Final Research Project
 
 Submission of the final research project.
