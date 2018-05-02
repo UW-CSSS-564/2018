@@ -68,52 +68,68 @@
   <h2>Meetings</h2>
 
   {{ range .Data.Pages.ByDate }}
-    <h3 id="{{ .Date.Format "2006-01-02" }}-{{ if .Params.lab }}lab{{ else }}class {{ end }}">{{ .Title | safeHTML }}</h3>
-    <p>
-      {{ .Date.Format "3:04 PM" }}&ndash; {{ dateFormat "3:04 PM" .Params.endTime }}
-    </p>
+    <div class="card">
+      <div class="card-header" data-toggle="collapse" data-target="#{{- .Date.Format "2006-01-02" -}}-{{ if .Params.lab }}lab{{ else }}class{{ end }}-body">
+        <h3 >{{ .Title | safeHTML }}</h3>
+        <p>
+          {{ .Date.Format "3:04 PM" }}&ndash; {{ dateFormat "3:04 PM" .Params.endTime }}
+        </p>
+      </div>
 
-    {{ with .Params.inclass }}
-      <h5>In class</h5>
-      <p>
-        <ul>
-          {{ range . }}
-            <li>
-              {{ . | markdownify }}
-            </li>
-          {{ end }}
-        </ul>
-      </p>
-    {{ end }}
-    <h5>Readings</h5>
-    <p>
-        {{ with .Params.readings }}
-          <ul>
-            {{ range . }}
-              <li>
-                {{ . | markdownify }}
-              </li>
-            {{ end }}
-          </ul>
-        {{ else }}
-          None
+      <div class="card-body collapse" id="{{- .Date.Format "2006-01-02" -}}-{{ if .Params.lab }}lab{{ else }}class{{ end }}-body">
+
+        {{ with .Params.inclass }}
+          <h5>In class</h5>
+          <p>
+            <ul>
+              {{ range . }}
+                <li>
+                  {{ . | markdownify }}
+                </li>
+              {{ end }}
+            </ul>
+          </p>
         {{ end }}
-    </p>
-    {{ with .Params.optional }}
-      <h5>Additional Resources</h5>
-      <p>
-        <ul>
-          {{ range . }}
-            <li>
-              {{ . | markdownify }}
-            </li>
-          {{ end }}
-        </ul>
-      </p>
-    {{ end }}
 
-    {{ .Content }}
+        <h5>Readings</h5>
+        <p>
+            {{ with .Params.readings }}
+              <ul>
+                {{ range . }}
+                  <li>
+                    {{ . | markdownify }}
+                  </li>
+                {{ end }}
+              </ul>
+            {{ else }}
+              None
+            {{ end }}
+        </p>
 
+        {{ with .Params.optional }}
+          <h5>Additional Resources</h5>
+          <p>
+            <ul>
+              {{ range . }}
+                <li>
+                  {{ . | markdownify }}
+                </li>
+              {{ end }}
+            </ul>
+          </p>
+        {{ end }}
+
+        {{ with .Content }}
+          <h5>
+            Summary
+          </h5>
+          <p class="card-text">
+            {{ . }}
+          </p>
+        {{ end }}
+       </div><!-- end of card-body -->
+    </div><!-- end of card -->
+  <!-- end of meeting -->
   {{ end }}
 </div>
 {{ end }}
