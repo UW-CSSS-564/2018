@@ -17,7 +17,7 @@ The intent of the proposal is two-fold:
 1.  Encourage the student to think about the project with enough time to implement it.
 1.  Receive feedback early in order to avoid projects that will be unfeasible in the context of this course.
 
-The proposal sould consist of a paragraph or two describing.
+The proposal should consist of a paragraph or two describing.
 
 1.  State research question
 1.  Describe data that will be used to answer that question.
@@ -155,7 +155,7 @@ To ensure readability of the paper, authors should choose a notation that makes 
 ### Reproducibility
 
 1.  Code must run without error and successfully replicate.
-1.  The repository must contain a REAMDE.md file which describes the contents of the repositories, software and data dependencies and installation instructions, and instructions on how to reproduce the analysis.
+1.  The repository must contain a README.md file which describes the contents of the repositories, software and data dependencies and installation instructions, and instructions on how to reproduce the analysis.
 1.  If the analysis requires data too large to include in the repository, instructions on how to obtain the necessary must be included. If possible, a script to automate the process is preferred.
 1.  If the analysis uses data that cannot be distributed for privacy or intellectual property reasons, it must be documented. The student must discuss with the instructor prior to submission.
 

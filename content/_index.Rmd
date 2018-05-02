@@ -55,10 +55,9 @@ There are two main types of assignments for students:
 Students should have a laptop that they can bring to both class and lab as we will integrate computing with learning data analysis and statistics throughout the course.
 
 This course will use [R](https://www.r-project.org/), which is a free and open-source programming language primarily used for statistics and data analysis. We will also use [RStudio](https://www.rstudio.com/), which is an easy-to-use interface to R.
-Instructions to install or upgrade R are [here](./pages/install/).
 
 We will use [git](https://git-scm.com/) and [GitHub](https://github.com/) for distributing, collecting, and commenting on assignments and projects. See the [onboarding](./pages/onboarding) instructions for setting up git and GitHub.
-See the [git and GitHub](./pages/git) for links to help introductions and refences on git and GitHub.
+See the [git and GitHub](./pages/git) for links to help introductions and references on git and GitHub.
 
 ### Books
 
@@ -72,7 +71,7 @@ This will be supplemented with other readings and notes as indicated on the sche
 
 ## Evaluation
 
-The evalution of Students will be based on the following.
+The evaluation of Students will be based on the following.
 
 1.  Assignments
 

@@ -1,25 +1,20 @@
 Textbooks
 
- 
-
-- Robert. Bayesian Choice.
-- Berger.
-- Geyer. http://www.mcmchandbook.net/HandbookChapter1.pdf
+-   Robert. Bayesian Choice.
+-   Berger.
+-   Geyer. http://www.mcmchandbook.net/HandbookChapter1.pdf
 
 ### Week 1
 
-- *BDA*, Chapter 1
-- Review probability. This [Probability Resource](http://www.wzchen.com/probability-cheatsheet/) is a good resource.
-- Review R. See [R for Data Science](http://r4ds.had.co.nz/).
-- Frank Harrell, "[My Journey From Frequentist to Bayesian Statistics](http://www.fharrell.com/post/journey/)".
+-   *BDA*, Chapter 1
+-   Review probability. This [Probability Resource](http://www.wzchen.com/probability-cheatsheet/) is a good resource.
+-   Review R. See [R for Data Science](http://r4ds.had.co.nz/).
+-   Frank Harrell, "[My Journey From Frequentist to Bayesian Statistics](http://www.fharrell.com/post/journey/)".
 
 
 - [Frequentism and Bayesianism: A Practical Introduction](http://jakevdp.github.io/blog/2014/03/11/frequentism-and-bayesianism-a-practical-intro/)
-- [The Bayesian New Statistics: Hypothesis testing, estimation, meta-analysis, and power analysis from a Bayesian perspective](https://link.springer.com/article/10.3758/s13423-016-1221-4)
-
-
-- Clark, Michael [Bayesian Basics](http://m-clark.github.io/docs/IntroBayes.html) A quick overview of Bayesian inference using regression, Stan, and including model checking.
-
+-   [The Bayesian New Statistics: Hypothesis testing, estimation, meta-analysis, and power analysis from a Bayesian perspective](https://link.springer.com/article/10.3758/s13423-016-1221-4)
+-   Clark, Michael [Bayesian Basics](http://m-clark.github.io/docs/IntroBayes.html) A quick overview of Bayesian inference using regression, Stan, and including model checking.
 
 Introductions
 
@@ -81,9 +76,7 @@ https://en.wikipedia.org/wiki/Information_theory
 - Jonah Gabry and Ben Goodrich [Estimating Regularized Linear Models with rstanarm](https://cran.r-project.org/web/packages/rstanarm/vignettes/lm.html)
 - Paul-Christian Bürkner [brms: An R Package for Bayesian Multilevel Models Using Stan](https://www.jstatsoft.org/article/view/v080i01)
 
-
-### Shinkage and Hierarchical Models
-
+### Shrinkage and Hierarchical Models
 
 - P. Richard Hahn∗, Carlos M. Carvalho† , David Puelz† , and Jingyu He [Regularization and Confounding in Linear
 Regression for Treatment Effect Estimation](https://projecteuclid.org/download/pdfview_1/euclid.ba/1484103680)
@@ -121,12 +114,9 @@ Bayes' Rule
 - https://alexanderetz.com/2015/08/09/understanding-bayes-visualization-of-bf/
 -https://alexanderetz.com/2015/11/01/evidence-vs-conclusions/
 
-
 ### Bayesian vs. Frequentists
 
-- Alessio Benavoli, Giorgio Corani, Janez Demsar, Marco Zaffalon [Time for a Change: a Tutorial for Comparing MultipleClassifiers Through Bayesian Analysis](http://jmlr.org/papers/volume18/16-305/16-305.pdf)
-
-
+- Alessio Benavoli, Giorgio Corani, Janez Demsar, Marco Zaffalon [Time for a Change: a Tutorial for Comparing Multiple Classifiers Through Bayesian Analysis](http://jmlr.org/papers/volume18/16-305/16-305.pdf)
 
 - [The QR Decomposition for Regression Models](http://mc-stan.org/users/documentation/case-studies/qr_regression.html)
 - [Robust Statistical Workflow with RStan](http://mc-stan.org/users/documentation/case-studies/rstan_workflow.html)
@@ -157,7 +147,7 @@ Madeleine B. Thompson https://arxiv.org/pdf/1011.4457.pdf
 - [Hamiltonian Monte Carlo explained](http://arogozhnikov.github.io/2016/12/19/markov_chain_monte_canrlo.html)
 - http://chi-feng.github.io/mcmc-demo/app.html#HamiltonianMC,banana
 
-### Introudction to Stan
+### Introduction to Stan
 
 - Savage, Jim. [A quick-start introduction to Stan for economists](http://nbviewer.jupyter.org/github/QuantEcon/QuantEcon.notebooks/blob/master/IntroToStan_basics_workflow.ipynb)
 

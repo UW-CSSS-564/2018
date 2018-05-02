@@ -127,10 +127,10 @@ The most relevant to this course are:
 
 -   [RStudio IDE](https://www.rstudio.com/wp-content/uploads/2016/01/rstudio-IDE-cheatsheet.pdf)
 -   [Data Visualization](https://www.rstudio.com/wp-content/uploads/2016/11/ggplot2-cheatsheet-2.1.pdf)
--   [Data Transformation Cheat Sheet](https://github.com/rstudio/cheatsheets/raw/master/source/pdfs/data-transformation-cheatsheet.pdf)
+-   [Data Transformation Cheat Sheet](https://github.com/rstudio/cheatsheets/raw/master/data-transformation.pdf)
 -   [R Markdown](https://www.rstudio.com/wp-content/uploads/2016/03/rmarkdown-cheatsheet-2.0.pdf)
 -   [R Markdown Reference Guide](https://www.rstudio.com/wp-content/uploads/2015/03/rmarkdown-reference.pdf)
--   [Data Import Cheat Sheet](https://github.com/rstudio/cheatsheets/raw/master/source/pdfs/data-import-cheatsheet.pdf)
+-   [Data Import Cheat Sheet](https://github.com/rstudio/cheatsheets/raw/master/data-import.pdf)
 -   [Base R](https://www.rstudio.com/wp-content/uploads/2016/10/r-cheat-sheet-3.pdf)
 -   [Advanced R](https://www.rstudio.com/wp-content/uploads/2016/02/advancedR.pdf)
 -   [Regular Expressions](https://www.rstudio.com/wp-content/uploads/2016/09/RegExCheatsheet.pdf)
