@@ -8,5 +8,4 @@ readings: []
 optional: []
 startTime: 2018-05-17T14:30:00
 endTime: 2018-05-17T15:50:00
-
 ---

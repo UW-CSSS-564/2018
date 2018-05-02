@@ -71,7 +71,7 @@ Sign up for our Slack worplace, https://uwcsss564.slack.com. We will use this fo
       
       <guid>/2018/pages/research_project/</guid>
       <description>The final project will a short analysis in R markdown that implements a Bayesian model using Stan to answer a research question of the student’s choosing.
-Proposal Fork https://github.com/UW-CSSS-564/2018-research-project. Edit the README.md. Add your name, correct the title, and make any other appropriate customizations. Write your proposal in the document docs/proposal.Rmd. Submit the assignment by opening a pull request titled, “Review Proposal”.  The project proposal should be brief. The intent of the proposal is two-fold:</description>
+Proposal Fork https://github.com/UW-CSSS-564/2018-research-project. Edit the README.md. Add your name, correct the title, and make any other appropriate customizations. Write your proposal in the document doc/proposal.Rmd. Submit the assignment by opening a pull request titled, “Review Proposal”.  The project proposal should be brief. The intent of the proposal is two-fold:</description>
     </item>
     
   </channel>

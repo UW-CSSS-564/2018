@@ -8,7 +8,7 @@ The final project will a short analysis in R markdown that implements a Bayesian
 
 1.  Fork <https://github.com/UW-CSSS-564/2018-research-project>.
 1.  Edit the `README.md`. Add your name, correct the title, and make any other appropriate customizations.
-1.  Write your proposal in the document `docs/proposal.Rmd`.
+1.  Write your proposal in the document `doc/proposal.Rmd`.
 1.  Submit the assignment by opening a pull request titled, "Review Proposal".
 
 The project proposal should be brief.
@@ -27,6 +27,9 @@ The proposal sould consist of a paragraph or two describing.
 Other notes on this proposal:
 
 -   You should have data on hand. There is not enough time to collect new data before this is due.
+-   If you will be using non-public or large (> 100 MB) datasets, let the instructors know.
+    Using non-public data is acceptable for the project.
+    However, the instructors will need to work with you to ensure that your workflow keeps that data non-public.
 -   Replications are acceptable. However, you must do some original work when replicating a paper.
 
 ## Draft

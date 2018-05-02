@@ -5,6 +5,7 @@ buildFuture: true
 menu:
   main:
   - {name: Schedule, url: /schedule/}
+  - {name: Research Project, url: /pages/research_project/}
   - {name: Assignments, url: /assignments/}
   - {name: Pages, url: /pages/}
 params:

@@ -17,7 +17,7 @@
       <pubDate>Thu, 31 May 2018 14:30:00 +0000</pubDate>
       
       <guid>/2018/schedule/2018-05-31-class/</guid>
-      <description></description>
+      <description>Review and work on research projects.</description>
     </item>
     
     <item>
@@ -26,7 +26,7 @@
       <pubDate>Thu, 31 May 2018 13:30:00 +0000</pubDate>
       
       <guid>/2018/schedule/2018-05-31-lab/</guid>
-      <description></description>
+      <description>Review and work on research projects.</description>
     </item>
     
     <item>
@@ -35,7 +35,7 @@
       <pubDate>Tue, 29 May 2018 14:30:00 +0000</pubDate>
       
       <guid>/2018/schedule/2018-05-29-class/</guid>
-      <description></description>
+      <description>Draft of research project is due at the start of class. Review and collaboratively work on research projects.</description>
     </item>
     
     <item>
@@ -333,7 +333,7 @@ Sign up for our Slack worplace, https://uwcsss564.slack.com. We will use this fo
       
       <guid>/2018/pages/research_project/</guid>
       <description>The final project will a short analysis in R markdown that implements a Bayesian model using Stan to answer a research question of the student’s choosing.
-Proposal Fork https://github.com/UW-CSSS-564/2018-research-project. Edit the README.md. Add your name, correct the title, and make any other appropriate customizations. Write your proposal in the document docs/proposal.Rmd. Submit the assignment by opening a pull request titled, “Review Proposal”.  The project proposal should be brief. The intent of the proposal is two-fold:</description>
+Proposal Fork https://github.com/UW-CSSS-564/2018-research-project. Edit the README.md. Add your name, correct the title, and make any other appropriate customizations. Write your proposal in the document doc/proposal.Rmd. Submit the assignment by opening a pull request titled, “Review Proposal”.  The project proposal should be brief. The intent of the proposal is two-fold:</description>
     </item>
     
   </channel>

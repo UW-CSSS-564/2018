@@ -8,5 +8,7 @@ readings: []
 optional: []
 startTime: 2018-05-31T14:30:00
 endTime: 2018-05-31T15:50:00
-
 ---
+
+Review and work on research projects.
+
