@@ -4,6 +4,12 @@ title: CHANGELOG
 
 See the [GitHub repository](https://github.com/UW-POLS503/2018/commits/master) the history of changes.
 
+## 2018-05-01
+
+-   added all research project dates
+-   added all assignment dates for assignments 1--3
+-   added readings for weeks 6--7
+
 ## 2018-03-27
 
 -   fix times and locations of classes

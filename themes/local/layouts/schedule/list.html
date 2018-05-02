@@ -5,9 +5,65 @@
 
   {{ .Content }}
 
+  <hr>
+
   <h2>Research Project</h2>
 
+  See the <a href="{{ "pages/research_project/" | relURL }}"></a> page for instructions.
+
+  <table class="table">
+  <thead>
+    <tr>
+      <th></th>
+      <th>Date</th>
+    </tr>
+  </thead>
+  <tbody>
+  {{ range .Params.project }}
+    <tr>
+      <td>
+        <a href="{{ .url }}">{{ .name }}</a>
+      </td>
+      <td>
+        {{ dateFormat "Jan 2, 2006 3:04 PM" .date }}
+      </td>
+    </tr>
+  {{ end }}
+  </tbody>
+  </table>
+
+  <hr>
+
   <h2>Assignments</h2>
+
+  See the <a href="{{ "assigments/" | relURL }}"></a> page for instructions.
+
+  <table class="table">
+    <thead>
+      <tr>
+        <th>Assignment</th>
+        <th>Submission Date</th>
+        <th>Correction Date</th>
+      </tr>
+    </thead>
+    <tbody>
+    {{ range .Params.assignments }}
+    <tr>
+      <td>
+        <a href="{{ .url }}">{{ .name }}</a>
+      </td>
+      <td>
+        {{ dateFormat "Jan 2, 2006 3:04 PM" .dueDate }}
+      </td>
+      <td>
+        {{ dateFormat "Jan 2, 2006 3:04 PM" .correctionDate }}
+      </td>
+    </tr>
+    {{ end }}
+    </tbody>
+  </table>
+
+  <hr>
 
   <h2>Meetings</h2>
 

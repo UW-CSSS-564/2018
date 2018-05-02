@@ -7,43 +7,5 @@
 
   {{ .Content }}
 
-  <table class="table">
-    <thead>
-      <tr>
-      <th></th>
-      <th>Assigned date</th>
-      <th>Due date</th>
-      <th>Corrections due date</th>
-      <th>Instructions and<br>Submissions <i class="fa fa-github"></i></th>
-      <th>Solutions <i class="fa fa-github"></i></th>
-      </tr>
-    </thead>
-    <tbody>
-        {{ range .Data.Pages }}
-        {{ $solutionsURL := urls.Parse .Params.solutionsURL }}
-        {{ $assignmentURL := urls.Parse .Params.assignmentURL }}
-        <tr>
-          <td>
-            {{ .Title }}
-          </td>
-          <td>
-            {{ dateFormat "January 2" .Params.DateAssigned }}
-          </td>
-          <td>
-            {{ dateFormat "January 2" .Params.DateDue }}
-          </td>
-          <td>
-            {{ dateFormat "January 2" .Params.dateCorrectionsDue }}
-          </td>
-          <td>
-            <a href="{{ .Params.assignmentURL }}">{{ $assignmentURL.Path }}</a>
-          </td>
-          <td>
-            <a href="{{ .Params.solutionsURL }}">{{ $solutionsURL.Path }}</a>
-          </td>
-        </tr>
-        {{ end }}
-    </tbody>
-  </table>
 </main>
 {{ end }}

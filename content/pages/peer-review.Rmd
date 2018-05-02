@@ -1,0 +1,57 @@
+---
+title: "Peer Review"
+author: "Jeffrey Arnold"
+date: "5/1/2018"
+output: html_document
+---
+
+## Peer Review
+
+After the solutions to each assignment is released, each student will be assigned to review two assignments.
+
+### Instructions
+
+These reviews will be submitted as comments on the pull request.
+The comments should address the solution, code, and presentation:
+
+-   Solutions:
+
+    -   The reviewer should check whether the solutions are correct. A key will be provided.
+    -   The reviewer should note incorrect or incomplete solutions, along with a suggestion of what they can do to fix it. The reviewer does not need to fix the problems, but they should provide indications of where the solution
+    -   Note correct solutions.
+    -   If you are unsure about a solution, note it clearly, and ask the instructors for assistance, or the author for clarification.
+
+-   Code:
+
+    -   Check that the code runs/compiles; in this class that means "does it knit?". It should run without editing, and produce the results
+      presented.
+
+    -   If any errors are encountered: include the exact error message as a code block in comments.
+
+    -   The code should be clearly written, formatted, and easy to follow.
+
+    -   There should not be errors or warnings in the code.
+
+-   Presentation:
+
+    -   Is the document clearly written, well formatted, such that you as a reviewer can follow and understand the solutions?
+
+### Evaluation
+
+Each peer review will be deemed “good” or “needs more”.[^peer-review]
+Each review you do will give you 1 point if is "good" and 0 points if it "needs more".
+Those will be totaled over all assignments to form your peer review mark.
+
+How to give good comments:
+
+-   Address questions that were answered incorrectly, unclearly, or particularly well.
+-   Give thoughtful, constructive and considerate comments.
+-   Be specific and concise.
+-   Try to learn something new and, if you succeed, point that out.
+-   If you can’t find anything to praise or that you found helpful, then at least offer some suggestions in a kind way.
+
+Features of "needs more":
+
+-   You do not address each question.
+-   Your review is mean.
+-   You can’t find anything to praise/learn and yet you don’t offer any suggestions either.

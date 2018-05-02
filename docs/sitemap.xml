@@ -148,10 +148,6 @@
   </url>
   
   <url>
-    <loc>/2018/pages/_book/_main/</loc>
-  </url>
-  
-  <url>
     <loc>/2018/assignments/</loc>
   </url>
   
@@ -189,6 +185,10 @@
   <url>
     <loc>/2018/pages/</loc>
     <priority>0</priority>
+  </url>
+  
+  <url>
+    <loc>/2018/pages/peer-review/</loc>
   </url>
   
   <url>
