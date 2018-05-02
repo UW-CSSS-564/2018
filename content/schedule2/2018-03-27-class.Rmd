@@ -1,0 +1,10 @@
+---
+date: '2018-03-27'
+weekday: Tuesday
+tags: []
+lab: no
+week: 1
+startTime: 2018-03-27T14:30:00
+endTime: 2018-03-27T15:50:00
+
+---

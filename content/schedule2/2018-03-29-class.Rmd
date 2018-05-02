@@ -1,0 +1,13 @@
+---
+date: '2018-03-29'
+weekday: Thursday
+before: []
+after: []
+inclass: []
+tags: []
+lab: no
+week: 1
+startTime: 2018-03-29T14:30:00
+endTime: 2018-03-29T15:50:00
+
+---

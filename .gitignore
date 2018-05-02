@@ -2,3 +2,4 @@
 .RData
 .RHistory
 *.bib.sav
+node_modules
