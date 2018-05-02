@@ -1,6 +1,7 @@
 baseurl: https://UW-CSSS-564.github.io/2018/
 ignoreFiles: [\.Rmd$, \.Rmarkdown$, _files$, _cache$]
 languageCode: en-US
+buildFuture: true
 menu:
   main:
   - {name: Schedule, url: /schedule/}
@@ -86,5 +87,3 @@ permalinks:
   post: '/:year/:month/:day/:slug/'
 publishDir: docs
 theme: local
-
-

@@ -1,13 +1,9 @@
 {{ define "main" }}
 <main class="container">
-  <h1>Projects</h1>
-
-  <h2>Instructions</h2>
-
-  {{ .Content }}
+  <h1>{{ .Title }}</h1>
 
   <h2>Schedule</h2>
-
+  <p>
   <table class="table">
     <thead>
       <tr>
@@ -16,7 +12,7 @@
       </tr>
     </thead>
     <tbody>
-        {{ range .Data.Pages.ByWeight }}
+        {{ range .Data.Pages.ByDate }}
         <tr>
           <td>
             {{ if .Params.Draft }}
@@ -26,13 +22,18 @@
             {{ end }}
           </td>
           <td>
-            {{ if .Params.DateDue }}
-              {{ dateFormat "January 2" .Params.DateDue }}
+            {{ if .Date }}
+              {{ dateFormat "Jan 2, 3:04 PM" .Date }}
             {{ end }}
           </td>
         </tr>
         {{ end }}
     </tbody>
   </table>
+
+  <h2>Instructions</h2>
+
+  {{ .Content }}
+
 </main>
 {{ end }}

@@ -1,0 +1,623 @@
+<!DOCTYPE html>
+<html >
+
+<head>
+
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <title>Git and GitHub</title>
+  <meta name="description" content="Git and GitHub">
+  <meta name="generator" content="bookdown 0.7 and GitBook 2.6.7">
+
+  <meta property="og:title" content="Git and GitHub" />
+  <meta property="og:type" content="book" />
+  
+  
+  
+  
+
+  <meta name="twitter:card" content="summary" />
+  <meta name="twitter:title" content="Git and GitHub" />
+  
+  
+  
+
+
+
+
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="apple-mobile-web-app-capable" content="yes">
+  <meta name="apple-mobile-web-app-status-bar-style" content="black">
+  
+  
+
+
+<script src="libs/jquery-2.2.3/jquery.min.js"></script>
+<link href="libs/gitbook-2.6.7/css/style.css" rel="stylesheet" />
+<link href="libs/gitbook-2.6.7/css/plugin-bookdown.css" rel="stylesheet" />
+<link href="libs/gitbook-2.6.7/css/plugin-highlight.css" rel="stylesheet" />
+<link href="libs/gitbook-2.6.7/css/plugin-search.css" rel="stylesheet" />
+<link href="libs/gitbook-2.6.7/css/plugin-fontsettings.css" rel="stylesheet" />
+
+
+
+
+
+
+
+
+
+<style type="text/css">
+a.sourceLine { display: inline-block; line-height: 1.25; }
+a.sourceLine { pointer-events: none; color: inherit; text-decoration: inherit; }
+a.sourceLine:empty { height: 1.2em; position: absolute; }
+.sourceCode { overflow: visible; }
+code.sourceCode { white-space: pre; position: relative; }
+div.sourceCode { margin: 1em 0; }
+pre.sourceCode { margin: 0; }
+@media screen {
+div.sourceCode { overflow: auto; }
+}
+@media print {
+code.sourceCode { white-space: pre-wrap; }
+a.sourceLine { text-indent: -1em; padding-left: 1em; }
+}
+pre.numberSource a.sourceLine
+  { position: relative; }
+pre.numberSource a.sourceLine:empty
+  { position: absolute; }
+pre.numberSource a.sourceLine::before
+  { content: attr(data-line-number);
+    position: absolute; left: -5em; text-align: right; vertical-align: baseline;
+    border: none; pointer-events: all;
+    -webkit-touch-callout: none; -webkit-user-select: none;
+    -khtml-user-select: none; -moz-user-select: none;
+    -ms-user-select: none; user-select: none;
+    padding: 0 4px; width: 4em;
+    color: #aaaaaa;
+  }
+pre.numberSource { margin-left: 3em; border-left: 1px solid #aaaaaa;  padding-left: 4px; }
+div.sourceCode
+  {  }
+@media screen {
+a.sourceLine::before { text-decoration: underline; }
+}
+code span.al { color: #ff0000; font-weight: bold; } /* Alert */
+code span.an { color: #60a0b0; font-weight: bold; font-style: italic; } /* Annotation */
+code span.at { color: #7d9029; } /* Attribute */
+code span.bn { color: #40a070; } /* BaseN */
+code span.bu { } /* BuiltIn */
+code span.cf { color: #007020; font-weight: bold; } /* ControlFlow */
+code span.ch { color: #4070a0; } /* Char */
+code span.cn { color: #880000; } /* Constant */
+code span.co { color: #60a0b0; font-style: italic; } /* Comment */
+code span.cv { color: #60a0b0; font-weight: bold; font-style: italic; } /* CommentVar */
+code span.do { color: #ba2121; font-style: italic; } /* Documentation */
+code span.dt { color: #902000; } /* DataType */
+code span.dv { color: #40a070; } /* DecVal */
+code span.er { color: #ff0000; font-weight: bold; } /* Error */
+code span.ex { } /* Extension */
+code span.fl { color: #40a070; } /* Float */
+code span.fu { color: #06287e; } /* Function */
+code span.im { } /* Import */
+code span.in { color: #60a0b0; font-weight: bold; font-style: italic; } /* Information */
+code span.kw { color: #007020; font-weight: bold; } /* Keyword */
+code span.op { color: #666666; } /* Operator */
+code span.ot { color: #007020; } /* Other */
+code span.pp { color: #bc7a00; } /* Preprocessor */
+code span.sc { color: #4070a0; } /* SpecialChar */
+code span.ss { color: #bb6688; } /* SpecialString */
+code span.st { color: #4070a0; } /* String */
+code span.va { color: #19177c; } /* Variable */
+code span.vs { color: #4070a0; } /* VerbatimString */
+code span.wa { color: #60a0b0; font-weight: bold; font-style: italic; } /* Warning */
+</style>
+
+</head>
+
+<body>
+
+
+
+  <div class="book without-animation with-summary font-size-2 font-family-1" data-basepath=".">
+
+    <div class="book-summary">
+      <nav role="navigation">
+
+<ul class="summary">
+<li class="chapter" data-level="0.1" data-path=""><a href="#what-is-git"><i class="fa fa-check"></i><b>0.1</b> What is Git?</a></li>
+<li class="chapter" data-level="0.2" data-path=""><a href="#what-is-github"><i class="fa fa-check"></i><b>0.2</b> What is GitHub?</a></li>
+<li class="chapter" data-level="0.3" data-path=""><a href="#getting-started-with-git"><i class="fa fa-check"></i><b>0.3</b> Getting Started with Git</a></li>
+<li class="chapter" data-level="0.4" data-path=""><a href="#relationship-between-github-and-local-git-projects"><i class="fa fa-check"></i><b>0.4</b> Relationship between GitHub and Local Git Projects</a></li>
+<li class="chapter" data-level="0.5" data-path=""><a href="#references"><i class="fa fa-check"></i><b>0.5</b> References</a></li>
+<li class="chapter" data-level="0.6" data-path=""><a href="#asking-for-help"><i class="fa fa-check"></i><b>0.6</b> Asking for Help</a></li>
+<li class="chapter" data-level="0.7" data-path=""><a href="#getting-help-from-within-r-and-rstudio"><i class="fa fa-check"></i><b>0.7</b> Getting Help from Within R and RStudio</a></li>
+<li class="chapter" data-level="0.8" data-path=""><a href="#help-on-the-internet"><i class="fa fa-check"></i><b>0.8</b> Help on the Internet</a></li>
+<li class="chapter" data-level="0.9" data-path=""><a href="#r-cheatsheets"><i class="fa fa-check"></i><b>0.9</b> R Cheatsheets</a></li>
+<li class="chapter" data-level="0.10" data-path=""><a href="#books"><i class="fa fa-check"></i><b>0.10</b> Books</a></li>
+<li class="chapter" data-level="0.11" data-path=""><a href="#blogs-and-twitter"><i class="fa fa-check"></i><b>0.11</b> Blogs and Twitter</a></li>
+<li class="chapter" data-level="0.12" data-path=""><a href="#task-views"><i class="fa fa-check"></i><b>0.12</b> Task Views</a></li>
+<li class="chapter" data-level="0.13" data-path=""><a href="#proposal"><i class="fa fa-check"></i><b>0.13</b> Proposal</a></li>
+<li class="chapter" data-level="0.14" data-path=""><a href="#draft"><i class="fa fa-check"></i><b>0.14</b> Draft</a></li>
+<li class="chapter" data-level="0.15" data-path=""><a href="#final-research-project"><i class="fa fa-check"></i><b>0.15</b> Final Research Project</a></li>
+<li class="chapter" data-level="0.16" data-path=""><a href="#instructions"><i class="fa fa-check"></i><b>0.16</b> Instructions</a><ul>
+<li class="chapter" data-level="0.16.1" data-path=""><a href="#advice"><i class="fa fa-check"></i><b>0.16.1</b> Advice</a></li>
+<li class="chapter" data-level="0.16.2" data-path=""><a href="#reproducibility"><i class="fa fa-check"></i><b>0.16.2</b> Reproducibility</a></li>
+<li class="chapter" data-level="0.16.3" data-path=""><a href="#organization"><i class="fa fa-check"></i><b>0.16.3</b> Organization</a></li>
+<li class="chapter" data-level="0.16.4" data-path=""><a href="#computational-narratives"><i class="fa fa-check"></i><b>0.16.4</b> Computational Narratives</a></li>
+</ul></li>
+</ul>
+
+      </nav>
+    </div>
+
+    <div class="book-body">
+      <div class="body-inner">
+        <div class="book-header" role="navigation">
+          <h1>
+            <i class="fa fa-circle-o-notch fa-spin"></i><a href="./">Git and GitHub</a>
+          </h1>
+        </div>
+
+        <div class="page-wrapper" tabindex="-1" role="main">
+          <div class="page-inner">
+
+            <section class="normal" id="section-">
+<div id="header">
+<h1 class="title">Git and GitHub</h1>
+</div>
+<div id="what-is-git" class="section level2">
+<h2><span class="header-section-number">0.1</span> What is Git?</h2>
+<p>Git is software for version control (keeping track of the changes and history of files).</p>
+</div>
+<div id="what-is-github" class="section level2">
+<h2><span class="header-section-number">0.2</span> What is GitHub?</h2>
+<p>GitHub is a website that hosts git repositories. It also has tools to enable
+collaboration on software using git.</p>
+</div>
+<div id="getting-started-with-git" class="section level2">
+<h2><span class="header-section-number">0.3</span> Getting Started with Git</h2>
+<p>RStudio includes a GUI interface to git, which will cover almost all the cases you will encounter in this course.
+For quick introduction on learn how to use Version control within RStudio, I suggest the “Version Control” chapter of the <a href="https://www.datacamp.com/courses/working-with-the-rstudio-ide-part-2">Working with the RStudio IDE (Part 2)</a> DataCamp course.</p>
+<p>However, if you are comfortable with the command line I suggest you learn how
+to use git from the command line. See the references below for more information.</p>
+</div>
+<div id="relationship-between-github-and-local-git-projects" class="section level2">
+<h2><span class="header-section-number">0.4</span> Relationship between GitHub and Local Git Projects</h2>
+<p><img alt="Relationship between git and GitHub" src="../../img/github-diagram.svg"></p>
+</div>
+<div id="references" class="section level2">
+<h2><span class="header-section-number">0.5</span> References</h2>
+<p>There are <strong>many</strong> references/introductions and tutorials on git and GitHub available.
+However, be aware that many of these are written for programmers/software engineers who may have different use-cases for git than you will have working on research in a small team or solo.</p>
+<p>Here are a few that I’ve found useful.</p>
+<ul>
+<li><p>Jenny Bryan, <a href="http://happygitwithr.com/">Happy Git and GitHub for the useR</a></p></li>
+<li><p>DataCamp course <a href="http://swcarpentry.github.io/git-novice/">Version Control with Git</a>. This course requires shell knowledge, but the following two modules are useful.</p>
+<ul>
+<li><a href="http://swcarpentry.github.io/git-novice/01-basics/">Automated Version Control</a></li>
+<li><a href="http://swcarpentry.github.io/git-novice/14-supplemental-rstudio/">Using Git from RStudio</a></li>
+</ul></li>
+<li><p><a href="https://try.github.io/levels/1/challenges/1">Try Git</a></p></li>
+<li><p><a href="http://swcarpentry.github.io/git-novice/">Software Carpentry: Version Control with Git</a></p></li>
+<li><p><a href="http://www.dataschool.io/simple-guide-to-forks-in-github-and-git/">Simple guide to forks in GitHub and Git</a></p></li>
+<li><p><a href="https://help.github.com/">GitHub Help</a></p></li>
+<li><p><a href="http://www.dataschool.io/git-and-github-videos-for-beginners/">Git and GitHub videos for beginners</a> from dataschool introduces git and GitHub via many videos.</p></li>
+<li><p><a href="https://www.git-tower.com/blog/git-cheat-sheet/">Git Cheat Sheet</a></p></li>
+</ul>
+
+<p>A good place to start is <a href="https://support.rstudio.com/hc/en-us/articles/200552336-Getting-Help-with-R">Rstudio’s guide for getting help with R</a></p>
+</div>
+<div id="asking-for-help" class="section level2">
+<h2><span class="header-section-number">0.6</span> Asking for Help</h2>
+<p>When asking for help with R it is important to at least</p>
+<ol style="list-style-type: decimal">
+<li>Include the exact code that you ran</li>
+<li>The error message that you got</li>
+</ol>
+<p>Without the code and the error message it can be hard to impossible to diagnose the problem and provide a solution.
+Questions such as “This isn’t working” or even “I’m getting this error message” aren’t useful without the code and error message.</p>
+<p>Even better is to provide a <strong>minimal reproducible answer</strong>.
+This is the smallest amount of code that <strong>someone else can run</strong>, that produces the same error that you are getting.
+This often means trying to reproduce your error running the same code on a different built-in data set and seeing if you still get the same error.
+See more instructions <a href="http://stackoverflow.com/questions/5963269/how-to-make-a-great-r-reproducible-example">here</a>.
+A benefit of this approach, is that often by trying to reproduce with minimal code you will be able to debug the code itself.</p>
+<p>Finally, include the results of <code>sessionInfo()</code>.
+This provides information about the exact versions of R, loaded packages, and operating system you are using, which can be useful in debugging problems.</p>
+<div class="sourceCode" id="cb1"><pre class="sourceCode r"><code class="sourceCode r"><a class="sourceLine" id="cb1-1" data-line-number="1"><span class="kw">sessionInfo</span>()</a></code></pre></div>
+<pre><code>## R version 3.5.0 (2018-04-23)
+## Platform: x86_64-apple-darwin15.6.0 (64-bit)
+## Running under: macOS High Sierra 10.13.4
+## 
+## Matrix products: default
+## BLAS: /System/Library/Frameworks/Accelerate.framework/Versions/A/Frameworks/vecLib.framework/Versions/A/libBLAS.dylib
+## LAPACK: /Library/Frameworks/R.framework/Versions/3.5/Resources/lib/libRlapack.dylib
+## 
+## locale:
+## [1] en_US.UTF-8/en_US.UTF-8/en_US.UTF-8/C/en_US.UTF-8/en_US.UTF-8
+## 
+## attached base packages:
+## [1] stats     graphics  grDevices utils     datasets  methods   base     
+## 
+## other attached packages:
+## [1] fortunes_1.5-4  testthat_2.0.0  rmarkdown_1.9   knitr_1.20     
+## [5] roxygen2_6.0.1  devtools_1.13.5
+## 
+## loaded via a namespace (and not attached):
+##  [1] Rcpp_0.12.16    rstudioapi_0.7  xml2_1.2.0      magrittr_1.5   
+##  [5] R6_2.2.2        rlang_0.2.0     stringr_1.3.0   tools_3.5.0    
+##  [9] xfun_0.1        withr_2.1.2     htmltools_0.3.6 commonmark_1.5 
+## [13] yaml_2.1.18     rprojroot_1.3-2 digest_0.6.15   bookdown_0.7   
+## [17] memoise_1.1.0   evaluate_0.10.1 blogdown_0.6    stringi_1.1.7  
+## [21] compiler_3.5.0  backports_1.1.2</code></pre>
+<p>For further discussion on how to ask good questions:</p>
+<ul>
+<li><a href="http://blog.revolutionanalytics.com/2014/01/how-to-ask-for-r-help.html">How to ask for help in R</a></li>
+<li>StackOverflow. <a href="https://stackoverflow.com/questions/5963269/how-to-make-a-great-r-reproducible-example">How to make a great R reproducible example?</a></li>
+<li>StackOverflow. <a href="http://stackoverflow.com/help/mcve">How to create a Minimal, Complete, and Verifiable example</a></li>
+<li><a href="https://www.r-project.org/posting-guide.html">R Posting Guide: How to ask good questions that prompt useful answers</a></li>
+<li>Coding Killed the Cat. <a href="https://codingkilledthecat.wordpress.com/2012/06/26/how-to-ask-for-programming-help/">How to ask for programming question</a></li>
+<li>Matt Gemmell. <a href="http://mattgemmell.com/what-have-you-tried/">What Have You Tried?</a></li>
+</ul>
+</div>
+<div id="getting-help-from-within-r-and-rstudio" class="section level2">
+<h2><span class="header-section-number">0.7</span> Getting Help from Within R and RStudio</h2>
+<p><strong>Help tab:</strong> The first place to look is to use the search box in the <em>Help</em> tab of RStudio.</p>
+<p><strong>Autocompletion:</strong> If you start typing in either the console or editor in RStudio and hit <code>[TAB]</code>, the RStudio will show a list of completions as well as a short help for each.</p>
+<p>There are several R functions to get help.
+You can use either <code>?</code> or <code>help</code>.
+For example to find help for a function <code>quantile</code>, both</p>
+<div class="sourceCode" id="cb3"><pre class="sourceCode r"><code class="sourceCode r"><a class="sourceLine" id="cb3-1" data-line-number="1">?quantile</a></code></pre></div>
+<p>and</p>
+<div class="sourceCode" id="cb4"><pre class="sourceCode r"><code class="sourceCode r"><a class="sourceLine" id="cb4-1" data-line-number="1"><span class="kw">help</span>(<span class="st">&quot;quantile&quot;</span>)</a></code></pre></div>
+<p>will display the help page for <code>quantile</code>.
+To view this documentation online in a searchable form visit <a href="http://www.rdocumentation.org/">Rdocumentation.org</a>.</p>
+<p>To find the help pages available for a package, use <code>help</code> with the <code>package</code> argument.
+For example,</p>
+<div class="sourceCode" id="cb5"><pre class="sourceCode r"><code class="sourceCode r"><a class="sourceLine" id="cb5-1" data-line-number="1"><span class="kw">help</span>(<span class="dt">package =</span> <span class="st">&quot;tidyr&quot;</span>)</a></code></pre></div>
+<p>The help for R functions is only useful if you know what function you need want to know either what it is doing, or what the arguments are.
+The help files in R are not useful for understanding what a package does or how to use it.
+However, <em>vignettes</em> for R packages are often overviews of the functionality of packages that serve as tutorials or introductions to using the package.
+To get a list of all vignettes of the packages your have installed, run</p>
+<div class="sourceCode" id="cb6"><pre class="sourceCode r"><code class="sourceCode r"><a class="sourceLine" id="cb6-1" data-line-number="1"><span class="kw">browseVignettes</span>()</a></code></pre></div>
+<p>To get the list of vignettes for a specific package, run</p>
+<div class="sourceCode" id="cb7"><pre class="sourceCode r"><code class="sourceCode r"><a class="sourceLine" id="cb7-1" data-line-number="1"><span class="kw">browseVignettes</span>(<span class="st">&quot;dplyr&quot;</span>)</a></code></pre></div>
+<p>You can also find vignettes for packages you have not installed on the packages’ CRAN page <a href="https://github.com/hadley/dplyr">https://cran.r-project.org/web/packages/tidyr/index.html</a>.
+There is also a <code>vignette</code> function, but you need the exact name of the vignette, which you generally do not know.</p>
+<p>You can search for foo in help manuals and archived mailing lists</p>
+<div class="sourceCode" id="cb8"><pre class="sourceCode r"><code class="sourceCode r"><a class="sourceLine" id="cb8-1" data-line-number="1"><span class="kw">RSiteSearch</span>(<span class="st">&quot;ggplot2&quot;</span>)</a></code></pre></div>
+<p>Want to find out what data sets are included in the R packages that you have installed?</p>
+<div class="sourceCode" id="cb9"><pre class="sourceCode r"><code class="sourceCode r"><a class="sourceLine" id="cb9-1" data-line-number="1"><span class="kw">data</span>()</a></code></pre></div>
+<p>To find data sets included in a specific package, use <code>data</code> with the <code>package</code> argument,
+For example,</p>
+<div class="sourceCode" id="cb10"><pre class="sourceCode r"><code class="sourceCode r"><a class="sourceLine" id="cb10-1" data-line-number="1"><span class="kw">data</span>(<span class="dt">package =</span> <span class="st">&quot;ggplot2&quot;</span>)</a></code></pre></div>
+<p>Note that <code>search()</code> <strong>does not</strong> do what you expect it to do (unless you expect it to return the <a href="http://adv-r.had.co.nz/Environments.html">search path</a> in which R looks for names of functions and objects).</p>
+</div>
+<div id="help-on-the-internet" class="section level2">
+<h2><span class="header-section-number">0.8</span> Help on the Internet</h2>
+<p><a href="http://www.rdocumentation.org/">Rdocumentation.org</a> searches the documentation of all R packages on CRAN.</p>
+<p>There are several documentation sites that are of particular use:</p>
+<ul>
+<li><a href="http://tidyverse.org/">tidyverse.org</a> hosts documentation for the various <strong>tidyverse</strong> packages (ggplot2, tibble, tidyr, reader, purr, dplyr, …).</li>
+<li><a href="http://docs.ggplot2.org/">ggplot2 documentation</a>. Documentation for <strong>ggplot2</strong>.</li>
+<li><a href="https://www.ggplot2-exts.org/">ggplot2 extensions</a> A list of packages that extend the functionality of <strong>ggplot2</strong>.</li>
+</ul>
+<p>Google has gotten better with R searches, but <code>R</code> is a particularly unfriendly search term.
+However, if you are searching for “R” with other words in context, you are likely to have some success.
+An alternative is to use <a href="http://rseek.org">rseek.org</a> instead.
+It is a Google search restricted to a curated set of sites related to R.</p>
+<p>Many R packages have an article in either the <a href="http://www.jstatsoft.org/index">Journal of Statistical Software</a> or <a href="https://journal.r-project.org/">The R Journal</a>
+These articles are similar to package does.</p>
+<p><a href="https://stackoverflow.com">Stack Overflow</a> is a question and answer website for computer programming questions.
+Search for questions about R using the “r” tag. You can do this by adding <code>[r]</code> to your search query. Other tags that may be useful are <code>[ggplot2]</code>, <code>[plyr]</code>.
+However, generally you should not need to <em>ask</em> questions for this course.
+Someone has likely already asked your question before.</p>
+<p>If you have a question about “statistics” or “data analysis” rather than “R”, then <a href="https://stats.stackexchange.com/">Cross Validated</a> is a Q-and-A site like Stack Overflow, but for statistics and machine learning.</p>
+<p>The traditional source of R help was the <a href="https://stat.ethz.ch/mailman/listinfo/r-help">R-help mailing list</a>.
+It is still a useful resource, though much of the traffic has moved over to StackOverflow.</p>
+</div>
+<div id="r-cheatsheets" class="section level2">
+<h2><span class="header-section-number">0.9</span> R Cheatsheets</h2>
+<p>RStudio has man very good <a href="https://www.rstudio.com/resources/cheatsheets/">cheatsheets</a>.
+The most relevant to this course are:</p>
+<ul>
+<li><a href="https://www.rstudio.com/wp-content/uploads/2016/01/rstudio-IDE-cheatsheet.pdf">RStudio IDE</a></li>
+<li><a href="https://www.rstudio.com/wp-content/uploads/2016/11/ggplot2-cheatsheet-2.1.pdf">Data Visualization</a></li>
+<li><a href="https://github.com/rstudio/cheatsheets/raw/master/source/pdfs/data-transformation-cheatsheet.pdf">Data Transformation Cheat Sheet</a></li>
+<li><a href="https://www.rstudio.com/wp-content/uploads/2016/03/rmarkdown-cheatsheet-2.0.pdf">R Markdown</a></li>
+<li><a href="https://www.rstudio.com/wp-content/uploads/2015/03/rmarkdown-reference.pdf">R Markdown Reference Guide</a></li>
+<li><a href="https://github.com/rstudio/cheatsheets/raw/master/source/pdfs/data-import-cheatsheet.pdf">Data Import Cheat Sheet</a></li>
+<li><a href="https://www.rstudio.com/wp-content/uploads/2016/10/r-cheat-sheet-3.pdf">Base R</a></li>
+<li><a href="https://www.rstudio.com/wp-content/uploads/2016/02/advancedR.pdf">Advanced R</a></li>
+<li><a href="https://www.rstudio.com/wp-content/uploads/2016/09/RegExCheatsheet.pdf">Regular Expressions</a></li>
+</ul>
+<p>The <a href="https://cran.r-project.org/doc/contrib/Short-refcard.pdf">Short R Reference Card</a> is the classic cheatsheet.
+However, some of the data manipulation and plotting functions are not those we use in this course, but it does cover much of the statistical functions.</p>
+</div>
+<div id="books" class="section level2">
+<h2><span class="header-section-number">0.10</span> Books</h2>
+<p>Two references organized by task are <a href="http://www.cookbook-r.com">The Cookbook for R</a> and <a href="http://www.statmethods.net/">Quick-R</a>.</p>
+</div>
+<div id="blogs-and-twitter" class="section level2">
+<h2><span class="header-section-number">0.11</span> Blogs and Twitter</h2>
+<p><a href="http://www.r-bloggers.com/">R-bloggers</a> aggregates R-related blogging.</p>
+</div>
+<div id="task-views" class="section level2">
+<h2><span class="header-section-number">0.12</span> Task Views</h2>
+<p>Do you want to know what packages exist for a given topic? <a href="https://cran.r-project.org/web/views/">CRAN Task Views</a> provide subject matter groupings of R packages. Some potentially useful task-views to social scientists are:</p>
+<ul>
+<li><a href="https://cran.r-project.org/web/views/Econometrics.html">Econometrics</a></li>
+<li><a href="https://cran.r-project.org/web/views/NaturalLanguageProcessing.html">Natural Language Processing</a></li>
+<li><a href="https://cran.r-project.org/web/views/OfficialStatistics.html">Official Statistics &amp; Survey Methodology</a></li>
+<li><a href="https://cran.r-project.org/web/views/ReproducibleResearch.html">Reproducible Research</a></li>
+<li><a href="https://cran.r-project.org/web/views/Spatial.html">Spatial</a></li>
+<li><a href="https://cran.r-project.org/web/views/Survival.html">Survival Analysis</a></li>
+<li><a href="https://cran.r-project.org/web/views/TimeSeries.html">Time Series</a></li>
+<li><a href="https://cran.r-project.org/web/views/WebTechnologies.html">Web Technologies and Services</a></li>
+<li><a href="https://cran.r-project.org/web/views/SocialSciences.html">Social Sciences</a></li>
+</ul>
+
+<p>Please complete the following before the first day of class (Tuesday, March 27, 2018).</p>
+<ol style="list-style-type: decimal">
+<li><p>Sign up for our Slack worplace, <a href="https://uwcsss564.slack.com" class="uri">https://uwcsss564.slack.com</a>. We will use this for announcments, and asking and answering questions in this course. You should have received an invite. If not email the <a href="cgilroy@uw.edu">instructors</a> to receive one.</p></li>
+<li><p>Sign into the course Slack workplace <a href="https://uwcsss564.slack.com" class="uri">https://uwcsss564.slack.com</a>, and leave a message on the <a href="https://uwcsss564.slack.com/messages/C9TRYPV19/">#onboarding</a> channel.
+In the message introduce yourself, explain why you are taking this course, and what you hope to get out of taking this course.</p></li>
+<li><p>Tell use about yourself: Complete the pre-course survey. If you are registered for the course, you should have received an email. kIf not, you can find a link pinned on the <code>#onboarding</code> channel of Slack.</p></li>
+<li><p>We will use <a href="https://git-scm.com/">git</a> for version control. and <a href="https://github.com/">GitHub</a> for distributing, collecting, and commenting on assignments.</p>
+<ol style="list-style-type: decimal">
+<li><p>Download <a href="https://git-scm.com/downloads">Git</a> and install git.
+You should be able to use defaults for all settings.</p></li>
+<li><p>Sign up for a GitHub account at <a href="https://github.com" class="uri">https://github.com</a> (if you do no already have one).</p></li>
+<li><p>Tell us what your GitHub username is using the form emailed to you,
+or that can be found pinned on the <code>#onboarding</code> channel in Slack.</p></li>
+</ol></li>
+<li><p>Download that you have installed and downloaded R:</p>
+<ol style="list-style-type: decimal">
+<li><p>If you have R installed already, check have the latest version of R.
+At the start of this course, the most recent version of R is <strong>3.4.4</strong>.
+You can find this in R:</p>
+<pre class="rconsole"><code>$ sessionInf()</code></pre></li>
+<li><p>If you do not have R or the latest version of it installed, then download
+it from <a href="https://cloud.r-project.org/">CRAN</a>.</p></li>
+<li><p>Update all installed R packages,</p>
+<pre class="rconsole"><code>$ update.packages(ask = FALSE)</code></pre></li>
+</ol></li>
+<li><p>Download that install RStudio Desktop (Open Source Edition). RStudio provides a
+friendly interface to R (an IDE). (If you are proficient with R and have
+been using another IDE or text editor with R, you can skip this step.)</p>
+<ol style="list-style-type: decimal">
+<li><p>If you do not have RStudio installed, download and install it from <a href="https://www.rstudio.com/products/rstudio/download/#download">here</a>.</p></li>
+<li><p>If you already have RStudio installed, check that you have the latest version
+by selecting <code>Help &gt; Check for Updates</code> in the menu. Download and install
+the newest version if not.</p></li>
+</ol></li>
+<li><p>Install LaTeX. We will not use LaTeX directly. But we will use it to create PDFs from R Markdown files. If you do not have LaTeX installed on your machine, download and install a LaTeX distribution. There are many different distributions, but these are the ones common to each distribution.</p>
+<ul>
+<li><p>Windows: <a href="http://miktex.org/download">MikTex</a></p></li>
+<li><p>MacOS: <a href="https://tug.org/mactex/">MacTex</a></p></li>
+<li><p>Linux: <code>tex-live</code> is the most common LaTeX distribution. Install it
+using your distribution’s package manager.</p></li>
+</ul>
+<p>Note, these are very large files and can take a while to download.</p></li>
+</ol>
+
+<p>The final project will a short analysis in R markdown that implements a Bayesian model using Stan to answer a research question of the student’s choosing.</p>
+</div>
+<div id="proposal" class="section level2">
+<h2><span class="header-section-number">0.13</span> Proposal</h2>
+<ol style="list-style-type: decimal">
+<li>Fork <a href="https://github.com/UW-CSSS-564/2018-research-project" class="uri">https://github.com/UW-CSSS-564/2018-research-project</a>.</li>
+<li>Edit the <code>README.md</code>. Add your name, correct the title, and make any other appropriate customizations.</li>
+<li>Write your proposal in the document <code>docs/proposal.Rmd</code>.</li>
+<li>Submit the assignment by opening a pull request titled, “Review Proposal”.</li>
+</ol>
+<p>The project proposal should be brief.
+The intent of the proposal is two-fold:</p>
+<ol style="list-style-type: decimal">
+<li>Encourage the student to think about the project with enough time to implement it.</li>
+<li>Receive feedback early in order to avoid projects that will be unfeasible in the context of this course.</li>
+</ol>
+<p>The proposal sould consist of a paragraph or two describing.</p>
+<ol style="list-style-type: decimal">
+<li>State research question</li>
+<li>Describe data that will be used to answer that question.</li>
+<li>Describe the model to be estimated to the best of your current understanding.</li>
+<li>Forecast anticipated problems with the project: data availability, data size, model complexity, etc.</li>
+</ol>
+<p>Other notes on this proposal:</p>
+<ul>
+<li>You should have data on hand. There is not enough time to collect new data before this is due.</li>
+<li>Replications are acceptable. However, you must do some original work when replicating a paper.</li>
+</ul>
+</div>
+<div id="draft" class="section level2">
+<h2><span class="header-section-number">0.14</span> Draft</h2>
+<p>This is a draft of the final research project. This will consistent of whatever the student is able to produce at the time of the due date.
+We will spend the last week working on these projects so the intent of having a draft prior to that week is not to have a complete draft, but to provide an opportunity for the student to document the current state of the project from which instructors and peers can provide feedback.
+The student should write up whatever they have done, and their plans, in such a way to provide others the best possibility to provide feedback.</p>
+</div>
+<div id="final-research-project" class="section level2">
+<h2><span class="header-section-number">0.15</span> Final Research Project</h2>
+<p>Submission of the final research project.
+See <a href="#instructions">Instructions</a>.</p>
+</div>
+<div id="instructions" class="section level2">
+<h2><span class="header-section-number">0.16</span> Instructions</h2>
+<p>The final project should produce a <a href="http://blog.stephenwolfram.com/2017/11/what-is-a-computational-essay/">computational
+narrative</a>
+in R markdown which answers a relevant research problem using methods
+introduced in this course. A [computational narrative] is a document which
+combines prose, code, and visualizations to explain and communicate scientific
+results. Unlike a traditional article, the code and data producing the results
+transparently presented in the document itself. The <a href="http://mc-stan.org/users/documentation/case-studies">Stan Case
+Studies</a> provide good
+exemplars of this style.</p>
+<p>This course asks requires a computational essay instead of an article in order to focus the students’ attention on the methodology, computation, and reproducibility issues which this course should promote.</p>
+<ol style="list-style-type: decimal">
+<li><p>The submission will consist of an R markdown document compiled into either a PDF or HTML file (if the document contains interactive material) and a repository containing the data and code necessary to reproduce the analysis.
+The details of this process are described in the final project details.</p></li>
+<li><p>The computational narrative should be no longer than a research note in a political science journal, 5,000 words of text (excluding code).</p></li>
+<li><p>The computational narrative should be self contained and written for a general social science audience.</p></li>
+<li><p>The computational narrative should effectively and informatively communicate its research design, methods, and contribution using text, code, and visualizations.
+The computational narrative should include no unnecessary material.</p></li>
+<li><p>The computational narrative must address an research problem or question using the appropriate methodology and design incorporating methods introduced and discussed in this course.</p></li>
+<li><p>As with any project worked on during graduate school, the author should use it to further research that could lead to a publication.
+However, given the time constraints of the quarter, it is recognized that it may not be possible to develop a novel contribution to a body of knowledge. Thus, projects will be primarily assessed on the appropriate application of methodology while taking the question as given.</p></li>
+<li><p>Replications of existing papers are acceptable provided that the author conducts their own analysis.</p></li>
+<li><p>It is acceptable to use this work in other courses.</p></li>
+<li><p>It is possible to collaborate on this assignment, but it requires pre-approval of the instructor.</p></li>
+<li><p>The computational narrative should not include a lengthy discussion of previous literature. But if it makes an original contribution it should clearly identify a gap in this literature and state the original contribution.</p></li>
+<li><p>Citations should use the citation capabilities in R markdown; see the <a href="https://rmarkdown.rstudio.com/authoring_bibliographies_and_citations.html">R markdown documentation</a>.</p></li>
+<li><p>Projects will not be judged on their results. They will be judged on the appropriateness of Bayesian methods used to answer the question.</p></li>
+<li><p>The use of visualization to convey results is preferable to tables or the printed output of code.</p></li>
+<li><p>Equations and formulas are important for the presentation of statistical arguments.
+Authors should make the mathematical presentation as clear as possible.
+Clear and consistent notation and formatting of equations should be used.
+All symbols used in equations need to be clearly defined.
+To ensure readability of the paper, authors should choose a notation that makes the argument as easy to follow as possible.
+Equations are part of the text and thus they should contain appropriate punctuation.
+Equations should be numbered consecutively, with sub-numbering used as appropriate, e.g. equations 1a and 1b.</p></li>
+<li><p>Mathematical notation should use the appropriate R markdown math capabilities. See <a href="http://www.stat.cmu.edu/~cshalizi/rmarkdown/#math-in-r-markdown">this</a> for an introduction.</p></li>
+<li><p>To the extent possible, variable names should be readable and clearly denote what the variable is.</p></li>
+<li><p>Provide clear a descriptions of the data and the context necessary to understand the data. A non-expert reader should be able to understand the meaning and scale of the relevant variables and important features of the analysis.</p></li>
+</ol>
+<div id="advice" class="section level3">
+<h3><span class="header-section-number">0.16.1</span> Advice</h3>
+<ol style="list-style-type: decimal">
+<li><p>As in any graduate courses, strive to produce analysis that could lead to a publishable article.<a href="#fn1" class="footnote-ref" id="fnref1"><sup>1</sup></a></p></li>
+<li><p>The main focus of the computational narrative should be on data, methods, and results.
+Justify your modeling choices with reference to theory.
+Present findings in terms any intelligent person could understand, regardless of their statistical knowledge.
+This should not limit the sophistication of your methods.
+It does require you to explain results from complicated models in approachable terms.</p></li>
+<li><p>Do not spend too much time on literature reviews or theory, but do not neglect hypothesis building.
+Hypotheses can be clearly explicated without recourse to numbered lists.
+The the time the reader reaches the results, they should know what to expect, what would be surprising, and why.</p></li>
+<li><p>Research that ask substantively important, interesting, novel, or controversial questions are better—potentially much better—than research that do not, all else equal.</p></li>
+<li><p>Papers that explain their empirical findings in ways non-specialists can understand are better than papers that do not, all else equal.</p></li>
+<li><p>Model specifications informed by test statistics, substantive knowledge and theory are better than model specifications based solely on test statistics, all else equal.</p></li>
+</ol>
+</div>
+<div id="reproducibility" class="section level3">
+<h3><span class="header-section-number">0.16.2</span> Reproducibility</h3>
+<ol style="list-style-type: decimal">
+<li>Code must run without error and successfully replicate.</li>
+<li>The repository must contain a REAMDE.md file which describes the contents of the repositories, software and data dependencies and installation instructions, and instructions on how to reproduce the analysis.</li>
+<li>If the analysis requires data too large to include in the repository, instructions on how to obtain the necessary must be included. If possible, a script to automate the process is preferred.</li>
+<li>If the analysis uses data that cannot be distributed for privacy or intellectual property reasons, it must be documented. The student must discuss with the instructor prior to submission.</li>
+</ol>
+</div>
+<div id="organization" class="section level3">
+<h3><span class="header-section-number">0.16.3</span> Organization</h3>
+<ol style="list-style-type: decimal">
+<li><p>The repository must be organized as an R project.</p></li>
+<li><p>To the extent possible, good scientific practices should be followed, as outlined in [Good enough practices in scientific computing] (<a href="http://journals.plos.org/ploscompbiol/article?id=10.1371/journal.pcbi.1005510" class="uri">http://journals.plos.org/ploscompbiol/article?id=10.1371/journal.pcbi.1005510</a>).</p></li>
+<li><p>Do not use of absolute paths in the code. See <a href="https://www.tidyverse.org/articles/2017/12/workflow-vs-script/">this post</a> for a discussion of this. Use the <a href="https://cran.r-project.org/web/packages/here/index.html">here</a> package to</p></li>
+<li><p>Do not use <code>install.packages</code> in the computational narrative.
+Instructions on installing dependencies should go in the <code>README.md</code> or a separate script.</p></li>
+<li><p>Include a code chunk at the top of the R markdown document which loads the packages which will be used.</p></li>
+<li><p>Include a code chunk at the end of the R markdown document which includes information from <code>sessionInfo()</code> to document the original computational environment.</p></li>
+<li><p>Do not include unnecessary output (e.g. extraneous print statement) or messages. Each piece of code and output in the computational narrative should serve some purpose toward communicate the research.</p></li>
+</ol>
+</div>
+<div id="computational-narratives" class="section level3">
+<h3><span class="header-section-number">0.16.4</span> Computational Narratives</h3>
+<p>A computational narrative is a document that combines text, code, and code
+output to communicate a data analysis or scientific research. R markdown is one
+program that can be used to produce computational narratives. Even if students
+are familiar with statistics and programming, they may be less familiar with
+computational narratives than with the format of journal articles and books.</p>
+<p>The following references provide some discussion of computational narratives.
+Many of these references <a href="http://jupyter.org/">Jupyter</a>, a similar,
+Python-based tool to produce notebooks.</p>
+<ul>
+<li><a href="https://www.oreilly.com/ideas/the-state-of-jupyter">The state of Jupyter: How Project Jupyter got here and where we are headed</a></li>
+<li>Fernando Perez and Brian E. Granger (2015) <a href="https://blog.jupyter.org/project-jupyter-computational-narratives-as-the-engine-of-collaborative-data-science-2b5fb94c3c58">Project Jupyter: Computational Narratives as the Engine of Collaborative Data Science</a></li>
+<li><a href="https://blog.ouseful.info/2017/11/15/programming-meh-lets-teach-how-to-write-computational-essays-instead/">Programming, meh … Let’s Teach How to Write Computational Essays Instead</a></li>
+<li><a href="http://blog.stephenwolfram.com/2017/11/what-is-a-computational-essay/">What is a Computational Essay?</a></li>
+<li><a href="http://blog.fperez.org/2013/04/literate-computing-and-computational.html">“Literate computing” and computational reproducibility: IPython in the age of data-driven journalism</a></li>
+</ul>
+<p>Since students may not have seen computational narratives, the following examples are provided.
+Most of them are produced by R markdown. Some are produced by the Python program Jupyter.
+These are not meant to be definitive guides for how to structure your computational narrative.
+Many of these were produced for different purposes than the project for this course.
+However, they do provide examples of effectively combining text, code, and output to communicate data analysis.</p>
+<ul>
+<li><p><a href="http://mc-stan.org/users/documentation/case-studies">Stan Case Studies</a> are generally well formatted examples of this style.</p></li>
+<li><p><a href="https://nbviewer.jupyter.org/github/dmasad/GDELT_Intro/blob/master/Getting_Started_with_GDELT.ipynb">Getting Started with GDELT</a></p></li>
+<li><p>Brian Keegan, <a href="http://nbviewer.jupyter.org/github/brianckeegan/Bechdel/blob/master/Bechdel_test.ipynb">The Need for Openness in Data Journalism</a> (python/Jupyter)</p></li>
+<li><p>David Robinson, <a href="http://varianceexplained.org/r/trump-tweets/">Text analysis of Trump’s tweets confirms he writes only the (angrier) Android half</a></p></li>
+<li><p>The <a href="https://www.tidytextmining.com/twitter.html">Case Studies</a> in the <strong>tidytext</strong> R package.</p></li>
+<li><p><a href="http://varianceexplained.org/r/hn-trends/">Words Growing or Shrinking in Hacker News Titles: A Tidy Analysis</a></p></li>
+<li><p><a href="http://varianceexplained.org/r/tidytext-gender-plots/">Gender and Verbs across 10,000 stories: a tidy analysis</a></p></li>
+<li><p>Brookman, David, and Kalla, Joshua, and Aronow, Peter. 2014. <a href="https://stanford.edu/~dbroock/broockman_kalla_aronow_lg_irregularities.pdf">Irregularities in LaCour (2014)</a> This
+is an unusual document that provides evidence of research fraud in the LaCour and Green paper.
+However, note how it uses knitr and R to do so. The paper is making and argument,
+with points supported by figures and results, with the code that produced them also visible.</p></li>
+<li><p><a href="https://www.r-bloggers.com/mapping-the-gdelt-data-and-some-russian-protests-too">Mapping the GDELT data and some Russian protests too</a></p></li>
+</ul>
+
+</div>
+</div>
+
+
+
+
+
+
+<div class="footnotes">
+<hr />
+<ol start="1">
+<li id="fn1"><p>This advice is derived with minimal editing from Chris Adolph <a href="http://faculty.washington.edu/cadolph/503/papers.pdf">Writing Empirical Papers 6 Rules &amp; 12 Recommendations</a>.<a href="#fnref1" class="footnote-back">↩</a></p></li>
+</ol>
+</div>
+            </section>
+
+          </div>
+        </div>
+      </div>
+
+
+    </div>
+  </div>
+<script src="libs/gitbook-2.6.7/js/app.min.js"></script>
+<script src="libs/gitbook-2.6.7/js/lunr.js"></script>
+<script src="libs/gitbook-2.6.7/js/plugin-search.js"></script>
+<script src="libs/gitbook-2.6.7/js/plugin-sharing.js"></script>
+<script src="libs/gitbook-2.6.7/js/plugin-fontsettings.js"></script>
+<script src="libs/gitbook-2.6.7/js/plugin-bookdown.js"></script>
+<script src="libs/gitbook-2.6.7/js/jquery.highlight.js"></script>
+<script>
+gitbook.require(["gitbook"], function(gitbook) {
+gitbook.start({
+"sharing": {
+"github": false,
+"facebook": true,
+"twitter": true,
+"google": false,
+"linkedin": false,
+"weibo": false,
+"instapper": false,
+"vk": false,
+"all": ["facebook", "google", "twitter", "linkedin", "weibo", "instapaper"]
+},
+"fontsettings": {
+"theme": "white",
+"family": "sans",
+"size": 2
+},
+"edit": {
+"link": null,
+"text": null
+},
+"download": null,
+"toc": {
+"collapse": "subsection"
+}
+});
+});
+</script>
+
+</body>
+
+</html>

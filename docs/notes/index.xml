@@ -2,20 +2,20 @@
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
     <title>Notes on </title>
-    <link>https://UW-CSSS-564.github.io/2018/notes/</link>
+    <link>/2018/notes/</link>
     <description>Recent content in Notes on </description>
     <generator>Hugo -- gohugo.io</generator>
     <language>en-US</language>
     
-	<atom:link href="https://UW-CSSS-564.github.io/2018/notes/index.xml" rel="self" type="application/rss+xml" />
+	<atom:link href="/2018/notes/index.xml" rel="self" type="application/rss+xml" />
     
     
     <item>
       <title></title>
-      <link>https://UW-CSSS-564.github.io/2018/notes/links/</link>
+      <link>/2018/notes/links/</link>
       <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
       
-      <guid>https://UW-CSSS-564.github.io/2018/notes/links/</guid>
+      <guid>/2018/notes/links/</guid>
       <description>Textbooks
  Robert. Bayesian Choice. Berger. Geyer. http://www.mcmchandbook.net/HandbookChapter1.pdf  Week 1  BDA, Chapter 1 Review probability. This Probability Resource is a good resource. Review R. See R for Data Science. Frank Harrell, &amp;ldquo;My Journey From Frequentist to Bayesian Statistics&amp;rdquo;.
  Frequentism and Bayesianism: A Practical Introduction

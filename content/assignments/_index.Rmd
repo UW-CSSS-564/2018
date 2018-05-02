@@ -2,7 +2,7 @@
 title: Assignments
 ---
 
-# Overview
+## Overview
 
 Assignments will be distributed and submitted using GitHub.
 
@@ -12,27 +12,25 @@ Each assignment will have three steps:
 1.  Peer review (1 week after initial submission)
 1.  Corrections (1 week after peer review)
 
-There will be approximately 4--6 assignments. 
+There will be approximately 4--6 assignments.
 
-# Initial Submission
+### Initial Submission
 
-Submissions of all assignments should include both an R Markdown file and a compiled PDF file. Each assignment should be forked from the assignment repository, and submitted with a pull request. More detailed instructions are [here](https://github.com/UW-CSSS-564/assignment-2018-0). 
+Submissions of all assignments should include both an R Markdown file and a compiled PDF file. Each assignment should be forked from the assignment repository, and submitted with a pull request. More detailed instructions are [here](https://github.com/UW-CSSS-564/assignment-2018-0).
 
 The initial submission will be graded on the following 4-category scale:
 
---- ------------------------------------------------------
-4   exceptional, above and beyond what was expected
-3   effort made to complete all questions; mostly correct
-2   some effort made for most or all questions
-1   submitted, but largely incomplete
-0   did not submit 
---- ------------------------------------------------------
+| 4  | exceptional, above and beyond what was expected        |
+| 3  | effort made to complete all questions; mostly correct  |
+| 2  | some effort made for most or all questions             |
+| 1  | submitted, but largely incomplete                      |
+| 0  | did not submit                                         |
 
-# Peer Review
+## Peer Review
 
 After the solutions to each assignment is released, each student will be assigned to review two assignments.
 
-## Instructions
+### Instructions
 
 These reviews will be submitted as comments on the pull request.
 The comments should address the solution, code, and presentation:
@@ -59,7 +57,7 @@ The comments should address the solution, code, and presentation:
 
     -   Is the document clearly written, well formatted, such that you as a reviewer can follow and understand the solutions?
 
-## Evaluated.
+### Evaluation
 
 Each peer review will be deemed “good” or “needs more”.[^peer-review]
 Each review you do will give you 1 point if is "good" and 0 points if it "needs more".
@@ -79,10 +77,10 @@ Features of "needs more":
 -   Your review is mean.
 -   You can’t find anything to praise/learn and yet you don’t offer any suggestions either.
 
-# Corrections
+## Corrections
 
 After receiving the key students will correct any issues with their
-assignments. Corrections will be evaluated as follows: 
+assignments. Corrections will be evaluated as follows:
 
 | 1  | Acceptable   |
 | 0  | Unacceptable |

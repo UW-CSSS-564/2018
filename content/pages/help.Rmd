@@ -5,12 +5,12 @@ output: html_document
 
 A good place to start is [Rstudio's guide for getting help with R]( https://support.rstudio.com/hc/en-us/articles/200552336-Getting-Help-with-R)
 
-# Asking for Help
+## Asking for Help
 
 When asking for help with R it is important to at least
 
-1. Include the exact code that you ran
-2. The error message that you got
+1.  Include the exact code that you ran
+1.  The error message that you got
 
 Without the code and the error message it can be hard to impossible to diagnose the problem and provide a solution.
 Questions such as "This isn't working" or even "I'm getting this error message" aren't useful without the code and error message.
@@ -29,14 +29,14 @@ sessionInfo()
 
 For further discussion on how to ask good questions:
 
-- [How to ask for help in R](http://blog.revolutionanalytics.com/2014/01/how-to-ask-for-r-help.html)
-- StackOverflow. [How to make a great R reproducible example?](https://stackoverflow.com/questions/5963269/how-to-make-a-great-r-reproducible-example)
-- StackOverflow. [How to create a Minimal, Complete, and Verifiable example](http://stackoverflow.com/help/mcve)
-- [R Posting Guide: How to ask good questions that prompt useful answers](https://www.r-project.org/posting-guide.html)
-- Coding Killed the Cat. [How to ask for programming question](https://codingkilledthecat.wordpress.com/2012/06/26/how-to-ask-for-programming-help/)
-- Matt Gemmell. [What Have You Tried?](http://mattgemmell.com/what-have-you-tried/)
+-   [How to ask for help in R](http://blog.revolutionanalytics.com/2014/01/how-to-ask-for-r-help.html)
+-   StackOverflow. [How to make a great R reproducible example?](https://stackoverflow.com/questions/5963269/how-to-make-a-great-r-reproducible-example)
+-   StackOverflow. [How to create a Minimal, Complete, and Verifiable example](http://stackoverflow.com/help/mcve)
+-   [R Posting Guide: How to ask good questions that prompt useful answers](https://www.r-project.org/posting-guide.html)
+-   Coding Killed the Cat. [How to ask for programming question](https://codingkilledthecat.wordpress.com/2012/06/26/how-to-ask-for-programming-help/)
+-   Matt Gemmell. [What Have You Tried?](http://mattgemmell.com/what-have-you-tried/)
 
-# Getting Help from Within R and RStudio
+## Getting Help from Within R and RStudio
 
 **Help tab:** The first place to look is to use the search box in the *Help* tab of RStudio.
 
@@ -92,16 +92,15 @@ data(package = "ggplot2")
 
 Note that `search()` **does not** do what you expect it to do (unless you expect it to return the [search path](http://adv-r.had.co.nz/Environments.html) in which R looks for names of functions and objects).
 
-
-# Help on the Internet
+## Help on the Internet
 
 [Rdocumentation.org](http://www.rdocumentation.org/) searches the documentation of all R packages on CRAN.
 
 There are several documentation sites that are of particular use:
 
-- [tidyverse.org](http://tidyverse.org/) hosts documentation for the various **tidyverse** packages (ggplot2, tibble, tidyr, reader, purr, dplyr, ...).
-- [ggplot2 documentation](http://docs.ggplot2.org/). Documentation for **ggplot2**.
-- [ggplot2 extensions](https://www.ggplot2-exts.org/) A list of packages that extend the functionality of **ggplot2**.
+-   [tidyverse.org](http://tidyverse.org/) hosts documentation for the various **tidyverse** packages (ggplot2, tibble, tidyr, reader, purr, dplyr, ...).
+-   [ggplot2 documentation](http://docs.ggplot2.org/). Documentation for **ggplot2**.
+-   [ggplot2 extensions](https://www.ggplot2-exts.org/) A list of packages that extend the functionality of **ggplot2**.
 
 Google has gotten better with R searches, but `R` is a particularly unfriendly search term.
 However, if you are searching for "R" with other words in context, you are likely to have some success.
@@ -121,43 +120,42 @@ If you have a question about "statistics" or "data analysis" rather than "R", th
 The traditional source of R help was the [R-help mailing list](https://stat.ethz.ch/mailman/listinfo/r-help).
 It is still a useful resource, though much of the traffic has moved over to StackOverflow.
 
-# R Cheatsheets
+## R Cheatsheets
 
 RStudio has man very good [cheatsheets](https://www.rstudio.com/resources/cheatsheets/).
 The most relevant to this course are:
 
-- [RStudio IDE](https://www.rstudio.com/wp-content/uploads/2016/01/rstudio-IDE-cheatsheet.pdf)
-- [Data Visualization](https://www.rstudio.com/wp-content/uploads/2016/11/ggplot2-cheatsheet-2.1.pdf)
-- [Data Transformation Cheat Sheet](https://github.com/rstudio/cheatsheets/raw/master/source/pdfs/data-transformation-cheatsheet.pdf)
-- [R Markdown](https://www.rstudio.com/wp-content/uploads/2016/03/rmarkdown-cheatsheet-2.0.pdf)
-- [R Markdown Reference Guide](https://www.rstudio.com/wp-content/uploads/2015/03/rmarkdown-reference.pdf)
-- [Data Import Cheat Sheet](https://github.com/rstudio/cheatsheets/raw/master/source/pdfs/data-import-cheatsheet.pdf)
-- [Base R](https://www.rstudio.com/wp-content/uploads/2016/10/r-cheat-sheet-3.pdf)
-- [Advanced R](https://www.rstudio.com/wp-content/uploads/2016/02/advancedR.pdf)
-- [Regular Expressions](https://www.rstudio.com/wp-content/uploads/2016/09/RegExCheatsheet.pdf)
+-   [RStudio IDE](https://www.rstudio.com/wp-content/uploads/2016/01/rstudio-IDE-cheatsheet.pdf)
+-   [Data Visualization](https://www.rstudio.com/wp-content/uploads/2016/11/ggplot2-cheatsheet-2.1.pdf)
+-   [Data Transformation Cheat Sheet](https://github.com/rstudio/cheatsheets/raw/master/source/pdfs/data-transformation-cheatsheet.pdf)
+-   [R Markdown](https://www.rstudio.com/wp-content/uploads/2016/03/rmarkdown-cheatsheet-2.0.pdf)
+-   [R Markdown Reference Guide](https://www.rstudio.com/wp-content/uploads/2015/03/rmarkdown-reference.pdf)
+-   [Data Import Cheat Sheet](https://github.com/rstudio/cheatsheets/raw/master/source/pdfs/data-import-cheatsheet.pdf)
+-   [Base R](https://www.rstudio.com/wp-content/uploads/2016/10/r-cheat-sheet-3.pdf)
+-   [Advanced R](https://www.rstudio.com/wp-content/uploads/2016/02/advancedR.pdf)
+-   [Regular Expressions](https://www.rstudio.com/wp-content/uploads/2016/09/RegExCheatsheet.pdf)
 
 The [Short R Reference Card](https://cran.r-project.org/doc/contrib/Short-refcard.pdf) is the classic cheatsheet.
 However, some of the data manipulation and plotting functions are not those we use in this course, but it does cover much of the statistical functions.
 
-# Books
+## Books
 
 Two references organized by task are [The Cookbook for R](http://www.cookbook-r.com) and [Quick-R](http://www.statmethods.net/).
 
-# Blogs and Twitter
+## Blogs and Twitter
 
 [R-bloggers](http://www.r-bloggers.com/) aggregates R-related blogging.
 
-
-# Task Views
+## Task Views
 
 Do you want to know what packages exist for a given topic? [CRAN Task Views](https://cran.r-project.org/web/views/) provide subject matter groupings of R packages. Some potentially useful task-views to social scientists are:
 
-- [Econometrics](https://cran.r-project.org/web/views/Econometrics.html)
-- [Natural Language Processing](https://cran.r-project.org/web/views/NaturalLanguageProcessing.html)
-- [Official Statistics & Survey Methodology](https://cran.r-project.org/web/views/OfficialStatistics.html)
-- [Reproducible Research](https://cran.r-project.org/web/views/ReproducibleResearch.html)
-- [Spatial](https://cran.r-project.org/web/views/Spatial.html)
-- [Survival Analysis](https://cran.r-project.org/web/views/Survival.html)
-- [Time Series](https://cran.r-project.org/web/views/TimeSeries.html)
-- [Web Technologies and Services](https://cran.r-project.org/web/views/WebTechnologies.html)
-- [Social Sciences](https://cran.r-project.org/web/views/SocialSciences.html)
+-   [Econometrics](https://cran.r-project.org/web/views/Econometrics.html)
+-   [Natural Language Processing](https://cran.r-project.org/web/views/NaturalLanguageProcessing.html)
+-   [Official Statistics & Survey Methodology](https://cran.r-project.org/web/views/OfficialStatistics.html)
+-   [Reproducible Research](https://cran.r-project.org/web/views/ReproducibleResearch.html)
+-   [Spatial](https://cran.r-project.org/web/views/Spatial.html)
+-   [Survival Analysis](https://cran.r-project.org/web/views/Survival.html)
+-   [Time Series](https://cran.r-project.org/web/views/TimeSeries.html)
+-   [Web Technologies and Services](https://cran.r-project.org/web/views/WebTechnologies.html)
+-   [Social Sciences](https://cran.r-project.org/web/views/SocialSciences.html)

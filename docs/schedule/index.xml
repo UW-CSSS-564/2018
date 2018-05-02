@@ -2,66 +2,111 @@
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
     <title>Course Schedule on </title>
-    <link>https://UW-CSSS-564.github.io/2018/schedule/</link>
+    <link>/2018/schedule/</link>
     <description>Recent content in Course Schedule on </description>
     <generator>Hugo -- gohugo.io</generator>
     <language>en-US</language>
-    <lastBuildDate>Mon, 30 Apr 2018 00:00:00 +0000</lastBuildDate>
+    <lastBuildDate>Mon, 04 Jun 2018 00:00:00 +0000</lastBuildDate>
     
-	<atom:link href="https://UW-CSSS-564.github.io/2018/schedule/index.xml" rel="self" type="application/rss+xml" />
+	<atom:link href="/2018/schedule/index.xml" rel="self" type="application/rss+xml" />
     
     
     <item>
+      <title>Week 11</title>
+      <link>/2018/schedule/week-11/</link>
+      <pubDate>Mon, 04 Jun 2018 00:00:00 +0000</pubDate>
+      
+      <guid>/2018/schedule/week-11/</guid>
+      <description>Finals week.</description>
+    </item>
+    
+    <item>
+      <title>Week 10</title>
+      <link>/2018/schedule/week-10/</link>
+      <pubDate>Mon, 28 May 2018 00:00:00 +0000</pubDate>
+      
+      <guid>/2018/schedule/week-10/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>Week 9</title>
+      <link>/2018/schedule/week-9/</link>
+      <pubDate>Mon, 21 May 2018 00:00:00 +0000</pubDate>
+      
+      <guid>/2018/schedule/week-9/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>Week 8</title>
+      <link>/2018/schedule/week-8/</link>
+      <pubDate>Mon, 14 May 2018 00:00:00 +0000</pubDate>
+      
+      <guid>/2018/schedule/week-8/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>Week 7</title>
+      <link>/2018/schedule/week-7/</link>
+      <pubDate>Mon, 07 May 2018 00:00:00 +0000</pubDate>
+      
+      <guid>/2018/schedule/week-7/</guid>
+      <description></description>
+    </item>
+    
+    <item>
       <title>Week 6</title>
-      <link>https://UW-CSSS-564.github.io/2018/schedule/week-6/</link>
+      <link>/2018/schedule/week-6/</link>
       <pubDate>Mon, 30 Apr 2018 00:00:00 +0000</pubDate>
       
-      <guid>https://UW-CSSS-564.github.io/2018/schedule/week-6/</guid>
+      <guid>/2018/schedule/week-6/</guid>
       <description></description>
     </item>
     
     <item>
       <title>Week 5</title>
-      <link>https://UW-CSSS-564.github.io/2018/schedule/week-5/</link>
+      <link>/2018/schedule/week-5/</link>
       <pubDate>Mon, 23 Apr 2018 00:00:00 +0000</pubDate>
       
-      <guid>https://UW-CSSS-564.github.io/2018/schedule/week-5/</guid>
+      <guid>/2018/schedule/week-5/</guid>
       <description></description>
     </item>
     
     <item>
       <title>Week 4</title>
-      <link>https://UW-CSSS-564.github.io/2018/schedule/week-4/</link>
+      <link>/2018/schedule/week-4/</link>
       <pubDate>Mon, 16 Apr 2018 00:00:00 +0000</pubDate>
       
-      <guid>https://UW-CSSS-564.github.io/2018/schedule/week-4/</guid>
+      <guid>/2018/schedule/week-4/</guid>
       <description></description>
     </item>
     
     <item>
       <title>Week 3</title>
-      <link>https://UW-CSSS-564.github.io/2018/schedule/week-3/</link>
+      <link>/2018/schedule/week-3/</link>
       <pubDate>Mon, 09 Apr 2018 00:00:00 +0000</pubDate>
       
-      <guid>https://UW-CSSS-564.github.io/2018/schedule/week-3/</guid>
+      <guid>/2018/schedule/week-3/</guid>
       <description></description>
     </item>
     
     <item>
       <title>Week 2</title>
-      <link>https://UW-CSSS-564.github.io/2018/schedule/week-2/</link>
+      <link>/2018/schedule/week-2/</link>
       <pubDate>Mon, 02 Apr 2018 00:00:00 +0000</pubDate>
       
-      <guid>https://UW-CSSS-564.github.io/2018/schedule/week-2/</guid>
+      <guid>/2018/schedule/week-2/</guid>
       <description></description>
     </item>
     
     <item>
       <title>Week 1</title>
-      <link>https://UW-CSSS-564.github.io/2018/schedule/week-1/</link>
+      <link>/2018/schedule/week-1/</link>
       <pubDate>Mon, 26 Mar 2018 00:00:00 +0000</pubDate>
       
-      <guid>https://UW-CSSS-564.github.io/2018/schedule/week-1/</guid>
+      <guid>/2018/schedule/week-1/</guid>
       <description></description>
     </item>
     

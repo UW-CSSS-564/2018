@@ -7,14 +7,11 @@ The final project will a short analysis in R markdown that implements a Bayesian
 ## Proposal
 
 1.  Fork <https://github.com/UW-CSSS-564/2018-research-project>.
-
 1.  Edit the `README.md`. Add your name, correct the title, and make any other appropriate customizations.
-
 1.  Write your proposal in the document `docs/proposal.Rmd`.
-
 1.  Submit the assignment by opening a pull request titled, "Review Proposal".
 
-The project proposal should be brief. 
+The project proposal should be brief.
 The intent of the proposal is two-fold:
 
 1.  Encourage the student to think about the project with enough time to implement it.
@@ -40,14 +37,20 @@ The student should write up whatever they have done, and their plans, in such a 
 
 ## Final Research Project
 
-Submission of the final research project. 
+Submission of the final research project.
 See [Instructions].
 
 ## Instructions
 
-The final project should produce a [computational narrative](http://blog.stephenwolfram.com/2017/11/what-is-a-computational-essay/) in R markdown which answers a relevant research problem using methods introduced in this course. A [computational narrative] is a document which combines prose, code, and visualizations to explain and communicate scientific results.
-Unlike a traditional article, the code and data producing the results transparently presented in the document itself.
-The [Stan Case Studies](http://mc-stan.org/users/documentation/case-studies) provide good exemplars of this style. 
+The final project should produce a [computational
+narrative](http://blog.stephenwolfram.com/2017/11/what-is-a-computational-essay/)
+in R markdown which answers a relevant research problem using methods
+introduced in this course. A [computational narrative] is a  document which
+combines prose, code, and visualizations to explain and communicate scientific
+results. Unlike a traditional article, the code and data producing the results
+transparently presented in the document itself. The [Stan Case
+Studies](http://mc-stan.org/users/documentation/case-studies) provide good
+exemplars of this style.
 
 This course asks requires a computational essay instead of an article in order to focus the students' attention on the methodology, computation, and reproducibility issues which this course should promote.
 
@@ -58,9 +61,8 @@ This course asks requires a computational essay instead of an article in order t
 
 1.  The computational narrative should be self contained and written for a general social science audience.
 
-1.  The computational narrative should effectively and informatively communicate its research design, methods, and contribution
-using text, code, and visualizations. 
-The computational narrative should include no unnecessary material.
+1.  The computational narrative should effectively and informatively communicate its research design, methods, and contribution using text, code, and visualizations.
+    The computational narrative should include no unnecessary material.
 
 1.  The computational narrative must address an research problem or question using the appropriate methodology and design incorporating methods introduced and discussed in this course.
 
@@ -82,9 +84,9 @@ The computational narrative should include no unnecessary material.
 1.  The use of visualization to convey results is preferable to tables or the printed output of code.
 
 1.  Equations and formulas are important for the presentation of statistical arguments.
-    Authors should make the mathematical presentation as clear as possible. 
-    Clear and consistent notation and formatting of equations should be used. 
-    All symbols used in equations need to be clearly defined. 
+    Authors should make the mathematical presentation as clear as possible.
+    Clear and consistent notation and formatting of equations should be used.
+    All symbols used in equations need to be clearly defined.
 To ensure readability of the paper, authors should choose a notation that makes the argument as easy to follow as possible.
     Equations are part of the text and thus they should contain appropriate punctuation.
     Equations should be numbered consecutively, with sub-numbering used as appropriate, e.g. equations 1a and 1b.
@@ -93,26 +95,27 @@ To ensure readability of the paper, authors should choose a notation that makes 
 
 1.  To the extent possible, variable names should be readable and  clearly denote what the variable is.
 
-2.  Provide clear a descriptions of the data and the context necessary to understand the data. A non-expert reader should be able to understand the meaning and scale of the relevant variables and important features of the analysis.
-
+1.  Provide clear a descriptions of the data and the context necessary to understand the data. A non-expert reader should be able to understand the meaning and scale of the relevant variables and important features of the analysis.
 
 ### Advice
 
 1.  As in any graduate courses, strive to produce analysis that could lead to a publishable article.[^advice]
 
-2.  The main focus of the computational narrative should be on data, methods, and results.
+1.  The main focus of the computational narrative should be on data, methods, and results.
     Justify your modeling choices with reference to theory.
-    Present findings in terms any intelligent person could understand, regardless of their statistical knowledge. 
+    Present findings in terms any intelligent person could understand, regardless of their statistical knowledge.
     This should not limit the sophistication of your methods.
     It does require you to explain results from complicated models in approachable terms.
 
-3.  Do not spend too much time on literature reviews or theory, but do not neglect hypothesis building.
+1.  Do not spend too much time on literature reviews or theory, but do not neglect hypothesis building.
     Hypotheses can be clearly explicated without recourse to numbered lists.
-    The the time the reader reaches the results, they should know what to expect, what would be surprising, and why. 
+    The the time the reader reaches the results, they should know what to expect, what would be surprising, and why.
 
-4.  Research that ask substantively important, interesting, novel, or controversial questions are better---potentially much better---than research that do not, all else equal.
-5.  Papers that explain their empirical findings in ways non-specialists can understand are better than papers that do not, all else equal.
-6.  Model specifications informed by test statistics, substantive knowledge and theory are better than model specifications based solely on test statistics, all else equal.
+1.  Research that ask substantively important, interesting, novel, or controversial questions are better---potentially much better---than research that do not, all else equal.
+
+1.  Papers that explain their empirical findings in ways non-specialists can understand are better than papers that do not, all else equal.
+
+1.  Model specifications informed by test statistics, substantive knowledge and theory are better than model specifications based solely on test statistics, all else equal.
 
 [^advice]: This advice is derived with minimal editing from Chris Adolph [Writing Empirical Papers 6 Rules & 12 Recommendations](http://faculty.washington.edu/cadolph/503/papers.pdf).
 
@@ -126,43 +129,61 @@ To ensure readability of the paper, authors should choose a notation that makes 
 ### Organization
 
 1.  The repository must be organized as an R project.
+
 1.  To the extent possible, good scientific practices should be followed, as outlined in [Good enough practices in scientific computing] (http://journals.plos.org/ploscompbiol/article?id=10.1371/journal.pcbi.1005510).
-1.  Do not use of absolute paths in the code. See [this post](https://www.tidyverse.org/articles/2017/12/workflow-vs-script/) for a discussion of this. Use the [here](https://cran.r-project.org/web/packages/here/index.html) package to 
+
+1.  Do not use of absolute paths in the code. See [this post](https://www.tidyverse.org/articles/2017/12/workflow-vs-script/) for a discussion of this. Use the [here](https://cran.r-project.org/web/packages/here/index.html) package to
+
 1.  Do not use `install.packages` in the computational narrative.
     Instructions on installing dependencies should go in the `README.md` or a separate script.
+
 1.  Include a code chunk at the top of the R markdown document which loads the packages which will be used.
+
 1.  Include a code chunk at the end of the R markdown document which includes information from `sessionInfo()` to document the original computational environment.
+
 1.  Do not include unnecessary output (e.g. extraneous print statement) or messages.  Each piece of code and output in the computational narrative should serve some purpose toward communicate the research.
 
 ### Computational Narratives
 
-A computational narrative is a document that combines text, code, and code output to communicate a data analysis or scientific research.
-R markdown is one program that can be used to produce computational narratives.
-Even if students are familiar with statistics and programming, they may be less familiar with computational narratives than with the format of journal articles and books.
+A computational narrative is a document that combines text, code, and code
+output to communicate a data analysis or scientific research. R markdown is one
+program that can be used to produce computational narratives. Even if students
+are familiar with statistics and programming, they may be less familiar with
+computational narratives than with the format of journal articles and books.
 
-The following references provide some discussion of computational narratives. Many of these references [Jupyter](http://jupyter.org/), a similar, Python-based tool to produce notebooks.
+The following references provide some discussion of computational narratives.
+Many of these references [Jupyter](http://jupyter.org/), a similar,
+Python-based tool to produce notebooks.
 
-- [The state of Jupyter: How Project Jupyter got here and where we are headed](https://www.oreilly.com/ideas/the-state-of-jupyter)
-- Fernando Perez and Brian E. Granger (2015) [Project Jupyter: Computational Narratives as the Engine of Collaborative Data Science](https://blog.jupyter.org/project-jupyter-computational-narratives-as-the-engine-of-collaborative-data-science-2b5fb94c3c58)
-- [Programming, meh ... Let’s Teach How to Write Computational Essays Instead](https://blog.ouseful.info/2017/11/15/programming-meh-lets-teach-how-to-write-computational-essays-instead/)
-- [What is a Computational Essay?](http://blog.stephenwolfram.com/2017/11/what-is-a-computational-essay/)
-- ["Literate computing" and computational reproducibility: IPython in the age of data-driven journalism](http://blog.fperez.org/2013/04/literate-computing-and-computational.html)
+-   [The state of Jupyter: How Project Jupyter got here and where we are headed](https://www.oreilly.com/ideas/the-state-of-jupyter)
+-   Fernando Perez and Brian E. Granger (2015) [Project Jupyter: Computational Narratives as the Engine of Collaborative Data Science](https://blog.jupyter.org/project-jupyter-computational-narratives-as-the-engine-of-collaborative-data-science-2b5fb94c3c58)
+-   [Programming, meh ... Let’s Teach How to Write Computational Essays Instead](https://blog.ouseful.info/2017/11/15/programming-meh-lets-teach-how-to-write-computational-essays-instead/)
+-   [What is a Computational Essay?](http://blog.stephenwolfram.com/2017/11/what-is-a-computational-essay/)
+-   ["Literate computing" and computational reproducibility: IPython in the age of data-driven journalism](http://blog.fperez.org/2013/04/literate-computing-and-computational.html)
 
-Since students may not have seen computational narratives, the following examples are provided. 
-Most of them are produced by R markdown. Some are produced by the Python program Jupyter. 
+Since students may not have seen computational narratives, the following examples are provided.
+Most of them are produced by R markdown. Some are produced by the Python program Jupyter.
 These are not meant to be definitive guides for how to structure your computational narrative.
 Many of these were produced for different purposes than the project for this course.
 However, they do provide examples of effectively combining text, code, and output to communicate data analysis.
 
--  [Stan Case Studies](http://mc-stan.org/users/documentation/case-studies) are generally well formatted examples of this style.
--  [Getting Started with GDELT](https://nbviewer.jupyter.org/github/dmasad/GDELT_Intro/blob/master/Getting_Started_with_GDELT.ipynb)
--  Brian Keegan, [The Need for Openness in Data Journalism](http://nbviewer.jupyter.org/github/brianckeegan/Bechdel/blob/master/Bechdel_test.ipynb) (python/Jupyter)
--  David Robinson, [Text analysis of Trump’s tweets confirms he writes only the (angrier) Android half](http://varianceexplained.org/r/trump-tweets/)
--  The Case Studies in The Tidy Text Package Text package, https://www.tidytextmining.com/twitter.html.
--  [Words Growing or Shrinking in Hacker News Titles: A Tidy Analysis](http://varianceexplained.org/r/hn-trends/)
--  [Gender and Verbs across 10,000 stories: a tidy analysis](http://varianceexplained.org/r/tidytext-gender-plots/)
--  Brookman, David, and Kalla, Joshua, and Aronow, Peter. 2014. [Irregularities in LaCour (2014)](https://stanford.edu/~dbroock/broockman_kalla_aronow_lg_irregularities.pdf) This
-   is an unusual document that provides evidence of research fraud in the LaCour and Green paper.
-   However, note how it uses knitr and R to do so. The paper is making and argument,
-   with points supported by figures and results, with the code that produced them also visible.
-- [Mapping the GDELT data and some Russian protests too](https://www.r-bloggers.com/mapping-the-gdelt-data-and-some-russian-protests-too)
+-   [Stan Case Studies](http://mc-stan.org/users/documentation/case-studies) are generally well formatted examples of this style.
+
+-   [Getting Started with GDELT](https://nbviewer.jupyter.org/github/dmasad/GDELT_Intro/blob/master/Getting_Started_with_GDELT.ipynb)
+
+-   Brian Keegan, [The Need for Openness in Data Journalism](http://nbviewer.jupyter.org/github/brianckeegan/Bechdel/blob/master/Bechdel_test.ipynb) (python/Jupyter)
+
+-   David Robinson, [Text analysis of Trump’s tweets confirms he writes only the (angrier) Android half](http://varianceexplained.org/r/trump-tweets/)
+
+-   The [Case Studies](https://www.tidytextmining.com/twitter.html) in the **tidytext** R package.
+
+-   [Words Growing or Shrinking in Hacker News Titles: A Tidy Analysis](http://varianceexplained.org/r/hn-trends/)
+
+-   [Gender and Verbs across 10,000 stories: a tidy analysis](http://varianceexplained.org/r/tidytext-gender-plots/)
+
+-   Brookman, David, and Kalla, Joshua, and Aronow, Peter. 2014. [Irregularities in LaCour (2014)](https://stanford.edu/~dbroock/broockman_kalla_aronow_lg_irregularities.pdf) This
+    is an unusual document that provides evidence of research fraud in the LaCour and Green paper.
+    However, note how it uses knitr and R to do so. The paper is making and argument,
+    with points supported by figures and results, with the code that produced them also visible.
+
+-   [Mapping the GDELT data and some Russian protests too](https://www.r-bloggers.com/mapping-the-gdelt-data-and-some-russian-protests-too)

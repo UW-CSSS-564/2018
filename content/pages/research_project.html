@@ -8,10 +8,10 @@ title: "Research Project"
 <div id="proposal" class="section level2">
 <h2>Proposal</h2>
 <ol style="list-style-type: decimal">
-<li><p>Fork <a href="https://github.com/UW-CSSS-564/2018-research-project" class="uri">https://github.com/UW-CSSS-564/2018-research-project</a>.</p></li>
-<li><p>Edit the <code>README.md</code>. Add your name, correct the title, and make any other appropriate customizations.</p></li>
-<li><p>Write your proposal in the document <code>docs/proposal.Rmd</code>.</p></li>
-<li><p>Submit the assignment by opening a pull request titled, “Review Proposal”.</p></li>
+<li>Fork <a href="https://github.com/UW-CSSS-564/2018-research-project" class="uri">https://github.com/UW-CSSS-564/2018-research-project</a>.</li>
+<li>Edit the <code>README.md</code>. Add your name, correct the title, and make any other appropriate customizations.</li>
+<li>Write your proposal in the document <code>docs/proposal.Rmd</code>.</li>
+<li>Submit the assignment by opening a pull request titled, “Review Proposal”.</li>
 </ol>
 <p>The project proposal should be brief.
 The intent of the proposal is two-fold:</p>
@@ -45,17 +45,22 @@ See <a href="#instructions">Instructions</a>.</p>
 </div>
 <div id="instructions" class="section level2">
 <h2>Instructions</h2>
-<p>The final project should produce a <a href="http://blog.stephenwolfram.com/2017/11/what-is-a-computational-essay/">computational narrative</a> in R markdown which answers a relevant research problem using methods introduced in this course. A [computational narrative] is a document which combines prose, code, and visualizations to explain and communicate scientific results.
-Unlike a traditional article, the code and data producing the results transparently presented in the document itself.
-The <a href="http://mc-stan.org/users/documentation/case-studies">Stan Case Studies</a> provide good exemplars of this style.</p>
+<p>The final project should produce a <a href="http://blog.stephenwolfram.com/2017/11/what-is-a-computational-essay/">computational
+narrative</a>
+in R markdown which answers a relevant research problem using methods
+introduced in this course. A [computational narrative] is a document which
+combines prose, code, and visualizations to explain and communicate scientific
+results. Unlike a traditional article, the code and data producing the results
+transparently presented in the document itself. The <a href="http://mc-stan.org/users/documentation/case-studies">Stan Case
+Studies</a> provide good
+exemplars of this style.</p>
 <p>This course asks requires a computational essay instead of an article in order to focus the students’ attention on the methodology, computation, and reproducibility issues which this course should promote.</p>
 <ol style="list-style-type: decimal">
 <li><p>The submission will consist of an R markdown document compiled into either a PDF or HTML file (if the document contains interactive material) and a repository containing the data and code necessary to reproduce the analysis.
 The details of this process are described in the final project details.</p></li>
 <li><p>The computational narrative should be no longer than a research note in a political science journal, 5,000 words of text (excluding code).</p></li>
 <li><p>The computational narrative should be self contained and written for a general social science audience.</p></li>
-<li><p>The computational narrative should effectively and informatively communicate its research design, methods, and contribution
-using text, code, and visualizations.
+<li><p>The computational narrative should effectively and informatively communicate its research design, methods, and contribution using text, code, and visualizations.
 The computational narrative should include no unnecessary material.</p></li>
 <li><p>The computational narrative must address an research problem or question using the appropriate methodology and design incorporating methods introduced and discussed in this course.</p></li>
 <li><p>As with any project worked on during graduate school, the author should use it to further research that could lead to a publication.
@@ -90,8 +95,8 @@ It does require you to explain results from complicated models in approachable t
 <li><p>Do not spend too much time on literature reviews or theory, but do not neglect hypothesis building.
 Hypotheses can be clearly explicated without recourse to numbered lists.
 The the time the reader reaches the results, they should know what to expect, what would be surprising, and why.</p></li>
-<li>Research that ask substantively important, interesting, novel, or controversial questions are better—potentially much better—than research that do not, all else equal.</li>
-<li>Papers that explain their empirical findings in ways non-specialists can understand are better than papers that do not, all else equal.</li>
+<li><p>Research that ask substantively important, interesting, novel, or controversial questions are better—potentially much better—than research that do not, all else equal.</p></li>
+<li><p>Papers that explain their empirical findings in ways non-specialists can understand are better than papers that do not, all else equal.</p></li>
 <li><p>Model specifications informed by test statistics, substantive knowledge and theory are better than model specifications based solely on test statistics, all else equal.</p></li>
 </ol>
 </div>
@@ -107,22 +112,26 @@ The the time the reader reaches the results, they should know what to expect, wh
 <div id="organization" class="section level3">
 <h3>Organization</h3>
 <ol style="list-style-type: decimal">
-<li>The repository must be organized as an R project.</li>
-<li>To the extent possible, good scientific practices should be followed, as outlined in [Good enough practices in scientific computing] (<a href="http://journals.plos.org/ploscompbiol/article?id=10.1371/journal.pcbi.1005510" class="uri">http://journals.plos.org/ploscompbiol/article?id=10.1371/journal.pcbi.1005510</a>).</li>
-<li>Do not use of absolute paths in the code. See <a href="https://www.tidyverse.org/articles/2017/12/workflow-vs-script/">this post</a> for a discussion of this. Use the <a href="https://cran.r-project.org/web/packages/here/index.html">here</a> package to</li>
-<li>Do not use <code>install.packages</code> in the computational narrative.
-Instructions on installing dependencies should go in the <code>README.md</code> or a separate script.</li>
-<li>Include a code chunk at the top of the R markdown document which loads the packages which will be used.</li>
-<li>Include a code chunk at the end of the R markdown document which includes information from <code>sessionInfo()</code> to document the original computational environment.</li>
-<li>Do not include unnecessary output (e.g. extraneous print statement) or messages. Each piece of code and output in the computational narrative should serve some purpose toward communicate the research.</li>
+<li><p>The repository must be organized as an R project.</p></li>
+<li><p>To the extent possible, good scientific practices should be followed, as outlined in [Good enough practices in scientific computing] (<a href="http://journals.plos.org/ploscompbiol/article?id=10.1371/journal.pcbi.1005510" class="uri">http://journals.plos.org/ploscompbiol/article?id=10.1371/journal.pcbi.1005510</a>).</p></li>
+<li><p>Do not use of absolute paths in the code. See <a href="https://www.tidyverse.org/articles/2017/12/workflow-vs-script/">this post</a> for a discussion of this. Use the <a href="https://cran.r-project.org/web/packages/here/index.html">here</a> package to</p></li>
+<li><p>Do not use <code>install.packages</code> in the computational narrative.
+Instructions on installing dependencies should go in the <code>README.md</code> or a separate script.</p></li>
+<li><p>Include a code chunk at the top of the R markdown document which loads the packages which will be used.</p></li>
+<li><p>Include a code chunk at the end of the R markdown document which includes information from <code>sessionInfo()</code> to document the original computational environment.</p></li>
+<li><p>Do not include unnecessary output (e.g. extraneous print statement) or messages. Each piece of code and output in the computational narrative should serve some purpose toward communicate the research.</p></li>
 </ol>
 </div>
 <div id="computational-narratives" class="section level3">
 <h3>Computational Narratives</h3>
-<p>A computational narrative is a document that combines text, code, and code output to communicate a data analysis or scientific research.
-R markdown is one program that can be used to produce computational narratives.
-Even if students are familiar with statistics and programming, they may be less familiar with computational narratives than with the format of journal articles and books.</p>
-<p>The following references provide some discussion of computational narratives. Many of these references <a href="http://jupyter.org/">Jupyter</a>, a similar, Python-based tool to produce notebooks.</p>
+<p>A computational narrative is a document that combines text, code, and code
+output to communicate a data analysis or scientific research. R markdown is one
+program that can be used to produce computational narratives. Even if students
+are familiar with statistics and programming, they may be less familiar with
+computational narratives than with the format of journal articles and books.</p>
+<p>The following references provide some discussion of computational narratives.
+Many of these references <a href="http://jupyter.org/">Jupyter</a>, a similar,
+Python-based tool to produce notebooks.</p>
 <ul>
 <li><a href="https://www.oreilly.com/ideas/the-state-of-jupyter">The state of Jupyter: How Project Jupyter got here and where we are headed</a></li>
 <li>Fernando Perez and Brian E. Granger (2015) <a href="https://blog.jupyter.org/project-jupyter-computational-narratives-as-the-engine-of-collaborative-data-science-2b5fb94c3c58">Project Jupyter: Computational Narratives as the Engine of Collaborative Data Science</a></li>
@@ -136,18 +145,18 @@ These are not meant to be definitive guides for how to structure your computatio
 Many of these were produced for different purposes than the project for this course.
 However, they do provide examples of effectively combining text, code, and output to communicate data analysis.</p>
 <ul>
-<li><a href="http://mc-stan.org/users/documentation/case-studies">Stan Case Studies</a> are generally well formatted examples of this style.</li>
-<li><a href="https://nbviewer.jupyter.org/github/dmasad/GDELT_Intro/blob/master/Getting_Started_with_GDELT.ipynb">Getting Started with GDELT</a></li>
-<li>Brian Keegan, <a href="http://nbviewer.jupyter.org/github/brianckeegan/Bechdel/blob/master/Bechdel_test.ipynb">The Need for Openness in Data Journalism</a> (python/Jupyter)</li>
-<li>David Robinson, <a href="http://varianceexplained.org/r/trump-tweets/">Text analysis of Trump’s tweets confirms he writes only the (angrier) Android half</a></li>
-<li>The Case Studies in The Tidy Text Package Text package, <a href="https://www.tidytextmining.com/twitter.html" class="uri">https://www.tidytextmining.com/twitter.html</a>.</li>
-<li><a href="http://varianceexplained.org/r/hn-trends/">Words Growing or Shrinking in Hacker News Titles: A Tidy Analysis</a></li>
-<li><a href="http://varianceexplained.org/r/tidytext-gender-plots/">Gender and Verbs across 10,000 stories: a tidy analysis</a></li>
-<li>Brookman, David, and Kalla, Joshua, and Aronow, Peter. 2014. <a href="https://stanford.edu/~dbroock/broockman_kalla_aronow_lg_irregularities.pdf">Irregularities in LaCour (2014)</a> This
+<li><p><a href="http://mc-stan.org/users/documentation/case-studies">Stan Case Studies</a> are generally well formatted examples of this style.</p></li>
+<li><p><a href="https://nbviewer.jupyter.org/github/dmasad/GDELT_Intro/blob/master/Getting_Started_with_GDELT.ipynb">Getting Started with GDELT</a></p></li>
+<li><p>Brian Keegan, <a href="http://nbviewer.jupyter.org/github/brianckeegan/Bechdel/blob/master/Bechdel_test.ipynb">The Need for Openness in Data Journalism</a> (python/Jupyter)</p></li>
+<li><p>David Robinson, <a href="http://varianceexplained.org/r/trump-tweets/">Text analysis of Trump’s tweets confirms he writes only the (angrier) Android half</a></p></li>
+<li><p>The <a href="https://www.tidytextmining.com/twitter.html">Case Studies</a> in the <strong>tidytext</strong> R package.</p></li>
+<li><p><a href="http://varianceexplained.org/r/hn-trends/">Words Growing or Shrinking in Hacker News Titles: A Tidy Analysis</a></p></li>
+<li><p><a href="http://varianceexplained.org/r/tidytext-gender-plots/">Gender and Verbs across 10,000 stories: a tidy analysis</a></p></li>
+<li><p>Brookman, David, and Kalla, Joshua, and Aronow, Peter. 2014. <a href="https://stanford.edu/~dbroock/broockman_kalla_aronow_lg_irregularities.pdf">Irregularities in LaCour (2014)</a> This
 is an unusual document that provides evidence of research fraud in the LaCour and Green paper.
 However, note how it uses knitr and R to do so. The paper is making and argument,
-with points supported by figures and results, with the code that produced them also visible.</li>
-<li><a href="https://www.r-bloggers.com/mapping-the-gdelt-data-and-some-russian-protests-too">Mapping the GDELT data and some Russian protests too</a></li>
+with points supported by figures and results, with the code that produced them also visible.</p></li>
+<li><p><a href="https://www.r-bloggers.com/mapping-the-gdelt-data-and-some-russian-protests-too">Mapping the GDELT data and some Russian protests too</a></p></li>
 </ul>
 </div>
 </div>
