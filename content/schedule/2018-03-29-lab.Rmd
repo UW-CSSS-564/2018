@@ -1,0 +1,14 @@
+---
+date: 2018-03-29T13:30:00
+weekday: Thursday
+inclass:
+- '[March 29th Notes](https://uw-csss-564.github.io/2018-03-29/)'
+lab: yes
+title: Mar, 29 (Thu)&mdash;Lab
+week: 1
+readings: []
+optional: []
+startTime: 2018-03-29T13:30:00
+endTime: 2018-03-29T14:20:00
+
+---

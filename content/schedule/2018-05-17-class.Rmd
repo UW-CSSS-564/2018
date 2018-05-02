@@ -1,0 +1,12 @@
+---
+date: 2018-05-17T14:30:00
+weekday: Thursday
+lab: no
+title: May, 17 (Thu)&mdash;Class
+week: 8
+readings: []
+optional: []
+startTime: 2018-05-17T14:30:00
+endTime: 2018-05-17T15:50:00
+
+---

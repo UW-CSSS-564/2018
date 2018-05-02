@@ -1,0 +1,16 @@
+---
+date: 2018-04-12T13:30:00
+week: 3
+weekday: Thursday
+lab: yes
+title: Apr, 12 (Thu)&mdash;Lab
+readings: []
+optional:
+- 'Richard McElreath, "[Markov Chains: Why Walk When You Can Flow?](http://elevanth.org/blog/2017/11/28/build-a-better-markov-chain/)"'
+- Chi Feng, [Interactive MCMC Demo](https://chi-feng.github.io/mcmc-demo/app.html#NaiveNUTS,banana)
+- Getting started with [RStan](http://mc-stan.org/users/interfaces/rstan.html)
+- Michael Clark, [Bayesian Basics](https://m-clark.github.io/bayesian-basics/)
+startTime: 2018-04-12T13:30:00
+endTime: 2018-04-12T14:20:00
+
+---

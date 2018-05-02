@@ -1,0 +1,12 @@
+---
+date: 2018-05-22T14:30:00
+week: 9
+weekday: Tuesday
+lab: no
+title: May, 22 (Tue)&mdash;Class
+readings: []
+optional: []
+startTime: 2018-05-22T14:30:00
+endTime: 2018-05-22T15:50:00
+
+---

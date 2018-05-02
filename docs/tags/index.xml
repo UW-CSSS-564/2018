@@ -6,55 +6,9 @@
     <description>Recent content in Tags on </description>
     <generator>Hugo -- gohugo.io</generator>
     <language>en-US</language>
-    <lastBuildDate>Mon, 09 Apr 2018 00:00:00 +0000</lastBuildDate>
     
 	<atom:link href="/2018/tags/index.xml" rel="self" type="application/rss+xml" />
     
-    
-    <item>
-      <title>Bayesian Computation</title>
-      <link>/2018/tags/bayesian-computation/</link>
-      <pubDate>Mon, 09 Apr 2018 00:00:00 +0000</pubDate>
-      
-      <guid>/2018/tags/bayesian-computation/</guid>
-      <description></description>
-    </item>
-    
-    <item>
-      <title>Conjugate Priors</title>
-      <link>/2018/tags/conjugate-priors/</link>
-      <pubDate>Mon, 09 Apr 2018 00:00:00 +0000</pubDate>
-      
-      <guid>/2018/tags/conjugate-priors/</guid>
-      <description></description>
-    </item>
-    
-    <item>
-      <title>Cross Validation</title>
-      <link>/2018/tags/cross-validation/</link>
-      <pubDate>Mon, 16 Apr 2018 00:00:00 +0000</pubDate>
-      
-      <guid>/2018/tags/cross-validation/</guid>
-      <description></description>
-    </item>
-    
-    <item>
-      <title>Model Fit</title>
-      <link>/2018/tags/model-fit/</link>
-      <pubDate>Mon, 16 Apr 2018 00:00:00 +0000</pubDate>
-      
-      <guid>/2018/tags/model-fit/</guid>
-      <description></description>
-    </item>
-    
-    <item>
-      <title>Prediction</title>
-      <link>/2018/tags/prediction/</link>
-      <pubDate>Mon, 16 Apr 2018 00:00:00 +0000</pubDate>
-      
-      <guid>/2018/tags/prediction/</guid>
-      <description></description>
-    </item>
     
   </channel>
 </rss>

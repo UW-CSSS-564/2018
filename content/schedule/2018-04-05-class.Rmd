@@ -1,0 +1,12 @@
+---
+date: 2018-04-05T14:30:00
+weekday: Thursday
+lab: no
+title: Apr, 05 (Thu)&mdash;Class
+week: 2
+readings: []
+optional: []
+startTime: 2018-04-05T14:30:00
+endTime: 2018-04-05T15:50:00
+
+---

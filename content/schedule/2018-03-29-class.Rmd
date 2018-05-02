@@ -1,0 +1,21 @@
+---
+date: 2018-03-29T14:30:00
+weekday: Thursday
+inclass: []
+lab: no
+title: Mar, 29 (Thu)&mdash;Class
+week: 1
+readings:
+- '*BDA*, Chapter 1'
+- >-
+  Review probability. See this [Probability Resource](http://www.wzchen.com/probability-cheatsheet/).
+
+- >-
+  Review R. I suggest reading [R for Data Science](http://r4ds.had.co.nz/).
+
+- Frank Harrell, "[My Journey From Frequentist to Bayesian Statistics](http://www.fharrell.com/post/journey/)"
+optional: []
+startTime: 2018-03-29T14:30:00
+endTime: 2018-03-29T15:50:00
+
+---

@@ -1,0 +1,23 @@
+---
+date: 2018-05-08T14:30:00
+week: 7
+weekday: Tuesday
+lab: no
+title: May, 08 (Tue)&mdash;Class
+readings:
+- '[ISLR](http://www-bcf.usc.edu/~gareth/ISL/ISLR%20Seventh%20Printing.pdf) Sec 6.2
+  "Shinkage Methods"  '
+- '*BDA3*. Sec 14.6 "Regularization and dimension reduction for multiple predictors"'
+- 'Stan Modeling Language Reference. Ch 9. "Regression Models"      '
+- <http://mc-stan.org/users/documentation/case-studies/qr_regression.html>
+- <https://cran.r-project.org/web/packages/rstanarm/vignettes/lm.html>
+- 'Polson, Nicholas and James G. Scott (2010) "[Shrink Globally, Act Locally: Sparse
+  Bayesian Regularization and Prediction](http://faculty.chicagobooth.edu/nicholas.polson/research/papers/Bayes1.pdf)"
+  *Bayesian Statistics*'
+- Juho Piironen and Aki Vehtari. 2017. "[Sparsity information and regularization in
+  the horseshoe and other shrinkage priors](https://arxiv.org/pdf/1707.01694.pdf)"
+optional: []
+startTime: 2018-05-08T14:30:00
+endTime: 2018-05-08T15:50:00
+
+---

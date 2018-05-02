@@ -1,0 +1,14 @@
+---
+date: 2018-04-03T14:30:00
+weekday: Tuesday
+inclass:
+- '[April 3rd Notes](https://uw-csss-564.github.io/2018-04-03/)'
+lab: no
+title: Apr, 03 (Tue)&mdash;Class
+week: 2
+readings: []
+optional: []
+startTime: 2018-04-03T14:30:00
+endTime: 2018-04-03T15:50:00
+
+---

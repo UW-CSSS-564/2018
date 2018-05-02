@@ -5,61 +5,60 @@
 
   {{ .Content }}
 
+  <h2>Research Project</h2>
+
+  <h2>Assignments</h2>
+
+
+  <h2>Meetings</h2>
+
   {{ range .Data.Pages.ByDate }}
-    <hr>
-    <h3><a href="{{ .Permalink }}">Week {{ .Params.week }}</a></h3>
-
-    {{ with .Params.tags }}
+    <h3 id="{{ .Date.Format "2006-01-02" }}-{{ if .Params.lab }}lab{{ else }}class {{ end }}">{{ .Title | safeHTML }}</h3>
     <p>
-      Topics: {{ delimit . "; " }}
+      {{ .Date.Format "3:04 PM" }}&ndash; {{ dateFormat "3:04 PM" .Params.endTime }}
     </p>
-    {{ end }}
-    {{ with .Params.due }}
-    <h4>Due</h4>
-    <p>
-      <ul>
-        {{ range . }}
-          <li>
-            <a href="{{ .url | relURL }}">{{ .title }}</a> {{ dateFormat "Jan 2, 3:04 PM" .date }}
-          </li>
-        {{ end }}
-      </ul>
-    </p>
-    {{ end }}
-    {{ range .Params.meetings }}
 
-      <hr>
-      <h4>{{ dateFormat "Jan 2 (Monday)" .date }}</h4>
-
-      {{ with .tags }}
-        <p>
-          <emph>Topics</emph>: {{ delimit . "; " }}
-        </p>
-      {{ end }}
-
-      <h5>Readings</h5>
+    {{ with .Params.inclass }}
+      <h5>In class</h5>
       <p>
-          {{ with .before }}
-            <ul>
-              {{ range . }}
-                {{ partial "list-reading" . }}
-              {{ end }}
-            </ul>
-          {{ else }}
-            None
-          {{ end }}
-      </p>
-      {{ with .after }}
-        <h5>Optional</h5>
-        <p>
-          <ul>
+        <ul>
           {{ range . }}
-            {{ partial "list-reading" . }}
+            <li>
+              {{ . | markdownify }}
+            </li>
           {{ end }}
-          </ul>
-        </p>
-      {{ end }}
+        </ul>
+      </p>
     {{ end }}
+    <h5>Readings</h5>
+    <p>
+        {{ with .Params.readings }}
+          <ul>
+            {{ range . }}
+              <li>
+                {{ . | markdownify }}
+              </li>
+            {{ end }}
+          </ul>
+        {{ else }}
+          None
+        {{ end }}
+    </p>
+    {{ with .Params.optional }}
+      <h5>Additional Resources</h5>
+      <p>
+        <ul>
+          {{ range . }}
+            <li>
+              {{ . | markdownify }}
+            </li>
+          {{ end }}
+        </ul>
+      </p>
+    {{ end }}
+
+    {{ .Content }}
+
   {{ end }}
 </div>
 {{ end }}
