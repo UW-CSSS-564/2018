@@ -11,4 +11,3 @@ endTime: 2018-05-31T15:50:00
 ---
 
 Review and work on research projects.
-

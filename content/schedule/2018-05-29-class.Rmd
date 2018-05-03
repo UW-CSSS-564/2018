@@ -12,5 +12,3 @@ endTime: 2018-05-29T15:50:00
 
 Draft of research project is due at the start of class. 
 Review and collaboratively work on research projects.
-
-

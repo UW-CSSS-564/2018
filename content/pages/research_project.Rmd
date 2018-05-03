@@ -27,9 +27,11 @@ The proposal should consist of a paragraph or two describing.
 Other notes on this proposal:
 
 -   You should have data on hand. There is not enough time to collect new data before this is due.
+
 -   If you will be using non-public or large (> 100 MB) datasets, let the instructors know.
     Using non-public data is acceptable for the project.
     However, the instructors will need to work with you to ensure that your workflow keeps that data non-public.
+
 -   Replications are acceptable. However, you must do some original work when replicating a paper.
 
 ## Draft

@@ -70,15 +70,15 @@
   Readings and materials for all class and lab meetings.
 
   {{ range .Data.Pages.ByDate }}
-    <div class="card">
-      <div class="card-header" data-toggle="collapse" data-target="#{{- .Date.Format "2006-01-02" -}}-{{ if .Params.lab }}lab{{ else }}class{{ end }}-body">
+    <div class="card"  id="{{- .Date.Format "2006-01-02" -}}-{{ if .Params.lab }}lab{{ else }}class{{ end }}">
+      <div class="card-header">
         <h3 >{{ .Title | safeHTML }}</h3>
         <p>
           {{ .Date.Format "3:04 PM" }}&ndash; {{ dateFormat "3:04 PM" .Params.endTime }}
         </p>
       </div>
 
-      <div class="card-body collapse" id="{{- .Date.Format "2006-01-02" -}}-{{ if .Params.lab }}lab{{ else }}class{{ end }}-body">
+      <div class="card-body" id="{{- .Date.Format "2006-01-02" -}}-{{ if .Params.lab }}lab{{ else }}class{{ end }}-body">
 
         {{ with .Params.inclass }}
           <h5>In class</h5>
