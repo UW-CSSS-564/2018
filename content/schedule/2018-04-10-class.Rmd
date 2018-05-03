@@ -4,6 +4,8 @@ week: 3
 weekday: Tuesday
 lab: no
 title: Apr 10 (Tue)&mdash;Class
+inclass: 
+- '[April 10th notes](https://uw-csss-564.github.io/2018-04-10/)'
 readings:
 - '*BDA3*, Ch. 2: "Single Parameter Models"'
 - '*BDA3*, Ch. 10: "Introduction to Bayesian  '
