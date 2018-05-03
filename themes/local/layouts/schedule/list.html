@@ -79,6 +79,14 @@
       </div>
 
       <div class="card-body" id="{{- .Date.Format "2006-01-02" -}}-{{ if .Params.lab }}lab{{ else }}class{{ end }}-body">
+        {{ with .Content }}
+          <h5>
+            Summary
+          </h5>
+          <p class="card-text">
+            {{ . }}
+          </p>
+        {{ end }}
 
         {{ with .Params.inclass }}
           <h5>In class</h5>
@@ -118,15 +126,6 @@
                 </li>
               {{ end }}
             </ul>
-          </p>
-        {{ end }}
-
-        {{ with .Content }}
-          <h5>
-            Summary
-          </h5>
-          <p class="card-text">
-            {{ . }}
           </p>
         {{ end }}
        </div><!-- end of card-body -->

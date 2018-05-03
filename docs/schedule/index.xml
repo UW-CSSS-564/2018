@@ -2,273 +2,273 @@
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
     <title>Course Schedule on </title>
-    <link>https://UW-CSSS-564.github.io/2018/schedule/</link>
+    <link>/2018/schedule/</link>
     <description>Recent content in Course Schedule on </description>
     <generator>Hugo -- gohugo.io</generator>
     <language>en-US</language>
     <lastBuildDate>Thu, 31 May 2018 14:30:00 +0000</lastBuildDate>
     
-	<atom:link href="https://UW-CSSS-564.github.io/2018/schedule/index.xml" rel="self" type="application/rss+xml" />
+	<atom:link href="/2018/schedule/index.xml" rel="self" type="application/rss+xml" />
     
     
     <item>
       <title>May 31 (Thu)&amp;mdash;Class</title>
-      <link>https://UW-CSSS-564.github.io/2018/schedule/2018-05-31-class/</link>
+      <link>/2018/schedule/2018-05-31-class/</link>
       <pubDate>Thu, 31 May 2018 14:30:00 +0000</pubDate>
       
-      <guid>https://UW-CSSS-564.github.io/2018/schedule/2018-05-31-class/</guid>
+      <guid>/2018/schedule/2018-05-31-class/</guid>
       <description>Review and work on research projects.</description>
     </item>
     
     <item>
       <title>May 31 (Thu)&amp;mdash;Lab</title>
-      <link>https://UW-CSSS-564.github.io/2018/schedule/2018-05-31-lab/</link>
+      <link>/2018/schedule/2018-05-31-lab/</link>
       <pubDate>Thu, 31 May 2018 13:30:00 +0000</pubDate>
       
-      <guid>https://UW-CSSS-564.github.io/2018/schedule/2018-05-31-lab/</guid>
+      <guid>/2018/schedule/2018-05-31-lab/</guid>
       <description>Review and work on research projects.</description>
     </item>
     
     <item>
       <title>May 29 (Tue)&amp;mdash;Class</title>
-      <link>https://UW-CSSS-564.github.io/2018/schedule/2018-05-29-class/</link>
+      <link>/2018/schedule/2018-05-29-class/</link>
       <pubDate>Tue, 29 May 2018 14:30:00 +0000</pubDate>
       
-      <guid>https://UW-CSSS-564.github.io/2018/schedule/2018-05-29-class/</guid>
+      <guid>/2018/schedule/2018-05-29-class/</guid>
       <description>Draft of research project is due at the start of class. Review and collaboratively work on research projects.</description>
     </item>
     
     <item>
       <title>May 24 (Thu)&amp;mdash;Class</title>
-      <link>https://UW-CSSS-564.github.io/2018/schedule/2018-05-24-class/</link>
+      <link>/2018/schedule/2018-05-24-class/</link>
       <pubDate>Thu, 24 May 2018 14:30:00 +0000</pubDate>
       
-      <guid>https://UW-CSSS-564.github.io/2018/schedule/2018-05-24-class/</guid>
+      <guid>/2018/schedule/2018-05-24-class/</guid>
       <description>Other algorithms: optimization and variational inference.</description>
     </item>
     
     <item>
       <title>May 24 (Thu)&amp;mdash;Lab</title>
-      <link>https://UW-CSSS-564.github.io/2018/schedule/2018-05-24-lab/</link>
+      <link>/2018/schedule/2018-05-24-lab/</link>
       <pubDate>Thu, 24 May 2018 13:30:00 +0000</pubDate>
       
-      <guid>https://UW-CSSS-564.github.io/2018/schedule/2018-05-24-lab/</guid>
+      <guid>/2018/schedule/2018-05-24-lab/</guid>
       <description>Bayesian regularization models for causal inference.</description>
     </item>
     
     <item>
       <title>May 22 (Tue)&amp;mdash;Class</title>
-      <link>https://UW-CSSS-564.github.io/2018/schedule/2018-05-22-class/</link>
+      <link>/2018/schedule/2018-05-22-class/</link>
       <pubDate>Tue, 22 May 2018 14:30:00 +0000</pubDate>
       
-      <guid>https://UW-CSSS-564.github.io/2018/schedule/2018-05-22-class/</guid>
+      <guid>/2018/schedule/2018-05-22-class/</guid>
       <description>Discrete latent variables and mixture models.</description>
     </item>
     
     <item>
       <title>May 17 (Thu)&amp;mdash;Class</title>
-      <link>https://UW-CSSS-564.github.io/2018/schedule/2018-05-17-class/</link>
+      <link>/2018/schedule/2018-05-17-class/</link>
       <pubDate>Thu, 17 May 2018 14:30:00 +0000</pubDate>
       
-      <guid>https://UW-CSSS-564.github.io/2018/schedule/2018-05-17-class/</guid>
+      <guid>/2018/schedule/2018-05-17-class/</guid>
       <description></description>
     </item>
     
     <item>
       <title>May 17 (Thu)&amp;mdash;Lab</title>
-      <link>https://UW-CSSS-564.github.io/2018/schedule/2018-05-17-lab/</link>
+      <link>/2018/schedule/2018-05-17-lab/</link>
       <pubDate>Thu, 17 May 2018 13:30:00 +0000</pubDate>
       
-      <guid>https://UW-CSSS-564.github.io/2018/schedule/2018-05-17-lab/</guid>
+      <guid>/2018/schedule/2018-05-17-lab/</guid>
       <description>Multilevel/hierarchical/random effects models.</description>
     </item>
     
     <item>
       <title>May 15 (Tue)&amp;mdash;Class</title>
-      <link>https://UW-CSSS-564.github.io/2018/schedule/2018-05-15-class/</link>
+      <link>/2018/schedule/2018-05-15-class/</link>
       <pubDate>Tue, 15 May 2018 14:30:00 +0000</pubDate>
       
-      <guid>https://UW-CSSS-564.github.io/2018/schedule/2018-05-15-class/</guid>
+      <guid>/2018/schedule/2018-05-15-class/</guid>
       <description>Variable selection in regression models.</description>
     </item>
     
     <item>
       <title>May 10 (Thu)&amp;mdash;Class</title>
-      <link>https://UW-CSSS-564.github.io/2018/schedule/2018-05-10-class/</link>
+      <link>/2018/schedule/2018-05-10-class/</link>
       <pubDate>Thu, 10 May 2018 14:30:00 +0000</pubDate>
       
-      <guid>https://UW-CSSS-564.github.io/2018/schedule/2018-05-10-class/</guid>
+      <guid>/2018/schedule/2018-05-10-class/</guid>
       <description>Bayesian shrinkage and regularization for regression models.</description>
     </item>
     
     <item>
       <title>May 10 (Thu)&amp;mdash;Lab</title>
-      <link>https://UW-CSSS-564.github.io/2018/schedule/2018-05-10-lab/</link>
+      <link>/2018/schedule/2018-05-10-lab/</link>
       <pubDate>Thu, 10 May 2018 13:30:00 +0000</pubDate>
       
-      <guid>https://UW-CSSS-564.github.io/2018/schedule/2018-05-10-lab/</guid>
+      <guid>/2018/schedule/2018-05-10-lab/</guid>
       <description></description>
     </item>
     
     <item>
       <title>May 8 (Tue)&amp;mdash;Class</title>
-      <link>https://UW-CSSS-564.github.io/2018/schedule/2018-05-08-class/</link>
+      <link>/2018/schedule/2018-05-08-class/</link>
       <pubDate>Tue, 08 May 2018 14:30:00 +0000</pubDate>
       
-      <guid>https://UW-CSSS-564.github.io/2018/schedule/2018-05-08-class/</guid>
+      <guid>/2018/schedule/2018-05-08-class/</guid>
       <description></description>
     </item>
     
     <item>
       <title>May 3 (Thu)&amp;mdash;Class</title>
-      <link>https://UW-CSSS-564.github.io/2018/schedule/2018-05-03-class/</link>
+      <link>/2018/schedule/2018-05-03-class/</link>
       <pubDate>Thu, 03 May 2018 14:30:00 +0000</pubDate>
       
-      <guid>https://UW-CSSS-564.github.io/2018/schedule/2018-05-03-class/</guid>
-      <description></description>
+      <guid>/2018/schedule/2018-05-03-class/</guid>
+      <description> Reviewed schedule Lecture on model comparison, selection, and averaging  </description>
     </item>
     
     <item>
       <title>May 3 (Thu)&amp;mdash;Lab</title>
-      <link>https://UW-CSSS-564.github.io/2018/schedule/2018-05-03-lab/</link>
+      <link>/2018/schedule/2018-05-03-lab/</link>
       <pubDate>Thu, 03 May 2018 13:30:00 +0000</pubDate>
       
-      <guid>https://UW-CSSS-564.github.io/2018/schedule/2018-05-03-lab/</guid>
+      <guid>/2018/schedule/2018-05-03-lab/</guid>
       <description></description>
     </item>
     
     <item>
       <title>May 1 (Tue)&amp;mdash;Class</title>
-      <link>https://UW-CSSS-564.github.io/2018/schedule/2018-05-01-class/</link>
+      <link>/2018/schedule/2018-05-01-class/</link>
       <pubDate>Tue, 01 May 2018 14:30:00 +0000</pubDate>
       
-      <guid>https://UW-CSSS-564.github.io/2018/schedule/2018-05-01-class/</guid>
+      <guid>/2018/schedule/2018-05-01-class/</guid>
       <description></description>
     </item>
     
     <item>
       <title>Apr 26 (Thu)&amp;mdash;Lab</title>
-      <link>https://UW-CSSS-564.github.io/2018/schedule/2018-04-26-lab/</link>
+      <link>/2018/schedule/2018-04-26-lab/</link>
       <pubDate>Thu, 26 Apr 2018 13:30:00 +0000</pubDate>
       
-      <guid>https://UW-CSSS-564.github.io/2018/schedule/2018-04-26-lab/</guid>
+      <guid>/2018/schedule/2018-04-26-lab/</guid>
       <description></description>
     </item>
     
     <item>
       <title>Apr 24 (Tue)&amp;mdash;Class</title>
-      <link>https://UW-CSSS-564.github.io/2018/schedule/2018-04-24-class/</link>
+      <link>/2018/schedule/2018-04-24-class/</link>
       <pubDate>Tue, 24 Apr 2018 14:30:00 +0000</pubDate>
       
-      <guid>https://UW-CSSS-564.github.io/2018/schedule/2018-04-24-class/</guid>
+      <guid>/2018/schedule/2018-04-24-class/</guid>
       <description></description>
     </item>
     
     <item>
       <title>Apr 19 (Thu)&amp;mdash;Class</title>
-      <link>https://UW-CSSS-564.github.io/2018/schedule/2018-04-19-class/</link>
+      <link>/2018/schedule/2018-04-19-class/</link>
       <pubDate>Thu, 19 Apr 2018 14:30:00 +0000</pubDate>
       
-      <guid>https://UW-CSSS-564.github.io/2018/schedule/2018-04-19-class/</guid>
+      <guid>/2018/schedule/2018-04-19-class/</guid>
       <description></description>
     </item>
     
     <item>
       <title>Apr 19 (Thu)&amp;mdash;Lab</title>
-      <link>https://UW-CSSS-564.github.io/2018/schedule/2018-04-19-lab/</link>
+      <link>/2018/schedule/2018-04-19-lab/</link>
       <pubDate>Thu, 19 Apr 2018 13:30:00 +0000</pubDate>
       
-      <guid>https://UW-CSSS-564.github.io/2018/schedule/2018-04-19-lab/</guid>
+      <guid>/2018/schedule/2018-04-19-lab/</guid>
       <description></description>
     </item>
     
     <item>
       <title>Apr 17 (Tue)&amp;mdash;Class</title>
-      <link>https://UW-CSSS-564.github.io/2018/schedule/2018-04-17-class/</link>
+      <link>/2018/schedule/2018-04-17-class/</link>
       <pubDate>Tue, 17 Apr 2018 14:30:00 +0000</pubDate>
       
-      <guid>https://UW-CSSS-564.github.io/2018/schedule/2018-04-17-class/</guid>
+      <guid>/2018/schedule/2018-04-17-class/</guid>
       <description></description>
     </item>
     
     <item>
       <title>Apr, 12 (Thu)&amp;mdash;Class</title>
-      <link>https://UW-CSSS-564.github.io/2018/schedule/2018-04-12-class/</link>
+      <link>/2018/schedule/2018-04-12-class/</link>
       <pubDate>Thu, 12 Apr 2018 14:30:00 +0000</pubDate>
       
-      <guid>https://UW-CSSS-564.github.io/2018/schedule/2018-04-12-class/</guid>
+      <guid>/2018/schedule/2018-04-12-class/</guid>
       <description></description>
     </item>
     
     <item>
       <title>Apr 12 (Thu)&amp;mdash;Lab</title>
-      <link>https://UW-CSSS-564.github.io/2018/schedule/2018-04-12-lab/</link>
+      <link>/2018/schedule/2018-04-12-lab/</link>
       <pubDate>Thu, 12 Apr 2018 13:30:00 +0000</pubDate>
       
-      <guid>https://UW-CSSS-564.github.io/2018/schedule/2018-04-12-lab/</guid>
+      <guid>/2018/schedule/2018-04-12-lab/</guid>
       <description></description>
     </item>
     
     <item>
       <title>Apr 10 (Tue)&amp;mdash;Class</title>
-      <link>https://UW-CSSS-564.github.io/2018/schedule/2018-04-10-class/</link>
+      <link>/2018/schedule/2018-04-10-class/</link>
       <pubDate>Tue, 10 Apr 2018 14:30:00 +0000</pubDate>
       
-      <guid>https://UW-CSSS-564.github.io/2018/schedule/2018-04-10-class/</guid>
+      <guid>/2018/schedule/2018-04-10-class/</guid>
       <description></description>
     </item>
     
     <item>
       <title>Apr 5 (Thu)&amp;mdash;Class</title>
-      <link>https://UW-CSSS-564.github.io/2018/schedule/2018-04-05-class/</link>
+      <link>/2018/schedule/2018-04-05-class/</link>
       <pubDate>Thu, 05 Apr 2018 14:30:00 +0000</pubDate>
       
-      <guid>https://UW-CSSS-564.github.io/2018/schedule/2018-04-05-class/</guid>
+      <guid>/2018/schedule/2018-04-05-class/</guid>
       <description></description>
     </item>
     
     <item>
       <title>Apr 5 (Thu)&amp;mdash;Lab</title>
-      <link>https://UW-CSSS-564.github.io/2018/schedule/2018-04-05-lab/</link>
+      <link>/2018/schedule/2018-04-05-lab/</link>
       <pubDate>Thu, 05 Apr 2018 13:30:00 +0000</pubDate>
       
-      <guid>https://UW-CSSS-564.github.io/2018/schedule/2018-04-05-lab/</guid>
+      <guid>/2018/schedule/2018-04-05-lab/</guid>
       <description></description>
     </item>
     
     <item>
       <title>Apr 3 (Tue)&amp;mdash;Class</title>
-      <link>https://UW-CSSS-564.github.io/2018/schedule/2018-04-03-class/</link>
+      <link>/2018/schedule/2018-04-03-class/</link>
       <pubDate>Tue, 03 Apr 2018 14:30:00 +0000</pubDate>
       
-      <guid>https://UW-CSSS-564.github.io/2018/schedule/2018-04-03-class/</guid>
+      <guid>/2018/schedule/2018-04-03-class/</guid>
       <description></description>
     </item>
     
     <item>
       <title>Mar 29 (Thu)&amp;mdash;Class</title>
-      <link>https://UW-CSSS-564.github.io/2018/schedule/2018-03-29-class/</link>
+      <link>/2018/schedule/2018-03-29-class/</link>
       <pubDate>Thu, 29 Mar 2018 14:30:00 +0000</pubDate>
       
-      <guid>https://UW-CSSS-564.github.io/2018/schedule/2018-03-29-class/</guid>
+      <guid>/2018/schedule/2018-03-29-class/</guid>
       <description></description>
     </item>
     
     <item>
       <title>Mar 29 (Thu)&amp;mdash;Lab</title>
-      <link>https://UW-CSSS-564.github.io/2018/schedule/2018-03-29-lab/</link>
+      <link>/2018/schedule/2018-03-29-lab/</link>
       <pubDate>Thu, 29 Mar 2018 13:30:00 +0000</pubDate>
       
-      <guid>https://UW-CSSS-564.github.io/2018/schedule/2018-03-29-lab/</guid>
+      <guid>/2018/schedule/2018-03-29-lab/</guid>
       <description></description>
     </item>
     
     <item>
       <title>Mar 27 (Tue)&amp;mdash;Class</title>
-      <link>https://UW-CSSS-564.github.io/2018/schedule/2018-03-27-class/</link>
+      <link>/2018/schedule/2018-03-27-class/</link>
       <pubDate>Tue, 27 Mar 2018 14:30:00 +0000</pubDate>
       
-      <guid>https://UW-CSSS-564.github.io/2018/schedule/2018-03-27-class/</guid>
+      <guid>/2018/schedule/2018-03-27-class/</guid>
       <description></description>
     </item>
     

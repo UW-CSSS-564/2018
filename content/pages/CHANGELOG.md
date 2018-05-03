@@ -4,6 +4,10 @@ title: CHANGELOG
 
 See the [GitHub repository](https://github.com/UW-POLS503/2018/commits/master) the history of changes.
 
+## 2018-05-03
+
+-   added lecture slides for May 3
+
 ## 2018-05-02
 
 -   changed due date of final research project to June 7

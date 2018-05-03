@@ -2,30 +2,30 @@
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
     <title>Pages on </title>
-    <link>https://UW-CSSS-564.github.io/2018/pages/</link>
+    <link>/2018/pages/</link>
     <description>Recent content in Pages on </description>
     <generator>Hugo -- gohugo.io</generator>
     <language>en-US</language>
     
-	<atom:link href="https://UW-CSSS-564.github.io/2018/pages/index.xml" rel="self" type="application/rss+xml" />
+	<atom:link href="/2018/pages/index.xml" rel="self" type="application/rss+xml" />
     
     
     <item>
       <title>CHANGELOG</title>
-      <link>https://UW-CSSS-564.github.io/2018/pages/changelog/</link>
+      <link>/2018/pages/changelog/</link>
       <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
       
-      <guid>https://UW-CSSS-564.github.io/2018/pages/changelog/</guid>
+      <guid>/2018/pages/changelog/</guid>
       <description>See the GitHub repository the history of changes.
-2018-05-02  changed due date of final research project to June 7 added peer review assignment due on June 1 added optional reading for May 1 added reading for May 3 added reading for May 15 added reading for May 17 added reading for May 22 added instructions for peer review to research project instructions  2018-05-01  added all research project dates added all assignment dates for assignments 1&amp;ndash;3 added readings for weeks 6&amp;ndash;7  2018-03-27  fix times and locations of classes add final project page add dates for final project to schedule.</description>
+2018-05-03  added lecture slides for May 3  2018-05-02  changed due date of final research project to June 7 added peer review assignment due on June 1 added optional reading for May 1 added reading for May 3 added reading for May 15 added reading for May 17 added reading for May 22 added instructions for peer review to research project instructions  2018-05-01  added all research project dates added all assignment dates for assignments 1&amp;ndash;3 added readings for weeks 6&amp;ndash;7  2018-03-27  fix times and locations of classes add final project page add dates for final project to schedule.</description>
     </item>
     
     <item>
       <title>Getting Help with R</title>
-      <link>https://UW-CSSS-564.github.io/2018/pages/help/</link>
+      <link>/2018/pages/help/</link>
       <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
       
-      <guid>https://UW-CSSS-564.github.io/2018/pages/help/</guid>
+      <guid>/2018/pages/help/</guid>
       <description>A good place to start is Rstudio’s guide for getting help with R
 Asking for Help When asking for help with R it is important to at least
 Include the exact code that you ran The error message that you got  Without the code and the error message it can be hard to impossible to diagnose the problem and provide a solution. Questions such as “This isn’t working” or even “I’m getting this error message” aren’t useful without the code and error message.</description>
@@ -33,10 +33,10 @@ Include the exact code that you ran The error message that you got  Without the 
     
     <item>
       <title>Git and GitHub</title>
-      <link>https://UW-CSSS-564.github.io/2018/pages/git/</link>
+      <link>/2018/pages/git/</link>
       <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
       
-      <guid>https://UW-CSSS-564.github.io/2018/pages/git/</guid>
+      <guid>/2018/pages/git/</guid>
       <description>What is Git? Git is software for version control (keeping track of the changes and history of files).
  What is GitHub? GitHub is a website that hosts git repositories. It also has tools to enable collaboration on software using git.
  Getting Started with Git RStudio includes a GUI interface to git, which will cover almost all the cases you will encounter in this course. For quick introduction on learn how to use Version control within RStudio, I suggest the “Version Control” chapter of the Working with the RStudio IDE (Part 2) DataCamp course.</description>
@@ -44,10 +44,10 @@ Include the exact code that you ran The error message that you got  Without the 
     
     <item>
       <title>Onboarding Instructions for CS&amp;SS 564, Spring 2018</title>
-      <link>https://UW-CSSS-564.github.io/2018/pages/onboarding/</link>
+      <link>/2018/pages/onboarding/</link>
       <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
       
-      <guid>https://UW-CSSS-564.github.io/2018/pages/onboarding/</guid>
+      <guid>/2018/pages/onboarding/</guid>
       <description>Please complete the following before the first day of class (Tuesday, March 27, 2018).
 Sign up for our Slack workplace, https://uwcsss564.slack.com. We will use this for announcements, and asking and answering questions in this course. You should have received an invite. If not email the instructors to receive one.
  Sign into the course Slack workplace https://uwcsss564.slack.com, and leave a message on the #onboarding channel. In the message introduce yourself, explain why you are taking this course, and what you hope to get out of taking this course.</description>
@@ -55,10 +55,10 @@ Sign up for our Slack workplace, https://uwcsss564.slack.com. We will use this f
     
     <item>
       <title>Research Project</title>
-      <link>https://UW-CSSS-564.github.io/2018/pages/research_project/</link>
+      <link>/2018/pages/research_project/</link>
       <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
       
-      <guid>https://UW-CSSS-564.github.io/2018/pages/research_project/</guid>
+      <guid>/2018/pages/research_project/</guid>
       <description>The final project will a short analysis in R markdown that implements a Bayesian model using Stan to answer a research question of the student’s choosing.
 Proposal Fork https://github.com/UW-CSSS-564/2018-research-project. Edit the README.md. Add your name, correct the title, and make any other appropriate customizations. Write your proposal in the document doc/proposal.Rmd. Submit the assignment by opening a pull request titled, “Review Proposal”.  The project proposal should be brief. The intent of the proposal is two-fold:</description>
     </item>

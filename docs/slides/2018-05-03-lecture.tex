@@ -1,0 +1,435 @@
+\PassOptionsToPackage{unicode=true}{hyperref} % options for packages loaded elsewhere
+\PassOptionsToPackage{hyphens}{url}
+%
+\documentclass[ignorenonframetext,]{beamer}
+\setbeamertemplate{caption}[numbered]
+\setbeamertemplate{caption label separator}{: }
+\setbeamercolor{caption name}{fg=normal text.fg}
+\beamertemplatenavigationsymbolsempty
+\usepackage{lmodern}
+\usepackage{amssymb,amsmath}
+\usepackage{ifxetex,ifluatex}
+\usepackage{fixltx2e} % provides \textsubscript
+\ifnum 0\ifxetex 1\fi\ifluatex 1\fi=0 % if pdftex
+  \usepackage[T1]{fontenc}
+  \usepackage[utf8]{inputenc}
+  \usepackage{textcomp} % provides euro and other symbols
+\else % if luatex or xelatex
+  \usepackage{unicode-math}
+  \defaultfontfeatures{Ligatures=TeX,Scale=MatchLowercase}
+\fi
+% use upquote if available, for straight quotes in verbatim environments
+\IfFileExists{upquote.sty}{\usepackage{upquote}}{}
+% use microtype if available
+\IfFileExists{microtype.sty}{%
+\usepackage[]{microtype}
+\UseMicrotypeSet[protrusion]{basicmath} % disable protrusion for tt fonts
+}{}
+\IfFileExists{parskip.sty}{%
+\usepackage{parskip}
+}{% else
+\setlength{\parindent}{0pt}
+\setlength{\parskip}{6pt plus 2pt minus 1pt}
+}
+\usepackage{hyperref}
+\hypersetup{
+            pdftitle={Model Selection, Comparison, Averaging},
+            pdfauthor={Jeffrey Arnold},
+            pdfborder={0 0 0},
+            breaklinks=true}
+\urlstyle{same}  % don't use monospace font for urls
+\newif\ifbibliography
+\usepackage{longtable,booktabs}
+\usepackage{caption}
+% These lines are needed to make table captions work with longtable:
+\makeatletter
+\def\fnum@table{\tablename~\thetable}
+\makeatother
+% Prevent slide breaks in the middle of a paragraph:
+\widowpenalties 1 10000
+\raggedbottom
+\setbeamertemplate{part page}{
+\centering
+\begin{beamercolorbox}[sep=16pt,center]{part title}
+  \usebeamerfont{part title}\insertpart\par
+\end{beamercolorbox}
+}
+\setbeamertemplate{section page}{
+\centering
+\begin{beamercolorbox}[sep=12pt,center]{part title}
+  \usebeamerfont{section title}\insertsection\par
+\end{beamercolorbox}
+}
+\setbeamertemplate{subsection page}{
+\centering
+\begin{beamercolorbox}[sep=8pt,center]{part title}
+  \usebeamerfont{subsection title}\insertsubsection\par
+\end{beamercolorbox}
+}
+\AtBeginPart{
+  \frame{\partpage}
+}
+\AtBeginSection{
+  \ifbibliography
+  \else
+    \frame{\sectionpage}
+  \fi
+}
+\AtBeginSubsection{
+  \frame{\subsectionpage}
+}
+\setlength{\emergencystretch}{3em}  % prevent overfull lines
+\providecommand{\tightlist}{%
+  \setlength{\itemsep}{0pt}\setlength{\parskip}{0pt}}
+\setcounter{secnumdepth}{0}
+
+% set default figure placement to htbp
+\makeatletter
+\def\fps@figure{htbp}
+\makeatother
+
+
+\title{Model Selection, Comparison, Averaging}
+\author{Jeffrey Arnold}
+\date{May 3, 2018}
+
+\begin{document}
+\frame{\titlepage}
+
+\hypertarget{model-averaging}{%
+\section{Model Averaging}\label{model-averaging}}
+
+\begin{frame}{Combining Models}
+\protect\hypertarget{combining-models}{}
+
+Three methods to combine models
+
+\begin{enumerate}
+[1.]
+\tightlist
+\item
+  Continuous Model Expansion
+\item
+  Discrete Model Expansion
+\item
+  Bayesian Model Averaging
+\end{enumerate}
+
+\end{frame}
+
+\begin{frame}{Continuous Model Exapansion}
+\protect\hypertarget{continuous-model-exapansion}{}
+
+\begin{itemize}
+\item
+  Write a larger model that nests the model you are using.
+\item
+  Can add either
+
+  \begin{itemize}
+  \tightlist
+  \item
+    more data, e.g.~hierarchical model
+  \item
+    more parameters
+  \end{itemize}
+\item
+  Upside: more flexible, can use shrinkage to avoid overfitting
+\item
+  Downside: increased computation
+\end{itemize}
+
+\end{frame}
+
+\begin{frame}{Continuous Model Expansion: Student-t}
+\protect\hypertarget{continuous-model-expansion-student-t}{}
+
+Normal distribution is Student-t with degrees of freedom \(\infty\). \[
+\mathsf{Normal}(y|\sigma, \mu) = \mathsf{StudentT}(y|\nu = \infty, \mu, \sigma)
+\]
+
+\end{frame}
+
+\begin{frame}{Continuous Model Expansion: Regression}
+\protect\hypertarget{continuous-model-expansion-regression}{}
+
+Special case: \[
+\mathsf{Normal}(y| \mu, \sigma)
+\] General case: \[
+\mathsf{Normal}(y_i| \mu_i, \sigma_i)
+\]
+
+\begin{itemize}
+\tightlist
+\item
+  Model \(\mu_i\) with regression
+\item
+  Heteroskedasticity model for \(\sigma_i\)
+\end{itemize}
+
+\end{frame}
+
+\begin{frame}{Continuous Model Expansion: Regression}
+\protect\hypertarget{continuous-model-expansion-regression-1}{}
+
+Special case: Observation \(i\) in group \(k \in 1:K\), \[
+\mathsf{Normal}(y_{i,k}|\alpha + X_i \beta, \sigma)
+\] General case: Different intercepts and slopes for each group. \[
+\mathsf{Normal}(y_{i,k}|\alpha_{i,k} + X \beta_{i,k}, \sigma)
+\]
+
+\end{frame}
+
+\begin{frame}{Discrete Model Expansion (Mixture Models)}
+\protect\hypertarget{discrete-model-expansion-mixture-models}{}
+
+Suppose we have \(\mathcal{M} = \{M_1, \dots, M_K\}\). \[
+p(y) = \sum_{k = 1}^{K} \pi_k  p(y | M_k)
+\]
+
+\begin{itemize}
+\tightlist
+\item
+  Mixture models: \(\pi_{k}\) is a parameter
+\item
+  Bayesian Model Averaging: plug-in a value for \(\pi_{k}\)
+\end{itemize}
+
+\end{frame}
+
+\begin{frame}{Discrete Model Expansion}
+\protect\hypertarget{discrete-model-expansion}{}
+
+\begin{itemize}
+\tightlist
+\item
+  Like continuous model expansion: directly estimate a meta-model.
+\item
+  Unless truly “discrete” models, usually a second-best approximation to
+  a continuous model expansion
+\item
+  Can be computationally difficult, which is why BMA/model selection are
+  used.
+\end{itemize}
+
+\end{frame}
+
+\hypertarget{bayes-factors}{%
+\section{Bayes factors}\label{bayes-factors}}
+
+\begin{frame}{Posterior Probability for a Model}
+\protect\hypertarget{posterior-probability-for-a-model}{}
+
+Think of a model, \(M\), as just another discrete parameter.
+
+What is the posterior probability of \(M\) given data \(y\)? \[
+p(M | y) = \frac{p(y | M) p(M)}{p(y)}
+\]
+
+\end{frame}
+
+\begin{frame}{Bayes Factor}
+\protect\hypertarget{bayes-factor}{}
+
+Evidence for \(M_2\) over model \(M_1\) is the ratio of their posterior
+distributions. \[
+\frac{p(M_2 | y)}{p(M_1 | y)} = \underbrace{\frac{p(y | M_2)}{p(y | M_1)}}_{\text{Bayes Factor}} \times \frac{p(M_2)}{p(M_1)}
+\]
+
+\end{frame}
+
+\begin{frame}{Problem: Bayes Factors Depend on Priors}
+\protect\hypertarget{problem-bayes-factors-depend-on-priors}{}
+
+\[
+\text{Bayes Factor}(M_2; M_1) = \frac{p(y | M_2)}{p(y | M_1)}
+\] where \[
+p(y | M_k) = \int p(\theta_k | M_k) p(y | \theta_k, M_k) d\,\theta_k
+\]
+
+\begin{itemize}
+\item
+  \textbf{Problem:} Marginal likelihood integrates over \(\theta\)!
+\item
+  \textbf{Implications}:
+
+  \begin{itemize}
+  \tightlist
+  \item
+    Model comparison extremely sensitive to priors, in ways that
+    posterior calculation is not.
+  \item
+    Cannot use improper priors (or make adjustments)
+  \item
+    Marginal likelihood hard to compute.
+  \end{itemize}
+\end{itemize}
+
+\end{frame}
+
+\begin{frame}{Bayes Factors}
+\protect\hypertarget{bayes-factors-1}{}
+
+\begin{itemize}
+\tightlist
+\item
+  Intuitive way to compare models
+\item
+  Not that useful in practice; rarely used in practice
+\item
+  Marginal likelihoods hard to compute
+\item
+  Sensitivity to priors is \textbf{major issue}
+\end{itemize}
+
+\end{frame}
+
+\hypertarget{bayesian-model-averaging}{%
+\section{Bayesian Model Averaging}\label{bayesian-model-averaging}}
+
+\begin{frame}{Bayesian Model Averaging}
+\protect\hypertarget{bayesian-model-averaging-1}{}
+
+\begin{itemize}
+\item
+  Given \(\mathcal{M} = \left\{M_1, \dots, M_K \right\}\) models: \[
+  p(\theta | y) = \sum_{k = 1}^K \left( \underbrace{p(\theta| M_k, y)}_{\text{posterior of } M_{k}} \times \underbrace{p(M_k | y)}_{\text{model prior}} \right)
+  \]
+\item
+  Weighted average of \(\theta\) estimated for each model
+\item
+  Unlike mixture model, models estimated separately, and averaging is
+  post-hoc
+\item
+  \textbf{Problem:} \(p(M_k | y)\) require marginal likelihoods.
+\end{itemize}
+
+\end{frame}
+
+\begin{frame}{BMA in practice}
+\protect\hypertarget{bma-in-practice}{}
+
+\begin{itemize}
+\tightlist
+\item
+  Several good implementations in R packages: BMA, BMS
+\item
+  Generally focus on linear models where some shortcuts available for
+  calculating Bayes Factors
+\item
+  In linear models big problem is (intelligently) sampling the large
+  space (\(2^p\)) of models
+\item
+  Regularization, shrinkage, and sparse shrinkage models can often
+  handle regression case better
+\item
+  Calculating marginal likelihood in general case hard, use of
+  approximation like BIC common
+\item
+  Use pseudo-BMA weights based on prediction
+\item
+  Theory based on \(\mathcal{M}\)-complete world, but that’s not the
+  case
+\end{itemize}
+
+\end{frame}
+
+\begin{frame}{Spaces of Models}
+\protect\hypertarget{spaces-of-models}{}
+
+\begin{itemize}
+\tightlist
+\item
+  models being compared:
+  \(\mathcal{M} = \left\{M_1, \dots, M_K \right\}\)
+\item
+  true model: \(\mathcal{M}_t\)
+\item
+  reference model: \(\mathcal{M}_r\)
+\end{itemize}
+
+\begin{longtable}[]{@{}ll@{}}
+\toprule
+View & Description\tabularnewline
+\midrule
+\endhead
+\(\mathcal{M}\)-closed & \(M_t\) in \(\mathcal{M}\)\tabularnewline
+\(\mathcal{M}\)-open & \(M_t\) not in \(\mathcal{M}\)\tabularnewline
+\(\mathcal{M}\)-completed & \(M_t\) not in \(\mathcal{M}\), but \(M_r\)
+is.\tabularnewline
+\bottomrule
+\end{longtable}
+
+\begin{itemize}
+\tightlist
+\item
+  prediction methods: \(\mathcal{M}\)-open or \(\mathcal{M}\)-completed
+\item
+  Bayesian model averaging, Bayes factors, BIC and methods using
+  marginal likelihoods: \(\mathcal{M}\)-closed
+\end{itemize}
+
+\end{frame}
+
+\hypertarget{psis-loo}{%
+\section{PSIS-LOO}\label{psis-loo}}
+
+\begin{frame}{What does PSIS-LOO do?}
+\protect\hypertarget{what-does-psis-loo-do}{}
+
+PSIS-LOO = Pareto smoothed importance sample leave-one-out
+(cross-validation)
+
+\begin{itemize}
+\tightlist
+\item
+  \textbf{leave-one-out cross-validation}: that’s what it’s doing.
+  LOO-CV where model trained on \(n - 1\) observations, and predicts the
+  one held-out obs.
+\item
+  \textbf{importance sampling}: running LOO-CV requires running the
+  model \(n\) times. But \(p(theta|y) \approx p(\theta|y_{-i})\), so use
+  importance sampling to avoid that.
+\item
+  \textbf{Pareto smoothed}: IS on it’s own won’t work, so we need to
+  regularize it
+\end{itemize}
+
+\end{frame}
+
+\begin{frame}{What should you use?}
+\protect\hypertarget{what-should-you-use}{}
+
+\begin{itemize}
+\item
+  Use PSIS-LOO (Vehtari, Gelman, and Gabry 2015) implemented in the loo
+  package:
+
+  \begin{itemize}
+  \tightlist
+  \item
+    computationally efficient
+  \item
+    fully Bayesian, unlike AIC and DIC
+  \item
+    perform better than WAIC
+  \item
+    indicators for when it is a poor approximation (unlike AIC, DIC, and
+    WAIC)
+  \end{itemize}
+\item
+  if still too slow use WAIC, it’s next best approximation
+\item
+  No reason to use AIC or DIC ever; BIC does something different
+\item
+  For observations which the PSIS-LOO has \(k > 0.7\) use LOO-CV
+\item
+  If too many observations fail PSIS-LOO, use k-fold CV
+\item
+  If the likelihood doesn’t easily partition into observations or LOO is
+  not an appropriate prediction task, use the appropriate CV method.
+\end{itemize}
+
+\end{frame}
+
+\end{document}
