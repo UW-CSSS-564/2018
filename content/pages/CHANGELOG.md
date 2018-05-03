@@ -6,7 +6,11 @@ See the [GitHub repository](https://github.com/UW-POLS503/2018/commits/master) t
 
 ## 2018-05-03
 
--   added lecture slides for May 3
+-   add summary and lecture notes for  May 3 class
+-   add summary and in-class links for May 1 class
+-   add summary and in-class links for Apr 26 class
+-   add summary and link to notes for Apr 24 class
+-   added missing entry for Apr 26 class to schedule page
 
 ## 2018-05-02
 

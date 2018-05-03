@@ -44,7 +44,7 @@
       <pubDate>Thu, 24 May 2018 14:30:00 +0000</pubDate>
       
       <guid>/2018/schedule/2018-05-24-class/</guid>
-      <description>Other algorithms: optimization and variational inference.</description>
+      <description>Using MAP and variational inference to approximate a posterior distribution.</description>
     </item>
     
     <item>
@@ -143,7 +143,16 @@
       <pubDate>Tue, 01 May 2018 14:30:00 +0000</pubDate>
       
       <guid>/2018/schedule/2018-05-01-class/</guid>
-      <description></description>
+      <description>Lectured on posterior predictive checks (BDA Ch. 6) and model checking (BDA Ch. 7), with a discussion of generalization error.</description>
+    </item>
+    
+    <item>
+      <title>Apr 26 (Thu)&amp;mdash;Lab</title>
+      <link>/2018/schedule/2018-04-26-class/</link>
+      <pubDate>Thu, 26 Apr 2018 14:30:00 +0000</pubDate>
+      
+      <guid>/2018/schedule/2018-04-26-class/</guid>
+      <description>Started working on Assignment 1</description>
     </item>
     
     <item>
@@ -161,7 +170,7 @@
       <pubDate>Tue, 24 Apr 2018 14:30:00 +0000</pubDate>
       
       <guid>/2018/schedule/2018-04-24-class/</guid>
-      <description></description>
+      <description>Lectured on separation in binomial models, and using the Student-t distribution as a model for heteroskedasticity and robust regression.</description>
     </item>
     
     <item>

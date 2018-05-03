@@ -27,4 +27,4 @@ endTime: 2018-05-24T15:50:00
 
 ---
 
-Other algorithms: optimization and variational inference.
+Using MAP and variational inference to approximate a posterior distribution.
