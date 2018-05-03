@@ -43,6 +43,8 @@ The student should write up whatever they have done, and their plans, in such a 
 After the drafts are submitted, each student will be assigned one other student to peer review and provide feedback.
 Time will be allocated in class during the last week in order to do this.
 
+Reading another researcher's code is a skill, and it can be an eye-opening experience. Peer review is also an important part of the academic process, and being a good reviewer takes practice. 
+
 ### Instructions
 
 These reviews will be submitted as comments on the pull request.
@@ -50,13 +52,11 @@ The comments should address both substantive and programming issues.
 
 ### Evaluation
 
-Each peer review will be deemed “good” or “needs more”.[^peer-review]
-Each review you do will give you 1 point if is "good" and 0 points if it "needs more".
-Those will be totaled over all assignments to form your peer review mark.
+Each peer review will be deemed “good” or “needs more”.
 
 How to give good comments:
 
--   Address questions that were answered incorrectly, unclearly, or particularly well.
+-   Address portions of the code and analysis that were incorrect or unclear. Also address parts that were done particularly well.
 -   Give thoughtful, constructive and considerate comments.
 -   Be specific and concise.
 -   Try to learn something new and, if you succeed, point that out.
@@ -64,7 +64,7 @@ How to give good comments:
 
 Features of "needs more":
 
--   You do not address each question.
+-   You do not address all parts of the analysis, both computational and substantive.
 -   Your review is mean.
 -   You can’t find anything to praise/learn and yet you don’t offer any suggestions either.
 
