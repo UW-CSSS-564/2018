@@ -6,25 +6,33 @@ lab: no
 title: May 24 (Thu)&mdash;Class
 readings:
 - >-
-  Grimmer. 2011. "[An Introduction to Bayesian Inference Via Variational Approximations](https://dx.doi.org/10.1093/pan/mpq027)" *Political Analysis*
+  *Stan Modeling Language User’s Guide and Reference Manual: Stan Version 2.17.0*, Sec. 9.11 "Item-Response Theory Models" (p. 142).
 - >-
-  *BDA3*, Ch. 13. "Modal and Distributional Approximations"
+  Jackman, Simon. (2009) *Bayesian Analysis for the Social Sciences*, Ch. 9 "Bayesian Approaches to Measurment". This chapter is a good overview of some common, basic measurement mdoels. Ignore the Gibbs/MCMC estimation details due to the datedness of the source.
+- >- 
+  Clinton, Joshua, Simon Jackman, and Douglas Rivers. 2004.
+  "[The Statistical Analysis of Roll Call Data](http://www.jstor.org/stable/25791782)" 
+  This was the first application of Bayesian
+  statistical methods to estimating ideal points in political science.
+  There have been many innovations since then, but since this article
+  was written when many were unfamiliar with Bayesian stats, it will
+  provide an good introduction to some of the issues.
 - >-
-  Stan Modeling Language, Sec. 1.6 "Optimization"
+  Quinn, Kevin. (2004) "[Bayesian Factor Analysis for Mixed Ordinal and Continuous Responses](http://www.jstor.org/stable/25791782)" *Political Analysis*
+  Ignore the Gibbs sampling method, but note how the different outcomes
+  can be modeled.
 - >-
-  Stan Modeling Language, Sec. 1.7 "Variational Inference" 
+  Kruschke. [Bayesian Iterm Response Theory in JAGS](http://doingbayesiandataanalysis.blogspot.com/2015/12/bayesian-item-response-theory-in-jags.html). Ignore the JAGS model. This is a 
+  quick introduction to Bayesian IRT models.
 - >-
-  Stan Modeling Language, Sec. 31. "Penalized Maximum Likelihood Point Estimation"
-- >-
-  Stan Modeling Language, Sec. 33. "Variational Inference"
-optional:
-- >-
-  Kucekelbir, Ranganath, Gelman, and Blei. "[Automatic Variational Inference in Stan](https://arxiv.org/abs/1506.03431)" 2015. arXiv.
-- >-
-  Blei, Kucekelbir, McAuliffe. "[Variational inference: a review for statisticians](https://doi.org/10.1080/01621459.2017.1285773)". 2017. *Journal of the American Statistical Association*
+  [edstan](https://cran.r-project.org/web/packages/edstan/vignettes/briefmanual.html) package vignette. This package
+  provides pre-programmed Stan models for common item-response theory models.
+optional: []
 startTime: 2018-05-24T14:30:00
 endTime: 2018-05-24T15:50:00
 
 ---
 
-Using MAP and variational inference to approximate a posterior distribution.
+-   Bayesian Measurment models and item-response models
+-   Using MAP and variational inference to approximate a posterior distribution.
+

@@ -18,4 +18,5 @@ startTime: 2018-05-15T14:30:00
 endTime: 2018-05-15T15:50:00
 ---
 
-Variable selection in regression models.
+Continued discussion of shrinkage in regression models.
+VAariable selection in regression models.

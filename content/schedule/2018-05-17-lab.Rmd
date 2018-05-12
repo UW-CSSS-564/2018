@@ -10,4 +10,4 @@ startTime: 2018-05-17T13:30:00
 endTime: 2018-05-17T14:20:00
 ---
 
-Multilevel/hierarchical/random effects models.
+More on Bayesian variable shrinkage and variable selection in regression models.

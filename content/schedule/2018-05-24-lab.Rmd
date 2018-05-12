@@ -8,5 +8,3 @@ startTime: 2018-05-24T13:30:00
 endTime: 2018-05-24T14:20:00
 
 ---
-
-Bayesian regularization models for causal inference.
