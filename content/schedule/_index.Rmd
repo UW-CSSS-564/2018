@@ -5,8 +5,8 @@ assignments:
   correctionDate: 2018-05-15T14:30:00 
   name: Assignment 1
   url: https://github.com/UW-CSSS-564/2018-assignment-1
-- dueDate: 2018-05-15T14:30:00
-  correctionDate: 2018-05-22T14:30:00
+- dueDate: 2018-05-16T14:30:00
+  correctionDate: 2018-05-23T14:30:00
   name: Assignment 2
   url: https://github.com/UW-CSSS-564/2018-assignment-2  
 - dueDate: 2018-05-22T14:30:00
