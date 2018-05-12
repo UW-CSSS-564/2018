@@ -16,7 +16,13 @@ readings:
   Repeated Binary Trials](http://mc-stan.org/users/documentation/case-studies/pool-binary-trials-rstanarm.html)."
   *Stan Case Studies* 2017-01-19.
 optional: []
+inclass:
+- >-
+  [Shrinkage and Hierarchical Models](https://jrnold.github.io/bayesian_notes/shrinkage-and-hierarchical-models.html) 
 startTime: 2018-05-08T14:30:00
 endTime: 2018-05-08T15:50:00
 
 ---
+
+Bias-variance tradeoff. Bayesian hierarchical models and shrinkage.
+The Efron (1970) baseball hit example.

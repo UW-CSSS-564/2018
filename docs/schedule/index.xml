@@ -1,9 +1,9 @@
 <?xml version="1.0" encoding="utf-8" standalone="yes" ?>
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
-    <title>Course Schedule on CS&amp;SS/STAT 564: Bayesian Statistics for the Social Sciences</title>
+    <title>Course Schedule on </title>
     <link>/2018/schedule/</link>
-    <description>Recent content in Course Schedule on CS&amp;SS/STAT 564: Bayesian Statistics for the Social Sciences</description>
+    <description>Recent content in Course Schedule on </description>
     <generator>Hugo -- gohugo.io</generator>
     <language>en-US</language>
     <lastBuildDate>Thu, 31 May 2018 14:30:00 +0000</lastBuildDate>
@@ -44,7 +44,7 @@
       <pubDate>Thu, 24 May 2018 14:30:00 +0000</pubDate>
       
       <guid>/2018/schedule/2018-05-24-class/</guid>
-      <description>Using MAP and variational inference to approximate a posterior distribution.</description>
+      <description> Bayesian Measurment models and item-response models Using MAP and variational inference to approximate a posterior distribution.  </description>
     </item>
     
     <item>
@@ -53,7 +53,7 @@
       <pubDate>Thu, 24 May 2018 13:30:00 +0000</pubDate>
       
       <guid>/2018/schedule/2018-05-24-lab/</guid>
-      <description>Bayesian regularization models for causal inference.</description>
+      <description></description>
     </item>
     
     <item>
@@ -62,7 +62,7 @@
       <pubDate>Tue, 22 May 2018 14:30:00 +0000</pubDate>
       
       <guid>/2018/schedule/2018-05-22-class/</guid>
-      <description>Discrete latent variables and mixture models.</description>
+      <description>Bayesian hierarchical/multi-level regression models.</description>
     </item>
     
     <item>
@@ -71,7 +71,7 @@
       <pubDate>Thu, 17 May 2018 14:30:00 +0000</pubDate>
       
       <guid>/2018/schedule/2018-05-17-class/</guid>
-      <description></description>
+      <description>Continuation of Bayesian shrinkage in regressin and variable selection methods.</description>
     </item>
     
     <item>
@@ -80,7 +80,7 @@
       <pubDate>Thu, 17 May 2018 13:30:00 +0000</pubDate>
       
       <guid>/2018/schedule/2018-05-17-lab/</guid>
-      <description>Multilevel/hierarchical/random effects models.</description>
+      <description>More on Bayesian variable shrinkage and variable selection in regression models.</description>
     </item>
     
     <item>
@@ -89,7 +89,7 @@
       <pubDate>Tue, 15 May 2018 14:30:00 +0000</pubDate>
       
       <guid>/2018/schedule/2018-05-15-class/</guid>
-      <description>Variable selection in regression models.</description>
+      <description>Continued discussion of shrinkage in regression models. VAariable selection in regression models.</description>
     </item>
     
     <item>
@@ -116,7 +116,7 @@
       <pubDate>Tue, 08 May 2018 14:30:00 +0000</pubDate>
       
       <guid>/2018/schedule/2018-05-08-class/</guid>
-      <description></description>
+      <description>Bias-variance tradeoff. Bayesian hierarchical models and shrinkage. The Efron (1970) baseball hit example.</description>
     </item>
     
     <item>
