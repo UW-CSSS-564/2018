@@ -4,6 +4,10 @@ title: CHANGELOG
 
 See the [GitHub repository](https://github.com/UW-POLS503/2018/commits/master) the history of changes.
 
+## 2081-05-16
+
+-   Change due takes of corrections for Assignments 1 to 3.
+
 ## 2018-05-12
 
 -   move due date for Assignment 2 submission to May 18
