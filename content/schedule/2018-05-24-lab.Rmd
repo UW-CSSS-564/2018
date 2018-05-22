@@ -6,5 +6,9 @@ lab: yes
 title: May 24 (Thu)&mdash;Lab
 startTime: 2018-05-24T13:30:00
 endTime: 2018-05-24T14:20:00
-
+readings: 
+- Richard McElreath, [Multilevel Regression as Default](http://elevanth.org/blog/2017/08/24/multilevel-regression-as-default/) (blog post)
+- Richard McElreath, [Metamorphosis and the Multilevel Model](http://elevanth.org/blog/2017/09/07/metamorphosis-multilevel-model/) (blog post)
+optional: 
+- Statistical Rethinking, Chapter 12 ([free sample pdf online](http://xcelab.net/rmpubs/rethinking/Statistical_Rethinking_sample.pdf))
 ---
